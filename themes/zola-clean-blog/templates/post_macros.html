@@ -1,0 +1,15 @@
+{% macro page_title(page) %}
+<a href="{{ page.permalink }}">
+    <h2 class="post-title">{{ page.title }}</h2>
+</a>
+<p class="post-meta">
+    {{ page.date | date(format="%Y年 %m月 %d日")}}
+</p>
+{% endmacro page_list %}
+
+{% macro page_header(page) %}
+<h1>{{ page.title }}</h1>
+<span class="meta">
+    {{ page.date | date(format="%Y年 %m月 %d日")}}
+</span>
+{% endmacro page_list %}

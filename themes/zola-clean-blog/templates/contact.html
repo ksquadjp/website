@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ get_url(path="/img/contact-bg.jpg")}}')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Contact Me</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <p>お問い合わせについては以下からよろしくお願いします。</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true" width="640" height="709" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
+  </div>
+</div>
+{% endblock content %}
