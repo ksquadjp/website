@@ -1,7 +1,12 @@
+import Container from "../../components/container";
+import Layout from "../../components/layout";
+
 export default function Contact() {
     return (
-        <div>
-            contact page
-        </div>
+        <Layout pageTitle='お問い合わせ'>
+            <Container>
+                <div>Contact Page</div>
+            </Container>
+        </Layout>
     )
 }

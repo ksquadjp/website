@@ -1,17 +1,19 @@
 
 import Footer from './footer'
+import Header from './header'
 import Meta from './meta'
 
 type Props = {
-  preview?: boolean
+  pageTitle: string,
   children: React.ReactNode
 }
 
-const Layout = ({ preview, children }: Props) => {
+const Layout = ({ pageTitle, children }: Props) => {
   return (
     <>
-      <Meta />
-      <div className="min-h-screen container mx-auto px-5">
+      <Meta pageTitle={pageTitle} />
+      <Header />
+      <div className="min-h-screen">
         <main>{children}</main>
       </div>
       <Footer />

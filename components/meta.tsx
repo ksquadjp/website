@@ -1,7 +1,11 @@
 import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
+import { HOME_OG_IMAGE_URL } from '../lib/constants'
 
-const Meta = () => {
+type Props = {
+  pageTitle: string,
+}
+
+export default function Meta({ pageTitle }: Props) {
   return (
     <Head>
       <link
@@ -34,11 +38,11 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content={`ケイスクワッド合同会社はソフトウェア技術を通してお客様へ最大価値を提供します。アプリ開発からWebシステム構築、データ基盤整備を一気通貫で対応します。`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <title>{`K Squad | ${pageTitle}`}</title>
     </Head>
   )
 }
 
-export default Meta

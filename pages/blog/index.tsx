@@ -4,24 +4,19 @@ import HeroPost from '../../components/hero-post'
 import Intro from '../../components/header'
 import Layout from '../../components/layout'
 import { getAllPosts } from '../../lib/api'
-import Head from 'next/head'
 import Post from '../../interfaces/post'
 
 type Props = {
     allPosts: Post[]
 }
 
-export default function Index({ allPosts }: Props) {
+export default function Blog({ allPosts }: Props) {
     const heroPost = allPosts[0]
     const morePosts = allPosts.slice(1)
     return (
         <>
-            <Layout>
-                <Head>
-                    <title>{`K Squad`}</title>
-                </Head>
+            <Layout pageTitle='ブログ'>
                 <Container>
-                    <Intro />
                     {heroPost && (
                         <HeroPost
                             title={heroPost.title}
