@@ -2,15 +2,26 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-const postsDirectory = join(process.cwd(), '_posts')
+const blogPostsDirectory = join(process.cwd(), '_posts')
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory)
+const newsPostsDirectory = join(process.cwd(), '_news')
+
+export function getBlogPostSlugs() {
+  return fs.readdirSync(blogPostsDirectory)
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getNewsPostSlugs() {
+  return fs.readdirSync(newsPostsDirectory)
+}
+
+enum PostType {
+  Blog = 0,
+  News = 1,
+}
+
+export function getPostBySlug(slug: string, fields: string[] = [], postType: PostType = 0) {
   const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const fullPath = join(postType == 0 ? blogPostsDirectory : newsPostsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
@@ -37,10 +48,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs()
+export function getAllPosts(fields: string[] = [], postType: PostType = 0) {
+  const slugs = postType == 0 ? getBlogPostSlugs() : getNewsPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug, fields, postType))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts

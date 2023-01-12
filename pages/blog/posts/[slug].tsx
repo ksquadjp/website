@@ -4,10 +4,9 @@ import PostBody from '../../../components/post-body'
 import PostHeader from '../../../components/post-header'
 import Layout from '../../../components/layout'
 import { getPostBySlug, getAllPosts } from '../../../lib/api'
-import PostTitle from '../../../components/post-title'
 import Head from 'next/head'
 import markdownToHtml from '../../../lib/markdownToHtml'
-import type PostType from '../../../interfaces/post'
+import PostType from '../../../interfaces/post'
 import Container from '../../../components/container'
 
 type Props = {
@@ -25,7 +24,7 @@ export default function Post({ post, morePosts, preview }: Props) {
     <Layout pageTitle={post.title}>
       <Container>
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <p>Loading…</p>
         ) : (
           <>
             <article className="mb-32">
@@ -33,13 +32,12 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>
                   {post.title}
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={post.image} />
               </Head>
               <PostHeader
                 title={post.title}
-                coverImage={post.coverImage}
+                image={post.image}
                 date={post.date}
-                author={post.author}
               />
               <PostBody content={post.content} />
             </article>

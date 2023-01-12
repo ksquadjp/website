@@ -1,13 +1,12 @@
 import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
-import HeroPost from '../../components/hero-post'
-import Intro from '../../components/header'
 import Layout from '../../components/layout'
 import { getAllPosts } from '../../lib/api'
-import Post from '../../interfaces/post'
+import PostType from '../../interfaces/post'
+import Image from 'next/image'
+import Link from 'next/link'
 
 type Props = {
-    allPosts: Post[]
+    allPosts: PostType[]
 }
 
 export default function Blog({ allPosts }: Props) {
@@ -17,17 +16,28 @@ export default function Blog({ allPosts }: Props) {
         <>
             <Layout pageTitle='ブログ'>
                 <Container>
-                    {heroPost && (
-                        <HeroPost
-                            title={heroPost.title}
-                            coverImage={heroPost.coverImage}
-                            date={heroPost.date}
-                            author={heroPost.author}
-                            slug={heroPost.slug}
-                            excerpt={heroPost.excerpt}
-                        />
+                    {allPosts.map((e, i) =>
+                        <div key={i} className="grid grid-cols-1 lg:grid-cols-3 py-6 lg:px-48">
+                            <div className="relative aspect-video order-first lg:order-last lg:col-start-3">
+                                <Link href={"/blog/posts/" + e.slug}>
+                                    <Image
+                                        className="rounded-lg"
+                                        src={e.image}
+                                        alt={e.title}
+                                        fill
+                                    />
+                                </Link>
+                            </div>
+                            <div className="lg:col-span-2 px-6 lg:px-12 py-6 content-center">
+                                <time>{e.date}</time>
+                                <Link href={"/blog/posts/" + e.slug}>
+                                    <h2 className="font-bold">
+                                        {e.title}
+                                    </h2>
+                                </Link>
+                            </div>
+                        </div>
                     )}
-                    {morePosts.length > 0 && <MoreStories posts={morePosts} />}
                 </Container>
             </Layout>
         </>
