@@ -20,3 +20,7 @@
 .markdown a {
   @apply text-blue-600
 }
+
+.markdown code {
+  @apply text-orange-800 bg-neutral-200 px-1
+}

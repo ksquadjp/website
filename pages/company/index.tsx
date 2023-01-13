@@ -43,7 +43,7 @@ function Members() {
             </h2>
             <hr />
             <div className='p-6 grid grid-cols-1 sm:grid-cols-3 h-auto'>
-                <div className='lg:px-18'>
+                <div className='lg:px-18 py-4 lg:py-0'>
                     <div className='relative h-40 aspect-square mx-auto'>
                         <Image
                             className="object-cover rounded-lg"
@@ -69,7 +69,7 @@ function Members() {
                         2021年にヘイ株式会社（後にSTORES株式会社に商号変更）に入社し、1人目のデータエンジニアとしてデータ基盤を構築。
                     </p>
                 </div>
-                <div className='lg:px-18'>
+                <div className='lg:px-18 py-4 lg:py-0'>
                     <div className='relative h-40 aspect-square mx-auto'>
                         <Image
                             className="object-cover rounded-lg"
@@ -94,7 +94,7 @@ function Members() {
                         2017年度の京都大学理学部首席入学。
                     </p>
                 </div>
-                <div className='lg:px-18'>
+                <div className='lg:px-18 py-4 lg:py-0'>
                     <div className='relative h-40 aspect-square mx-auto'>
                         <Image
                             className="object-cover rounded-lg"
