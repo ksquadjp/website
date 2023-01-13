@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: yarn build
       - name: Set CNAME
-        run: echo "ksquad.jp" > ./public/CNAME
+        run: echo "ksquad.jp" > ./out/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
