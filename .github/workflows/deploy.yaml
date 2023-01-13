@@ -11,17 +11,16 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: install zola
-        run: |
-          sudo apt update
-          sudo apt install snapd
-          sudo snap install zola --edge
-      - name: zola build
-        run: zola build
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19.x'
+      - name: Build
+        run: yarn build
       - name: Set CNAME
         run: echo "ksquad.jp" > ./public/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./out
