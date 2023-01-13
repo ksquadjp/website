@@ -10,8 +10,7 @@ type Props = {
 }
 
 export default function Blog({ allPosts }: Props) {
-    const heroPost = allPosts[0]
-    const morePosts = allPosts.slice(1)
+    console.log(allPosts)
     return (
         <>
             <Layout pageTitle='ブログ'>
@@ -49,9 +48,7 @@ export const getStaticProps = async () => {
         'title',
         'date',
         'slug',
-        'author',
-        'coverImage',
-        'excerpt',
+        'image',
     ])
 
     return {

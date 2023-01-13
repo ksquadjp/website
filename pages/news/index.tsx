@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../../components/container";
-import HeroPost from "../../components/hero-post";
 import Layout from "../../components/layout";
 import PostType from "../../interfaces/post";
 import { getAllPosts } from '../../lib/api'
@@ -49,7 +48,7 @@ export const getStaticProps = async () => {
         'date',
         'slug',
         'image',
-    ], 1)
+    ], 1,)
 
     return {
         props: { allPosts },

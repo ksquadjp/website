@@ -159,9 +159,11 @@ function Application() {
             </h2>
             <hr />
             <div className="py-6">
-                ツイッターにて<a href="https://twitter.com/komi_edtr_1230" className="text-blue-400 inline-block">@komi_edtr_1230</a>宛にDMを送ってください。
+                careers@ksquad.jp にメールをお送りください。
                 <br />
-                応募時には自己紹介、志望動機、得意領域などを教えてください。
+                もしくはツイッターにて<a href="https://twitter.com/komi_edtr_1230" className="text-blue-400 inline-block">@komi_edtr_1230</a>宛にDMをお送りください。
+                <br />
+                応募時には自己紹介、志望動機、得意領域などを教えてください。参考資料としてポートフォリオなどを送っていただけると幸いです。
             </div>
             <div className="py-6">
                 上記以外の職種も常時募集しています。ご連絡お待ちしております。
