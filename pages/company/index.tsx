@@ -69,7 +69,7 @@ function Members() {
                         2021年にヘイ株式会社（後にSTORES株式会社に商号変更）に入社し、1人目のデータエンジニアとしてデータ基盤を構築。
                     </p>
                 </div>
-                <div className='lg:px-18 py-4 lg:py-0'>
+<!--                 <div className='lg:px-18 py-4 lg:py-0'>
                     <div className='relative h-40 aspect-square mx-auto'>
                         <Image
                             className="object-cover rounded-lg"
@@ -117,7 +117,7 @@ function Members() {
                     <p className="md:h-64 p-4">
                         2020年京都大学工学部卒業。<span className="text-blue-500"><Link href="https://www.moguravr.com/ar-tatekanban/">AR立て看</Link></span>をはじめとした様々なプロダクトを開発した経験を持つ。
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
     )
