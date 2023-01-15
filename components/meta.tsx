@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { HOME_OG_IMAGE_URL } from '../lib/constants'
 
 type Props = {
     pageTitle: string,
@@ -40,7 +39,7 @@ export default function Meta({ pageTitle }: Props) {
                 name="description"
                 content={`ケイスクワッド合同会社はソフトウェア技術を通してお客様へ最大価値を提供します。アプリ開発からWebシステム構築、データ基盤整備を一気通貫で対応します。`}
             />
-            <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+            <meta property="og:image" content="/assets/top.jpg" />
             <title>{`K Squad | ${pageTitle}`}</title>
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCCQNP1TC3"></script>
             <script

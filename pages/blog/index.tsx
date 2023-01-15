@@ -10,7 +10,6 @@ type Props = {
 }
 
 export default function Blog({ allPosts }: Props) {
-    console.log(allPosts)
     return (
         <>
             <Layout pageTitle='ブログ'>

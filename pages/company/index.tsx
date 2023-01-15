@@ -98,8 +98,8 @@ function Members() {
                     <div className='relative h-40 aspect-square mx-auto'>
                         <Image
                             className="object-cover rounded-lg"
-                            src="https://cdn2.aprico-media.com/production/imgs/images/000/008/511/original.jpg?1505866639"
-                            alt='Yusuke Kominami'
+                            src="https://camph.net/_next/image?url=http%3A%2F%2Fassets.camph.net%2F53-20210920181000-2x.jpg&w=256&q=75"
+                            alt='Hiroya Kawase'
                             fill
                         />
                     </div>

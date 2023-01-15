@@ -68,7 +68,7 @@ function News({ news }: NewsProps) {
             </h2>
             <div className='grid content-center px-4 grid-cols-1 lg:grid-cols-3 h-auto'>
                 {topFiveNews.map((e, i) =>
-                    <Link href={"/news/posts/" + e.slug}>
+                    <Link key={i} href={"/news/posts/" + e.slug}>
                         <div key={i} className="lg:px-18 mx-6 lg:mx-12 py-3 my-3 grid grid-cols-1 content-center rounded-lg bg-gray-100 overflow-hidden shadow-lg lg:h-80">
                             <div className='relative aspect-video h-24 xl:h-36 mx-auto px-2'>
                                 <Image className="rounded-lg" src={e.image} alt={e.title} fill />
