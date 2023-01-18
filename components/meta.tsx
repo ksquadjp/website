@@ -27,11 +27,11 @@ export default function Meta({ pageTitle }: Props) {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-XCCQNP1TC3');
-                    `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XCCQNP1TC3');
+          `,
         }}
       />
     </Head>
