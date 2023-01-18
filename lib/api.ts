@@ -1,10 +1,10 @@
-import fs from 'fs'
-import { join } from 'path'
-import matter from 'gray-matter'
+import fs from "fs"
+import { join } from "path"
+import matter from "gray-matter"
 
-const blogPostsDirectory = join(process.cwd(), '_posts')
+const blogPostsDirectory = join(process.cwd(), "_posts")
 
-const newsPostsDirectory = join(process.cwd(), '_news')
+const newsPostsDirectory = join(process.cwd(), "_news")
 
 export function getBlogPostSlugs() {
   return fs.readdirSync(blogPostsDirectory)
@@ -20,9 +20,9 @@ enum PostType {
 }
 
 export function getPostBySlug(slug: string, fields: string[] = [], postType: PostType = 0) {
-  const realSlug = slug.replace(/\.md$/, '')
+  const realSlug = slug.replace(/\.md$/, "")
   const fullPath = join(postType == 0 ? blogPostsDirectory : newsPostsDirectory, `${realSlug}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
 
   type Items = {
@@ -33,14 +33,14 @@ export function getPostBySlug(slug: string, fields: string[] = [], postType: Pos
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
-    if (field === 'slug') {
+    if (field === "slug") {
       items[field] = realSlug
     }
-    if (field === 'content') {
+    if (field === "content") {
       items[field] = content
     }
 
-    if (typeof data[field] !== 'undefined') {
+    if (typeof data[field] !== "undefined") {
       items[field] = data[field]
     }
   })
@@ -49,7 +49,7 @@ export function getPostBySlug(slug: string, fields: string[] = [], postType: Pos
 }
 
 export function getAllPosts(fields: string[] = [], postType: PostType = 0) {
-  const slugs = postType == 0 ? getBlogPostSlugs() : getNewsPostSlugs();
+  const slugs = postType == 0 ? getBlogPostSlugs() : getNewsPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields, postType))
     // sort posts by date in descending order

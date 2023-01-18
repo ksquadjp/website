@@ -10,17 +10,17 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug font-bold;
+  @apply mt-12 mb-4 text-3xl font-bold leading-snug;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug font-bold;
+  @apply mt-8 mb-4 text-2xl font-bold leading-snug;
 }
 
 .markdown a {
-  @apply text-blue-600
+  @apply text-blue-600;
 }
 
 .markdown code {
-  @apply text-orange-800 bg-neutral-200 px-1
+  @apply bg-neutral-200 px-1 text-orange-800;
 }

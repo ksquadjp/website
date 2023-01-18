@@ -1,13 +1,13 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import PostBody from '../../../components/post-body'
-import PostHeader from '../../../components/post-header'
-import Layout from '../../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../../lib/api'
-import Head from 'next/head'
-import markdownToHtml from '../../../lib/markdownToHtml'
-import PostType from '../../../interfaces/post'
-import Container from '../../../components/container'
+import { useRouter } from "next/router"
+import ErrorPage from "next/error"
+import PostBody from "../../../components/post-body"
+import PostHeader from "../../../components/post-header"
+import Layout from "../../../components/layout"
+import { getPostBySlug, getAllPosts } from "../../../lib/api"
+import Head from "next/head"
+import markdownToHtml from "../../../lib/markdownToHtml"
+import PostType from "../../../interfaces/post"
+import Container from "../../../components/container"
 
 type Props = {
   post: PostType
@@ -29,16 +29,10 @@ export default function Post({ post, morePosts, preview }: Props) {
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title}
-                </title>
+                <title>{post.title}</title>
                 <meta property="og:image" content={post.image} />
               </Head>
-              <PostHeader
-                title={post.title}
-                image={post.image}
-                date={post.date}
-              />
+              <PostHeader title={post.title} image={post.image} date={post.date} />
               <PostBody content={post.content} />
             </article>
           </>
@@ -55,15 +49,8 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'date',
-    'slug',
-    'author',
-    'content',
-    'image',
-  ])
-  const content = await markdownToHtml(post.content || '')
+  const post = getPostBySlug(params.slug, ["title", "date", "slug", "author", "content", "image"])
+  const content = await markdownToHtml(post.content || "")
 
   return {
     props: {
@@ -76,7 +63,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(["slug"])
 
   return {
     paths: posts.map((post) => {
