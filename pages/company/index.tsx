@@ -41,12 +41,7 @@ function Members() {
       <div className="grid h-auto grid-cols-1 p-6 sm:grid-cols-2">
         <div className="lg:px-18 py-4 lg:py-0">
           <div className="relative mx-auto aspect-square h-40">
-            <Image
-              className="rounded-lg object-cover"
-              src="/assets/komi.jpg"
-              alt="Yusuke Kominami"
-              fill
-            />
+            <Image className="rounded-lg object-cover" src="/assets/komi.jpg" alt="Yusuke Kominami" fill />
           </div>
           <div className="p-2 md:h-48">
             <h3 className="flex justify-center text-center text-xl font-bold lg:py-3 lg:text-2xl">

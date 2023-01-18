@@ -90,9 +90,7 @@ function Service() {
             <Image src="/assets/electricity.svg" alt="a" fill />
           </div>
           <div>
-            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">
-              技術顧問
-            </h3>
+            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">技術顧問</h3>
             <p>
               ベンダーにシステムを発注したいが予算が適正なのかわからない。内製化を進めていきたいがシニアエンジニアが不足している。
               <br />
@@ -105,12 +103,9 @@ function Service() {
             <Image src="/assets/dev_productivity.svg" alt="a" fill />
           </div>
           <div>
-            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">
-              システム・アプリ開発
-            </h3>
+            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">システム・アプリ開発</h3>
             <p>
-              Webサイトから顧客管理システム、モバイルアプリ、LINE
-              Botなどあらゆる技術領域をカバーしています。
+              Webサイトから顧客管理システム、モバイルアプリ、LINE Botなどあらゆる技術領域をカバーしています。
               <br />
               弊社のノウハウを活かし、少数精鋭チームで高速に開発させていただきます。
             </p>
@@ -121,9 +116,7 @@ function Service() {
             <Image src="/assets/predictive_analytics.svg" alt="a" fill />
           </div>
           <div>
-            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">
-              データ分析基盤構築
-            </h3>
+            <h3 className="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">データ分析基盤構築</h3>
             <p>
               アプリやシステムは作るだけでは終わらず、データを有効活用することによってその価値は何倍にも膨らみます。
               <br />
@@ -158,12 +151,7 @@ function Customers() {
           />
         </div>
         <div className="relative aspect-video">
-          <Image
-            className="object-contain px-24"
-            src="https://www.tostv.jp/asset/img/logo-tos.png"
-            alt="a"
-            fill
-          />
+          <Image className="object-contain px-24" src="https://www.tostv.jp/asset/img/logo-tos.png" alt="a" fill />
         </div>
       </div>
     </>

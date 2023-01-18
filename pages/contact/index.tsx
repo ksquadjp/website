@@ -5,9 +5,7 @@ export default function Contact() {
   return (
     <Layout pageTitle="お問い合わせ">
       <Container>
-        <div className="py-10">
-          お仕事のお問い合わせや講演依頼については以下からお問い合わせください。
-        </div>
+        <div className="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
         <div className="md:p-10">
           <iframe
             className="min-h-screen w-full"
