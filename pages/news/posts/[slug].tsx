@@ -11,11 +11,9 @@ import PostHeader from "../../../components/post-header"
 
 type Props = {
   post: PostType
-  morePosts: PostType[]
-  preview?: boolean
 }
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -77,8 +75,3 @@ export async function getStaticPaths() {
   }
 }
 
-type PostHeaderProps = {
-  title: string
-  image: string
-  date: string
-}

@@ -21,6 +21,6 @@
   @apply text-blue-600;
 }
 
-.markdown code {
+.markdown p code {
   @apply bg-neutral-200 px-1 text-orange-800;
 }
