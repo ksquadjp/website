@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import DateFormatter from './date-formatter'
+import Image from "next/image"
+import DateFormatter from "./date-formatter"
 
 type Props = {
   title: string
@@ -7,16 +7,16 @@ type Props = {
   date: string
 }
 
-const PostHeader = ({ title, image, date, }: Props) => {
+const PostHeader = ({ title, image, date }: Props) => {
   return (
-    <div className='py-10'>
+    <div className="py-10">
       <div className="mb-6 text-lg">
         <DateFormatter dateString={date} />
       </div>
-      <h1 className="text-5xl md:text-7xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+      <h1 className="mb-12 text-center text-5xl font-bold leading-tight tracking-tighter md:text-left md:text-7xl md:leading-none lg:text-5xl">
         {title}
       </h1>
-      <div className="relative aspect-video content-center mb-8 md:mb-16 sm:mx-0">
+      <div className="relative mb-8 aspect-video content-center sm:mx-0 md:mb-16">
         <Image src={image} alt={title} fill />
       </div>
     </div>
