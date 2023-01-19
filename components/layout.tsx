@@ -9,12 +9,12 @@ type Props = {
 
 const Layout = ({ pageTitle, children }: Props) => {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Meta pageTitle={pageTitle} />
       <Header />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 
