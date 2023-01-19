@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",
-    "typecheck": "tsc",
+    "lint:typecheck": "tsc",
+    "lint:prettier": "prettier -c .",
     "format": "prettier -w ."
   },
   "dependencies": {
