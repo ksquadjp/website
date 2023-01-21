@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: ./.github/actions/install-nodejs
+
+      - name: Install Dependencies
+        run: corepack pnpm install --dev --frozen-lockfile
+
+      - name: Lint with Prettier
+        run: corepack pnpm lint

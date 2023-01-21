@@ -1,0 +1,17 @@
+name: Install Node.js
+description: Install Node.js specified by .tool-versions
+
+runs:
+  using: composite
+  steps:
+    - name: Get node version
+      id: node-version
+      run: |
+        version=$(grep "^nodejs " ".tool-versions" | sed -e "s/^nodejs //")
+        echo "NODE_VERSION=$version" >> $GITHUB_OUTPUT
+      shell: bash
+
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ steps.node-version.outputs.NODE_VERSION }}
