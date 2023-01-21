@@ -1,33 +1,33 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-import Head from '../components/base/Head.astro';
-import Header from '../components/base/Header.tsx';
-import Footer from '../components/base/Footer.astro';
-import Container from '../components/base/Container.astro'
+import Head from "../components/base/Head.astro";
+import Header from "../components/base/Header.tsx";
+import Footer from "../components/base/Footer.astro";
+import Container from "../components/base/Container.astro";
 
-import About from '../components/company/About.astro'
-import Members from '../components/company/Members.astro'
+import About from "../components/company/About.astro";
+import Members from "../components/company/Members.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header client:load title={SITE_TITLE} />
-		<main class="h-full block">
-			<Container>
-				<div class="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
-                <iframe
-                    class="h-screen w-full"
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true"
-                >
-                    読み込んでいます…
-                </iframe>
-			</Container>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header client:load title={SITE_TITLE} />
+    <main class="block h-full">
+      <Container>
+        <div class="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
+        <iframe
+          class="h-screen w-full"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true"
+        >
+          読み込んでいます…
+        </iframe>
+      </Container>
+    </main>
+    <Footer />
+  </body>
 </html>

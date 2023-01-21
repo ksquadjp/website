@@ -1,7 +1,7 @@
-import { useState } from "preact/hooks"
+import { useState } from "preact/hooks";
 
 export default function Header() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="rounded border-gray-200 bg-white px-2 py-2.5 sm:px-4">
@@ -78,5 +78,5 @@ export default function Header() {
         </div>
       </div>
     </nav>
-  )
+  );
 }

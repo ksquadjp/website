@@ -1,32 +1,32 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-import Head from '../components/base/Head.astro';
-import Header from '../components/base/Header.tsx';
-import Footer from '../components/base/Footer.astro';
-import Container from '../components/base/Container.astro'
+import Head from "../components/base/Head.astro";
+import Header from "../components/base/Header.tsx";
+import Footer from "../components/base/Footer.astro";
+import Container from "../components/base/Container.astro";
 
-import Message from '../components/careers/Message.astro'
-import Requirements from '../components/careers/Requirements.astro'
-import Contracts from '../components/careers/Contracts.astro'
-import Application from '../components/careers/Application.astro'
+import Message from "../components/careers/Message.astro";
+import Requirements from "../components/careers/Requirements.astro";
+import Contracts from "../components/careers/Contracts.astro";
+import Application from "../components/careers/Application.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header client:load title={SITE_TITLE} />
-		<main>
-			<Container>
-				<Message />
-                <Requirements />
-                <Contracts />
-                <Application />
-			</Container>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header client:load title={SITE_TITLE} />
+    <main>
+      <Container>
+        <Message />
+        <Requirements />
+        <Contracts />
+        <Application />
+      </Container>
+    </main>
+    <Footer />
+  </body>
 </html>
