@@ -8,19 +8,31 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Get node version
+        id: node-version
+        run: |
+          version=$(grep "^nodejs " ".tool-versions" | sed -e "s/^nodejs //")
+          echo "NODE_VERSION=$version" >> $GITHUB_OUTPUT
+
+      - name: Install node
+        uses: actions/setup-node@v3
         with:
-          version: 7.25.1
+          node-version: ${{ steps.node-version.outputs.NODE_VERSION }}
+
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: corepack pnpm install --prod --frozen-lockfile
+
       - name: Build
-        run: pnpm build
+        run: corepack pnpm build
+
       - name: Set CNAME
         run: echo "ksquad.jp" > ./dist/CNAME
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
