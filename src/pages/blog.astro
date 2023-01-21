@@ -1,0 +1,46 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+import Head from '../components/base/Head.astro';
+import Header from '../components/base/Header.tsx';
+import Footer from '../components/base/Footer.astro';
+import Container from '../components/base/Container.astro'
+
+const news = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header client:load title={SITE_TITLE} />
+		<main>
+			{news.map((e, i) => (
+                <div key={i} class="grid grid-cols-1 md:grid-cols-2 py-6 md:px-48 xl:px-96">
+                    <div class="relative order-first md:order-last">
+                        <a href={e.url}>
+                            <img
+								class="mx-auto h-48 object-cover aspect-video rounded-lg"
+								src={e.frontmatter.image}
+								alt={e.frontmatter.itle}
+								loading="lazy"
+								decoding="async"
+							/>
+                        </a>
+                    </div>
+                    <div class="content-center px-6 py-6 md:px-12 mx-auto md:mx-0 order-last md:order-first">
+                        <time>{e.frontmatter.date}</time>
+                        <a href={e.url}>
+                            <h2 class="font-bold">{e.frontmatter.title}</h2>
+                        </a>
+                    </div>
+                </div>
+                ))}
+		</main>
+		<Footer />
+	</body>
+</html>

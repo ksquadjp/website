@@ -1,0 +1,32 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+import Head from '../components/base/Head.astro';
+import Header from '../components/base/Header.tsx';
+import Footer from '../components/base/Footer.astro';
+import Container from '../components/base/Container.astro'
+
+import Top from '../components/home/Top.astro'
+import Customers from '../components/home/Customers.astro'
+import News from '../components/home/News.astro'
+import Service from '../components/home/Service.astro'
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header client:load title={SITE_TITLE} />
+		<main>
+			<Top />
+			<Container>
+				<News />
+				<Service />
+				<Customers />
+			</Container>
+		</main>
+		<Footer />
+	</body>
+</html>
