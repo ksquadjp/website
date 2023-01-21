@@ -1,9 +1,0 @@
-/.pnp
-.pnp.js
-/coverage
-/.next/
-/out/
-/build
-next-env.d.ts
-pnpm-lock.yaml
-*.md

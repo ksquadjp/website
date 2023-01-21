@@ -1,6 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow": "/.github/workflows/**/*.yaml"
-  }
-}

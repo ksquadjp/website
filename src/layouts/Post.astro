@@ -1,0 +1,87 @@
+---
+import Head from '../components/base/Head.astro';
+import Header from '../components/base/Header.tsx';
+import Footer from '../components/base/Footer.astro';
+import Container from '../components/base/Container.astro'
+
+export interface Props {
+	content: {
+		title: string;
+		description: string;
+		date: string;
+		image: string;
+	};
+}
+
+const {
+	content: { title, description, date, image },
+} = Astro.props;
+---
+
+<html lang="ja">
+	<head>
+		<Head title={title} description={description} />
+		<style global>
+			.markdown {
+				@apply text-lg leading-relaxed lg:px-36 xl:px-48 py-10;
+			}
+			.markdown p {
+				@apply py-2
+			}
+			.markdown ul {
+				@apply px-16 list-disc;
+			}
+			.markdown ul li {
+				@apply list-item;
+			}
+			.markdown ol {}
+			.markdown blockquote {
+				@apply my-6;
+			}
+			.markdown h2 {
+				@apply mt-12 mb-4 text-3xl font-bold leading-snug;
+			}
+			.markdown h3 {
+				@apply mt-8 mb-4 text-2xl font-bold leading-snug;
+			}
+			.markdown a {
+				@apply text-blue-600;
+			}
+			.markdown p code {
+				@apply bg-neutral-200 px-1 text-orange-800;
+			}
+			.markdown pre {
+				@apply p-4;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<article>
+				<Container>
+					<h1 class="py-8 text-4xl font-bold">{title}</h1>
+					<div class="py-2">
+						<time class="">{date}</time>
+					</div>
+					<div class="relative">
+						<img
+							src={image}
+							alt=""
+							fit="fill"
+							class="w-screen"
+							loading="lazy"
+							decoding="async"
+						/>
+					</div>
+					<hr />
+					<div class="markdown">
+						<slot />
+					</div>
+				<Container/>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
