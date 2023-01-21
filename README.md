@@ -6,8 +6,8 @@ K SquadのLPのプロジェクトです。Astroで書かれています。
 
 以下のディレクトリにMarkdownの記事を置いてください。
 
-- ブログ = src/blog/
-- ニュース = src/news/
+- ブログ = `src/pages/blog/`
+- ニュース = `src/pages/news/`
 
 ニュースについては日時が最新のもの3つがLPのトップページに表示されます。
 
