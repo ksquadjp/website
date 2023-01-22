@@ -1,5 +1,17 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
 <div class="relative h-screen w-screen">
-  <img src="/top.jpg" alt="Top Image" class="absolute h-screen" />
+  <Image
+    src="/top.jpg"
+    alt="Top Image"
+    class="absolute h-screen"
+    format="webp"
+    width="2000"
+    height="1000"
+    fit="cover"
+  />
   <div
     class="absolute mx-auto flex h-screen w-screen items-center justify-center px-2 text-4xl font-bold md:text-6xl"
     style={{

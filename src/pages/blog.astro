@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 
 import Head from "@components/base/Head.astro";
@@ -23,12 +25,14 @@ const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
           <div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
             <div class="relative order-first md:order-last">
               <a href={e.url}>
-                <img
+                <Image
                   class="mx-auto aspect-video h-48 rounded-lg object-cover"
                   src={e.frontmatter.image}
                   alt={e.frontmatter.itle}
-                  loading="lazy"
-                  decoding="async"
+                  format="webp"
+                  width="300"
+                  height="200"
+                  fit="cover"
                 />
               </a>
             </div>

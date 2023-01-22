@@ -1,20 +1,40 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
 <h2 class="py-10 text-4xl font-bold">支援実績</h2>
 <div class="grid h-auto grid-cols-1 p-6 lg:grid-cols-3">
   <div class="relative aspect-video">
-    <img
+    <Image
       class="h-full object-contain"
       src="https://prtimes.jp/i/10009/34/origin/d10009-34-8c1d501dddb713463c94-0.png"
       alt="アイフル"
+      format="webp"
+      width="711"
+      height="372"
+      fit="cover"
     />
   </div>
   <div class="relative aspect-video">
-    <img
+    <Image
       class="h-full object-contain px-24"
       src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/storesblog/20200807/20200807163356.png"
       alt="STORES"
+      format="webp"
+      width="712"
+      height="219"
+      fit="cover"
     />
   </div>
   <div class="relative aspect-video">
-    <img class="h-full object-contain px-24" src="https://www.tostv.jp/asset/img/logo-tos.png" alt="テレビ大分" />
+    <Image
+      class="h-full object-contain px-24"
+      src="https://www.tostv.jp/asset/img/logo-tos.png"
+      alt="テレビ大分"
+      format="webp"
+      width="780"
+      height="156"
+      fit="cover"
+    />
   </div>
 </div>
