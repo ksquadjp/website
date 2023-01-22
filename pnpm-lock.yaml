@@ -7,12 +7,14 @@ specifiers:
   '@astrojs/rss': ^2.0.0
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.3
+  '@types/node': ^18.11.18
   astro: ^1.9.2
   preact: ^10.11.3
   prettier: ^2.8.3
   prettier-plugin-astro: ^0.7.2
   prettier-plugin-tailwindcss: ^0.2.1
   tailwindcss: ^3.2.4
+  typescript: ^4.9.4
 
 dependencies:
   '@astrojs/image': registry.npmmirror.com/@astrojs/image/0.12.1
@@ -21,14 +23,16 @@ dependencies:
   '@astrojs/rss': registry.npmmirror.com/@astrojs/rss/2.0.0
   '@astrojs/sitemap': registry.npmmirror.com/@astrojs/sitemap/1.0.0
   '@astrojs/tailwind': registry.npmmirror.com/@astrojs/tailwind/2.1.3_tailwindcss@3.2.4
-  astro: 1.9.2
+  astro: 1.9.2_@types+node@18.11.18
   preact: 10.11.3
   tailwindcss: 3.2.4_postcss@8.4.21
 
 devDependencies:
+  '@types/node': 18.11.18
   prettier: 2.8.3
   prettier-plugin-astro: 0.7.2
   prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.3
+  typescript: 4.9.4
 
 packages:
 
@@ -581,6 +585,13 @@ packages:
       '@types/unist': 2.0.6
     dev: false
 
+  /@types/node/17.0.45:
+    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+    dev: false
+
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
@@ -708,7 +719,7 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro/1.9.2:
+  /astro/1.9.2_@types+node@18.11.18:
     resolution: {integrity: sha512-L+Ma0eR0Aa6QZg7RF0lEs+106Ye1/zukvtq3KtsYIogAojltlwllwU9X5CwMBzFwA55NxpNp4gSRh5US/xb+8Q==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
@@ -772,7 +783,7 @@ packages:
       typescript: 4.9.4
       unist-util-visit: 4.1.1
       vfile: 5.3.6
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
       vitefu: 0.2.4_vite@3.2.5
       yargs-parser: 21.1.1
       zod: 3.20.2
@@ -3270,7 +3281,6 @@ packages:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
 
   /unherit/3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
@@ -3410,7 +3420,7 @@ packages:
       vfile-message: 3.1.3
     dev: false
 
-  /vite/3.2.5:
+  /vite/3.2.5_@types+node@18.11.18:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3435,6 +3445,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.18
       esbuild: 0.15.18
       postcss: 8.4.21
       resolve: 1.22.1
@@ -3451,7 +3462,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
     dev: false
 
   /vscode-css-languageservice/6.2.1:
@@ -4270,12 +4281,6 @@ packages:
       '@types/unist': registry.npmmirror.com/@types/unist/2.0.6
     dev: false
 
-  registry.npmmirror.com/@types/node/17.0.45:
-    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-17.0.45.tgz}
-    name: '@types/node'
-    version: 17.0.45
-    dev: false
-
   registry.npmmirror.com/@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/parse5/-/parse5-6.0.3.tgz}
     name: '@types/parse5'
@@ -4287,7 +4292,7 @@ packages:
     name: '@types/sax'
     version: 1.2.4
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/17.0.45
+      '@types/node': 18.11.18
     dev: false
 
   registry.npmmirror.com/@types/unist/2.0.6:
@@ -6178,7 +6183,7 @@ packages:
     engines: {node: '>=12.0.0', npm: '>=5.6.0'}
     hasBin: true
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/17.0.45
+      '@types/node': 17.0.45
       '@types/sax': registry.npmmirror.com/@types/sax/1.2.4
       arg: registry.npmmirror.com/arg/5.0.2
       sax: registry.npmmirror.com/sax/1.2.4
