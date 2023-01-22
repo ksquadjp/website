@@ -16,11 +16,11 @@ const news = (await Astro.glob("./news/*.{md,mdx}")).sort(
     <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header client:load title={SITE_TITLE} />
+    <Header client:load />
     <main>
       {
-        news.map((e, i) => (
-          <div key={i} class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
+        news.map((e) => (
+          <div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
             <div class="relative order-first md:order-last">
               <a href={e.url}>
                 <img
