@@ -11,7 +11,9 @@
     "check": "astro check && tsc --noEmit",
     "astro": "astro",
     "lint": "prettier -c --plugin-search-dir=. .",
-    "format": "prettier -w --plugin-search-dir=. . --cache"
+    "format": "prettier -w --plugin-search-dir=. . --cache",
+    "clean:dist": "node -e 'fs.rmSync(`dist/`, {recursive:true, force:true})'",
+    "clean:cache": "node -e 'fs.rmSync(`node_modules/.cache`, {recursive:true, force:true})'"
   },
   "packageManager": "pnpm@7.25.1",
   "dependencies": {
