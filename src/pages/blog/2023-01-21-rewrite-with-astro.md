@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Post.astro'
+layout: '@layouts/Post.astro'
 title: '公式ページを更にAstroで書き直しました'
 image: 'https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png'
 date: '2023-01-21'
@@ -189,7 +189,7 @@ Markdownファイルによって記述されたページのスタイルについ
 
 ```markdown
 ---
-layout: '../../layouts/Post.astro'
+layout: '@layouts/Post.astro'
 title: '公式ページを更にAstroで書き直しました'
 image: 'https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png'
 date: '2023-01-21'

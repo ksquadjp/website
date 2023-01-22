@@ -1,13 +1,10 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 
-import Head from "../components/base/Head.astro";
-import Header from "../components/base/Header.tsx";
-import Footer from "../components/base/Footer.astro";
-import Container from "../components/base/Container.astro";
-
-import About from "../components/company/About.astro";
-import Members from "../components/company/Members.astro";
+import Head from "@components/base/Head.astro";
+import Header from "@components/base/Header";
+import Footer from "@components/base/Footer.astro";
+import Container from "@components/base/Container.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,7 +13,7 @@ import Members from "../components/company/Members.astro";
     <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header client:load title={SITE_TITLE} />
+    <Header client:load />
     <main class="block h-full">
       <Container>
         <div class="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
