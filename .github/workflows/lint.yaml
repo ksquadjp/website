@@ -14,11 +14,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: ./.github/actions/install-nodejs
+      - name: Install tools
+        uses: ./.github/actions/install-tools
 
       - name: Install Dependencies
-        run: corepack pnpm install --dev --frozen-lockfile
+        run: pnpm install --dev --frozen-lockfile
 
       - name: Lint with Prettier
-        run: corepack pnpm lint
+        run: pnpm lint

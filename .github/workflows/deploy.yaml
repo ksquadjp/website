@@ -13,14 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: ./.github/actions/install-nodejs
+      - name: Install tools
+        uses: ./.github/actions/install-tools
 
       - name: Install Dependencies
-        run: corepack pnpm install --prod --frozen-lockfile
+        run: pnpm install --prod --frozen-lockfile
 
       - name: Build
-        run: corepack pnpm build
+        run: pnpm build
 
       - name: Set CNAME
         run: echo "ksquad.jp" > ./dist/CNAME
