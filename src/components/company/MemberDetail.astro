@@ -1,4 +1,6 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 export interface Props {
   name: string;
   nameKana: string;
@@ -20,7 +22,15 @@ const {
 
 <div class="lg:px-18 py-4 lg:py-0">
   <div class="relative mx-auto aspect-square h-40">
-    <img class="h-full w-full rounded-lg object-cover" src={image} alt={name} />
+    <Image
+      class="h-full w-full rounded-lg object-cover"
+      src={image}
+      alt={name}
+      format="webp"
+      width="400"
+      height="400"
+      fit="cover"
+    />
   </div>
   <div class="p-2 md:h-48">
     <h3 class="flex justify-center text-center text-xl font-bold lg:py-3 lg:text-2xl">
