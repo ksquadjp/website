@@ -4,7 +4,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 import Head from "@components/base/Head.astro";
 import Header from "@components/base/Header";
 import Footer from "@components/base/Footer.astro";
-import Container from "@components/base/Container.astro";
 
 const news = (await Astro.glob("./news/*.{md,mdx}")).sort(
   (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
