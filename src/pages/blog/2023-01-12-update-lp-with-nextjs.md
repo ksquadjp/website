@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Post.astro'
+layout: '@layouts/Post.astro'
 title: '公式ページをNext.jsで構築した'
 image: 'https://miro.medium.com/max/1400/1*2tmzU7bve-VlTkOMWsk_Hw.jpeg'
 date: '2023-01-12'

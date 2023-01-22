@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Post.astro'
+layout: '@layouts/Post.astro'
 title: 'ケイスクワッド合同会社を設立しました'
 date: '2022-08-01'
 image: '/top.jpg'
