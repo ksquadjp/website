@@ -43,8 +43,8 @@ const { title, description, image = "/top.jpg" } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCCQNP1TC3"></script>
-<script>
+<script type='text/partytown' async src="https://www.googletagmanager.com/gtag/js?id=G-XCCQNP1TC3"></script>
+<script type='text/partytown'>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
