@@ -30,8 +30,8 @@ const news = (await Astro.glob("./news/*.{md,mdx}")).sort(
                   src={e.frontmatter.image}
                   alt={e.frontmatter.itle}
                   format="webp"
-                  width="340"
-                  height="200"
+                  width={340}
+                  height={200}
                   fit="cover"
                 />
               </a>
