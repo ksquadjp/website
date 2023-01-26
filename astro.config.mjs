@@ -4,7 +4,9 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import preact from "@astrojs/preact";
+import partytown from "@astrojs/partytown";
 
+// https://astro.build/config
 export default defineConfig({
   site: "https://ksquad.jp",
   integrations: [
@@ -16,5 +18,6 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
     preact(),
+    partytown(),
   ],
 });
