@@ -18,6 +18,11 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
     preact(),
-    partytown(),
+    partytown({
+      // Adds dataLayer.push as a forwarding-event.
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
   ],
 });
