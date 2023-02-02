@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@astrojs/image': ^0.13.0
+  '@astrojs/image': ^0.14.0
   '@astrojs/mdx': ^0.15.0
   '@astrojs/partytown': ^1.0.3
   '@astrojs/preact': ^2.0.0
@@ -19,7 +19,7 @@ specifiers:
   typescript: ^4.9.4
 
 dependencies:
-  '@astrojs/image': 0.13.0_astro@2.0.1+sharp@0.31.3
+  '@astrojs/image': 0.14.0_astro@2.0.1+sharp@0.31.3
   '@astrojs/mdx': 0.15.0_astro@2.0.1+rollup@3.10.1
   '@astrojs/partytown': registry.npmmirror.com/@astrojs/partytown/1.0.3
   '@astrojs/preact': 2.0.0_preact@10.11.3
@@ -59,10 +59,10 @@ packages:
   /@astrojs/compiler/1.0.1:
     resolution: {integrity: sha512-77aacobLKcL98NmhK3OBS5EHIrX9gs1ckB/vGSIdkVZuB7u51V4jh05I6W0tSvG7/86tALv6QtHTRZ8rLhFTbQ==}
 
-  /@astrojs/image/0.13.0_astro@2.0.1+sharp@0.31.3:
-    resolution: {integrity: sha512-18IlEsb/mau4ji9sR7+JVPFJHtgIk7Qh/Ol+Hh/JNcPn/oMrjP6FMU3VrNHPy5Ltvw1DyzkDV4wu+jYKU/V0Hw==}
+  /@astrojs/image/0.14.0_astro@2.0.1+sharp@0.31.3:
+    resolution: {integrity: sha512-prrBz2jZ8bsHm9uNlgeuf+jxQ4jHUD08h7+GXQv1DGfbYQuXQaupJlAg2/hJHmzE5lEvDCL0OYKTXAJ03Gorpw==}
     peerDependencies:
-      astro: ^2.0.0
+      astro: ^2.0.5
       sharp: '>=0.31.0'
     peerDependenciesMeta:
       sharp:
@@ -76,7 +76,6 @@ packages:
       magic-string: 0.27.0
       mime: 3.0.0
       sharp: 0.31.3
-      slash: 4.0.0
     dev: false
 
   /@astrojs/language-server/0.28.3:
