@@ -7,9 +7,9 @@ import Head from "@components/base/Head.astro";
 import Header from "@components/base/Header";
 import Footer from "@components/base/Footer.astro";
 
-const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-);
+import posts from "../../.contents/posts";
+
+const blogs = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
 ---
 
 <!DOCTYPE html>
@@ -21,25 +21,12 @@ const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     <Header client:load />
     <main>
       {
-        news.map((e) => (
-          <div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
-            <div class="relative order-first md:order-last">
-              <a href={e.url}>
-                <Image
-                  class="mx-auto aspect-video h-48 rounded-lg object-cover"
-                  src={e.frontmatter.image}
-                  alt={e.frontmatter.itle}
-                  format="webp"
-                  width={340}
-                  height={200}
-                  fit="cover"
-                />
-              </a>
-            </div>
-            <div class="order-last mx-auto content-center px-6 py-6 md:order-first md:mx-0 md:px-12">
-              <time>{e.frontmatter.date}</time>
-              <a href={e.url}>
-                <h2 class="font-bold">{e.frontmatter.title}</h2>
+        blogs.map((e) => (
+          <div class="my-6 grid grid-cols-1 border border-gray-500 md:mx-48 md:grid-cols-2 xl:mx-96">
+            <div class="order-last mx-auto my-6 mx-6 content-center md:order-first md:mx-0 md:mx-12">
+              <time>{e.isoDate}</time>
+              <a href={e.link}>
+                <h2 class="font-bold">{e.title}</h2>
               </a>
             </div>
           </div>
