@@ -12,4 +12,13 @@ export const members: Member[] = [
     githubUsername: "umepon0626",
     websiteUrl: "https://qiita.com/ryuichiastrona",
   },
+  {
+    id: "Ksquad Official",
+    name: "Ksquad",
+    role: "公式",
+    bio: "Ksquad",
+    avatarSrc: "https://ksquad.jp/logos/ksquad_logo.svg",
+    websiteUrl: "https://ksquad.jp",
+    sources: ["https://ksquad.jp/rss.xml"],
+  },
 ];
