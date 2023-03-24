@@ -20,3 +20,6 @@ pnpm-debug.log*
 
 # asdf
 !.tool-versions
+
+# the directory which contains members blog datas (by feedsCollector)
+.contents
