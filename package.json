@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "collect_rss": "ts-node --project tsconfig.feedsBuilder.json ./src/feedsBuilder/posts.ts",
+    "collect_rss": "ts-node --project tsconfig.feedsCollector.json ./src/feedsCollector/collect.ts",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
     "astro": "astro",
