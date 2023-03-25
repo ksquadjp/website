@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
-    "collect_rss": "ts-node --project tsconfig.feedsCollector.json ./src/feedsCollector/collect.ts",
+    "build": "run-s build:collect_rss build:astro",
+    "build:astro": "astro build",
+    "build:collect_rss": "ts-node --project tsconfig.feedsCollector.json ./src/feedsCollector/collect.ts",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
     "astro": "astro",
