@@ -1,0 +1,10 @@
+---
+import { Image } from "@astrojs/image/components";
+const { member, blog } = Astro.props;
+const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${origin}`;
+---
+
+<div>
+  <Image src={faviconSrc} />
+  <p>{origin}</p>
+</div>
