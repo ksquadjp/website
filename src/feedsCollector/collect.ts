@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import Parser from "rss-parser";
 import { members } from "./members";
-import type { PostItem, Member, FeedItem } from "./types";
+import type { PostItem, Member, FeedItem } from "@types";
 
 function isValidUrl(str: string): boolean {
   try {
