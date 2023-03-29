@@ -17,7 +17,7 @@ export const members: Member[] = [
     name: "Ksquad",
     role: "公式",
     bio: "Ksquad",
-    avatarSrc: "https://ksquad.jp/logos/ksquad_logo.svg",
+    avatarSrc: "/icons/favicon32.png",
     websiteUrl: "https://ksquad.jp",
     sources: ["https://ksquad.jp/rss.xml"],
   },

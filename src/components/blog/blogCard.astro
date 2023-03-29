@@ -1,10 +1,30 @@
 ---
 import { Image } from "@astrojs/image/components";
-const { member, blog } = Astro.props;
-const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${origin}`;
+import AvatarTip from "@components/blog/AvatarTip.astro";
+import { Member, PostItem } from "@types";
+import posts from "@blogContents";
+import { members } from "@feedsCollector/members";
+interface Props {
+  blog: PostItem;
+}
+
+function getMemberById(id: string) {
+  return members.find((member) => member.id === id);
+}
+const { blog } = Astro.props;
+const member = getMemberById(blog.authorId);
+const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${blog.link}`;
 ---
 
-<div>
-  <Image src={faviconSrc} />
-  <p>{origin}</p>
+<div class="h-auto w-8/12 border">
+  <div class="flex flex-row">
+    <Image src={`${blog.url}`} />
+    <div class="flex-node px-1">
+      <AvatarTip avatarSrc={member.avatarSrc} />
+    </div>
+    <div class="flex-node">
+      <p>{member.id}</p>
+    </div>
+  </div>
+  <h2>{blog.title}</h2>
 </div>

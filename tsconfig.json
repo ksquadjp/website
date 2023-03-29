@@ -11,6 +11,7 @@
       "@styles/*": ["src/styles/*"],
       "@config": ["src/config.ts"],
       "@types": ["src/types"],
+      "@feedsCollector/*": ["src/feedsCollector/*"],
       "@blogContents": [".contents"],
     }
   }

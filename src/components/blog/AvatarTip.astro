@@ -1,0 +1,10 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { Member } from "@types";
+type Props = Pick<Member, "avatarSrc">;
+const { avatarSrc } = Astro.props;
+---
+
+<div>
+  <Image src={avatarSrc} width={30} height={30} class="rounded-full" />
+</div>

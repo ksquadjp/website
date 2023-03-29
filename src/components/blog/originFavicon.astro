@@ -2,9 +2,9 @@
 import { Image } from "@astrojs/image/components";
 const { origin } = Astro.props;
 const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${origin}`;
+console.log(faviconSrc);
 ---
 
 <div>
-  <Image src={faviconSrc} />
-  <p>{origin}</p>
+  <Image src={faviconSrc} width={10} height={10} />
 </div>
