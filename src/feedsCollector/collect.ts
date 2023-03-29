@@ -1,6 +1,8 @@
 import fs from "fs-extra";
 import Parser from "rss-parser";
+import * as cheerio from "cheerio";
 import { members } from "./members";
+import { createHash } from "crypto";
 import type { PostItem, Member, FeedItem } from "@types";
 
 function isValidUrl(str: string): boolean {
@@ -33,6 +35,27 @@ async function fetchFeedItems(url: string) {
     .filter(({ title, link }) => title && link && isValidUrl(link)) as FeedItem[];
 }
 
+async function fetchOGP(url: string) {
+  const fileName = ".contents/" + createHash("md5").update(url).digest("hex") + ".png";
+  const ogpImageUrl = await fetch(url)
+    .then((response) => response.text())
+    .then((body) => {
+      const $ = cheerio.load(body);
+      return $('meta[property="og:image"]').attr("content");
+    });
+
+  if (ogpImageUrl != null) {
+    await fetch(ogpImageUrl)
+      .then((res) => res.arrayBuffer())
+      .then((res) => Buffer.from(res))
+      .then((buf) => {
+        fs.writeFileSync(fileName, buf);
+      });
+    return fileName;
+  }
+  return null;
+}
+
 async function getFeedItemsFromSources(sources: undefined | string[]) {
   if (!sources?.length) return [];
   let feedItems: FeedItem[] = [];
@@ -48,13 +71,17 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
   const feedItems = await getFeedItemsFromSources(sources);
   if (!feedItems) return [];
 
-  let postItems = feedItems.map((item) => {
-    return {
-      ...item,
-      authorName: name,
-      authorId: id,
-    };
-  });
+  let postItems = await Promise.all(
+    feedItems.map(async (item) => {
+      const ogpFileName = await fetchOGP(item.link);
+      return {
+        ...item,
+        ogpPath: ogpFileName || "",
+        authorName: name,
+        authorId: id,
+      };
+    })
+  );
   // remove items which not matches includeUrlRegex
   if (includeUrlRegex) {
     postItems = postItems.filter((item) => {

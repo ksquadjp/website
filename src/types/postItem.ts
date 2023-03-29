@@ -3,6 +3,7 @@ export type PostItem = {
   authorName: string;
   title: string;
   link: string;
+  ogpPath: string;
   contentSnippet?: string;
   isoDate?: string;
   dateMiliSeconds: number;
