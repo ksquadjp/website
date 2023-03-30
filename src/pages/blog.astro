@@ -21,8 +21,8 @@ const blogs = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.is
   <body>
     <Header client:load />
     <main>
-      <div class="grid grid-cols-1 place-items-center gap-4">
-        {blogs.map((e) => <BlogCard blog={e} />)}
+      <div>
+        {blogs.map((e, i) => <BlogCard blog={e} key={i} />)}
       </div>
     </main>
     <Footer />

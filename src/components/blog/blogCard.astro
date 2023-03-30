@@ -4,9 +4,9 @@ import AvatarTip from "@components/blog/AvatarTip.astro";
 import { Member, PostItem } from "@types";
 import posts from "@blogContents";
 import { members } from "@feedsCollector/members";
-interface Props {
+type Props = {
   blog: PostItem;
-}
+};
 
 function getMemberById(id: string) {
   return members.find((member) => member.id === id);
@@ -14,18 +14,28 @@ function getMemberById(id: string) {
 const { blog } = Astro.props;
 const member = getMemberById(blog.authorId);
 const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${blog.link}`;
-console.log(blog.url);
 ---
 
-<div class="h-auto w-8/12 border">
-  <div class="flex flex-row">
-    <Image src={`${blog.ogpPath}`} width={30} height={30} />
-    <div class="flex-node px-1">
-      <AvatarTip avatarSrc={member.avatarSrc} />
-    </div>
-    <div class="flex-node">
-      <p>{member.id}</p>
+<div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
+  <div class="oder-first relative md:order-last">
+    <Image
+      class="mx-auto aspect-video h-48 rounded-lg object-cover"
+      src={`${blog.ogpPath}`}
+      width={340}
+      height={200}
+      alt={blog.title}
+    />
+  </div>
+  <div class="order-last mx-auto content-center px-6 py-6 md:order-first md:mx-0 md:px-12">
+    <time>{blog.isoDate.split("T")[0]}</time>
+    <h2 class="py-3 font-bold">{blog.title}</h2>
+    <div class="flex flex-row pt-10">
+      <div class="flex-node">
+        <AvatarTip avatarSrc={member.avatarSrc} />
+      </div>
+      <div class="flex-node">
+        <p class="p-1">{member.id}</p>
+      </div>
     </div>
   </div>
-  <h2>{blog.title}</h2>
 </div>
