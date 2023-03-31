@@ -1,15 +1,15 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 
 import Head from "@components/base/Head.astro";
 import Header from "@components/base/Header";
 import Footer from "@components/base/Footer.astro";
+import type { PostItem } from "@types";
 
-import posts from "../../.contents/posts";
+import * as data from "@blogContents/posts.json";
 import BlogCard from "@components/blog/BlogCard.astro";
 
+const posts: PostItem[] = data;
 const blogs = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
 ---
 

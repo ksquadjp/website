@@ -1,9 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
-import AvatarTip from "@components/blog/AvatarTip.astro";
-import { Member, PostItem } from "@types";
-import posts from "@blogContents";
 import { members } from "@feedsCollector/members";
+import { PostItem } from "@types";
 type Props = {
   blog: PostItem;
 };
@@ -13,7 +11,6 @@ function getMemberById(id: string) {
 }
 const { blog } = Astro.props;
 const member = getMemberById(blog.authorId);
-const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${blog.link}`;
 ---
 
 <div class="grid grid-cols-1 py-6 md:relative md:grid-cols-2 md:px-48 xl:px-96">
