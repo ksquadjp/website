@@ -28,7 +28,7 @@ const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
                 <Image
                   class="mx-auto aspect-video h-48 rounded-lg object-cover"
                   src={e.frontmatter.image}
-                  alt={e.frontmatter.itle}
+                  alt={e.frontmatter.title}
                   format="webp"
                   width={340}
                   height={200}
