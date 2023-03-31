@@ -6,10 +6,9 @@ import Header from "@components/base/Header";
 import Footer from "@components/base/Footer.astro";
 import type { PostItem } from "@types";
 
-import * as data from "@blogContents/posts.json";
+import posts from "@blogContents/posts.json";
 import BlogCard from "@components/blog/BlogCard.astro";
 
-const posts: PostItem[] = data;
 const blogs: PostItem[] = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
 ---
 
@@ -22,7 +21,7 @@ const blogs: PostItem[] = posts.sort((a, b) => new Date(b.isoDate).valueOf() - n
     <Header client:load />
     <main>
       <div>
-        {blogs.map((e) => <BlogCard blog={e} />)}
+        {blogs.map((blog) => <BlogCard blog={blog} />)}
       </div>
     </main>
     <Footer />
