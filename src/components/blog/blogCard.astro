@@ -16,7 +16,7 @@ const member = getMemberById(blog.authorId);
 const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${blog.link}`;
 ---
 
-<div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
+<div class="grid grid-cols-1 py-6 md:relative md:grid-cols-2 md:px-48 xl:px-96">
   <div class="oder-first relative md:order-last">
     <Image
       class="mx-auto aspect-video h-48 rounded-lg object-cover"
@@ -26,16 +26,11 @@ const faviconSrc = `https://www.google.com/s2/favicons?sz=32&domain_url=${blog.l
       alt={blog.title}
     />
   </div>
-  <div class="order-last mx-auto content-center px-6 py-6 md:order-first md:mx-0 md:px-12">
+  <div class="relative order-last mx-auto w-80 content-center py-6 md:left-0 md:order-first md:px-0 xl:px-6">
     <time>{blog.isoDate.split("T")[0]}</time>
     <h2 class="py-3 font-bold">{blog.title}</h2>
-    <div class="flex flex-row pt-10">
-      <div class="flex-node">
-        <AvatarTip avatarSrc={member.avatarSrc} />
-      </div>
-      <div class="flex-node">
-        <p class="p-1">{member.id}</p>
-      </div>
+    <div class="flex-node absolute md:left-0 md:bottom-0 xl:bottom-6 xl:left-12">
+      <p class="text-gray-700">{member.id}</p>
     </div>
   </div>
 </div>
