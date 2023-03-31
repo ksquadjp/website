@@ -10,7 +10,7 @@ import * as data from "@blogContents/posts.json";
 import BlogCard from "@components/blog/BlogCard.astro";
 
 const posts: PostItem[] = data;
-const blogs = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
+const blogs: PostItem[] = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
 ---
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ const blogs = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.is
     <Header client:load />
     <main>
       <div>
-        {blogs.map((e, i) => <BlogCard blog={e} key={i} />)}
+        {blogs.map((e) => <BlogCard blog={e} />)}
       </div>
     </main>
     <Footer />
