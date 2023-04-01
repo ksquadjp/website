@@ -22,4 +22,4 @@ pnpm-debug.log*
 !.tool-versions
 
 # the directory which contains members blog datas (by feedsCollector)
-.contents
+.contents/ogp_images
