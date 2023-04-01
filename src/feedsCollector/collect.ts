@@ -36,7 +36,7 @@ async function fetchFeedItems(url: string) {
 }
 
 async function fetchOGP(url: string) {
-  const fileName = ".contents/" + createHash("md5").update(url).digest("hex") + ".png";
+  const fileName = ".contents/ogp_images/" + createHash("md5").update(url).digest("hex") + ".png";
   const ogpImageUrl = await fetch(url)
     .then((response) => response.text())
     .then((body) => {
@@ -100,11 +100,12 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
 
 (async function () {
   console.log("rss-feeds collecting script starts");
+  fs.ensureDirSync(".contents");
+  fs.ensureDirSync(".contents/ogp_images"); // 下でogp画像の保存を行うので、先にmkdirしておく。
   for (const member of members) {
     const items = await getMemberFeedItems(member);
     if (items) allPostItems = [...allPostItems, ...items];
   }
   allPostItems.sort((a, b) => b.dateMiliSeconds - a.dateMiliSeconds);
-  fs.ensureDirSync(".contents");
   fs.writeJsonSync(".contents/posts.json", allPostItems);
 })();

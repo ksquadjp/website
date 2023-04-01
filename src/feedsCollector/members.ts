@@ -20,5 +20,6 @@ export const members: Member[] = [
     twitterUsername: "@astrona0626",
     githubUsername: "umepon0626",
     websiteUrl: "https://qiita.com/ryuichiastrona",
+    includeUrlRegex: "^.+/e213c6a11f5b43821aab$",
   },
 ];
