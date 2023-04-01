@@ -14,6 +14,7 @@ K SquadのLPのプロジェクトです。Astroで書かれています。
 ### 個人のブログ記事をLPに掲載したい場合
 ケイスクワッド公式のブログ以外に個人のブログをLPに掲載することができます。
 方法としては、以下のように`src/feedsCollector/members.ts`に自分のブログのRSSフィードのURLを記載することで自動的にLPに組み込まれます。
+この部分の仕組みは[`team-blog-hub`](docs/add_rss_feed_collector_to_readme)を参考に実装しています。
 
 ```typescript
 export const members: Member[] = [
