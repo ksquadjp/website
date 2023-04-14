@@ -31,13 +31,7 @@ const member = getMemberById(blog.authorId);
       <div class="relative col-span-10 col-start-2 py-6 md:left-0">
         <time>{blog.isoDate.split("T")[0]}</time>
         <h2 class="py-3 font-bold">{blog.title}</h2>
-        {
-          member && (
-            <div class="md:absolute md:bottom-0 md:left-0 ">
-              <p class="text-gray-700">{member.id}</p>
-            </div>
-          )
-        }
+        {member && <div class="text-gray-700">{member.id}</div>}
       </div>
     </div>
   </div>
