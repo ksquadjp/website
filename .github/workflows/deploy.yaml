@@ -19,7 +19,7 @@ jobs:
         uses: ./.github/actions/install-tools
 
       - name: Install Dependencies
-        run: pnpm install --prod --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm collect_rss && pnpm build
