@@ -1,15 +1,16 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 
 import Head from "@components/base/Head.astro";
 import Header from "@components/base/Header";
 import Footer from "@components/base/Footer.astro";
+import type { PostItem } from "@types";
 
-const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-);
+import data from "@blogContents/posts.json";
+import BlogCard from "@components/blog/BlogCard.astro";
+
+const posts = data as PostItem[];
+const blogs: PostItem[] = posts.sort((a, b) => new Date(b.isoDate).valueOf() - new Date(a.isoDate).valueOf());
 ---
 
 <!DOCTYPE html>
@@ -20,31 +21,9 @@ const news = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   <body>
     <Header client:load />
     <main>
-      {
-        news.map((e) => (
-          <div class="grid grid-cols-1 py-6 md:grid-cols-2 md:px-48 xl:px-96">
-            <div class="relative order-first md:order-last">
-              <a href={e.url}>
-                <Image
-                  class="mx-auto aspect-video h-48 rounded-lg object-cover"
-                  src={e.frontmatter.image}
-                  alt={e.frontmatter.title}
-                  format="webp"
-                  width={340}
-                  height={200}
-                  fit="cover"
-                />
-              </a>
-            </div>
-            <div class="order-last mx-auto content-center px-6 py-6 md:order-first md:mx-0 md:px-12">
-              <time>{e.frontmatter.date}</time>
-              <a href={e.url}>
-                <h2 class="font-bold">{e.frontmatter.title}</h2>
-              </a>
-            </div>
-          </div>
-        ))
-      }
+      <div>
+        {blogs.map((blog) => <BlogCard blog={blog} />)}
+      </div>
     </main>
     <Footer />
   </body>

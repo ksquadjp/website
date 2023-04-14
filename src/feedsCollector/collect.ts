@@ -1,7 +1,9 @@
 import fs from "fs-extra";
 import Parser from "rss-parser";
+import * as cheerio from "cheerio";
 import { members } from "./members";
-import type { PostItem, Member, FeedItem } from "./types";
+import { createHash } from "crypto";
+import type { PostItem, Member, FeedItem } from "@types";
 
 function isValidUrl(str: string): boolean {
   try {
@@ -33,6 +35,27 @@ async function fetchFeedItems(url: string) {
     .filter(({ title, link }) => title && link && isValidUrl(link)) as FeedItem[];
 }
 
+async function fetchOGP(url: string) {
+  const fileName = ".contents/ogp_images/" + createHash("md5").update(url).digest("hex") + ".png";
+  const ogpImageUrl = await fetch(url)
+    .then((response) => response.text())
+    .then((body) => {
+      const $ = cheerio.load(body);
+      return $('meta[property="og:image"]').attr("content");
+    });
+
+  if (ogpImageUrl != null) {
+    await fetch(ogpImageUrl)
+      .then((res) => res.arrayBuffer())
+      .then((res) => Buffer.from(res))
+      .then((buf) => {
+        fs.writeFileSync(fileName, buf);
+      });
+    return fileName;
+  }
+  return null;
+}
+
 async function getFeedItemsFromSources(sources: undefined | string[]) {
   if (!sources?.length) return [];
   let feedItems: FeedItem[] = [];
@@ -48,13 +71,17 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
   const feedItems = await getFeedItemsFromSources(sources);
   if (!feedItems) return [];
 
-  let postItems = feedItems.map((item) => {
-    return {
-      ...item,
-      authorName: name,
-      authorId: id,
-    };
-  });
+  let postItems = await Promise.all(
+    feedItems.map(async (item) => {
+      const ogpFileName = await fetchOGP(item.link);
+      return {
+        ...item,
+        ogpPath: ogpFileName || "",
+        authorName: name,
+        authorId: id,
+      };
+    })
+  );
   // remove items which not matches includeUrlRegex
   if (includeUrlRegex) {
     postItems = postItems.filter((item) => {
@@ -73,11 +100,12 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
 
 (async function () {
   console.log("rss-feeds collecting script starts");
+  fs.ensureDirSync(".contents");
+  fs.ensureDirSync(".contents/ogp_images"); // 下でogp画像の保存を行うので、先にmkdirしておく。
   for (const member of members) {
     const items = await getMemberFeedItems(member);
     if (items) allPostItems = [...allPostItems, ...items];
   }
   allPostItems.sort((a, b) => b.dateMiliSeconds - a.dateMiliSeconds);
-  fs.ensureDirSync(".contents");
   fs.writeJsonSync(".contents/posts.json", allPostItems);
 })();

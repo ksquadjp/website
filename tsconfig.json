@@ -9,7 +9,10 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
-      "@config": ["src/config.ts"]
+      "@config": ["src/config.ts"],
+      "@types": ["src/types"],
+      "@feedsCollector/*": ["src/feedsCollector/*"],
+      "@blogContents/*": [".contents/*"]
     }
   }
 }
