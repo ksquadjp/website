@@ -36,7 +36,6 @@ async function fetchFeedItems(url: string) {
 }
 
 async function fetchOGP(url: string) {
-  const fileName = ".contents/ogp_images/" + createHash("md5").update(url).digest("hex") + ".png";
   const ogpImageUrl = await fetch(url)
     .then((response) => response.text())
     .then((body) => {
@@ -44,12 +43,13 @@ async function fetchOGP(url: string) {
       return $('meta[property="og:image"]').attr("content");
     });
 
+  const fileName = "/ogp_images/" + createHash("md5").update(url).digest("hex") + ".png";
   if (ogpImageUrl != null) {
     await fetch(ogpImageUrl)
       .then((res) => res.arrayBuffer())
       .then((res) => Buffer.from(res))
       .then((buf) => {
-        fs.writeFileSync(fileName, buf);
+        fs.writeFileSync("public" + fileName, buf);
       });
     return fileName;
   }
@@ -101,7 +101,7 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
 (async function () {
   console.log("rss-feeds collecting script starts");
   fs.ensureDirSync(".contents");
-  fs.ensureDirSync(".contents/ogp_images"); // 下でogp画像の保存を行うので、先にmkdirしておく。
+  fs.ensureDirSync("public/ogp_images"); // 下でogp画像の保存を行うので、先にmkdirしておく。
   for (const member of members) {
     const items = await getMemberFeedItems(member);
     if (items) allPostItems = [...allPostItems, ...items];
