@@ -5,20 +5,27 @@ import MemberDetail from "./MemberDetail.astro";
 <div class="py-8 lg:mx-48">
   <h2 class="text-6xl font-bold">メンバー</h2>
   <hr />
-  <div class="grid h-auto grid-cols-1 p-6 sm:grid-cols-2">
+  <div class="grid h-auto grid-cols-1 p-6 sm:grid-cols-3">
     <MemberDetail
       name="Yusuke Kominami"
       nameKana="小南 佑介"
       image="/assets/komi.jpg"
       title="代表社員"
-      link="komi.dev"
-      description="2020年京都大学理学部卒業。同年ソフトバンク株式会社に入社し、フルスタックエンジニアとして開発に参画。2021年にヘイ株式会社（後にSTORES株式会社に商号変更）に入社し、1人目のデータエンジニアとしてデータ基盤を構築。"
+      description="2020年京都大学理学部卒業。同年ソフトバンク株式会社に入社し、フルスタックエンジニアとして開発に参画。2021年にSTORES株式会社に入社し、1人目のデータエンジニアとしてデータ基盤をゼロから構築。"
     />
     <MemberDetail
       name="Taichi Kasai"
       nameKana="葛西 太一"
       title="パートナー"
+      image="/assets/kasai.jpg"
       description="2021年京都大学理学部卒業。学生時代よりLINE社やマネーフォワード社にて開発業務に従事。同年リクルート株式会社に入社し、機械学習を用いたレコメンデーションシステムの開発をリード。2017年度の京都大学理学部首席入学。"
+    />
+    <MemberDetail
+      name="Yosuke Koshiba"
+      nameKana="小柴 鷹介"
+      title="コンサルタント"
+      image="/assets/koshiba.png"
+      description="2022年京都大学理学研究科博士前期課程修了。学生時代は宇宙物理学を研究し、アイフル株式会社にてソフトウェアエンジニアとしてインターンを経験。卒業後リクルート株式会社に入社し、プロダクトデザイナーとしてUI・UX設計に携わる。"
     />
   </div>
 </div>
