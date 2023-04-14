@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   build_and_deploy:
@@ -20,7 +22,7 @@ jobs:
         run: pnpm install --prod --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: pnpm collect_rss && pnpm build
 
       - name: Set CNAME
         run: echo "ksquad.jp" > ./dist/CNAME
