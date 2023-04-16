@@ -20,7 +20,7 @@ const {
 ---
 
 <div class="lg:px-18 py-4 lg:py-0">
-  <div class="relative mx-auto aspect-square h-40">
+  <div class="relative mx-auto aspect-square h-60">
     <Image
       class="h-full w-full rounded-lg object-cover"
       src={image}
@@ -31,13 +31,13 @@ const {
       fit="cover"
     />
   </div>
-  <div class="p-2 md:h-48">
+  <div class="p-2 md:h-36">
     <h3 class="flex justify-center text-center text-xl font-bold lg:py-3 lg:text-2xl">
       {nameKana}
       <br />
       {name}
     </h3>
-    <div class="py-2">
+    <div class="">
       <h4 class="text-center text-stone-700">{title}</h4>
       {
         link && (
