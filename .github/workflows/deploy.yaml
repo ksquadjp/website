@@ -22,7 +22,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm collect_rss && pnpm build
+        run: pnpm build
 
       - name: Set CNAME
         run: echo "ksquad.jp" > ./dist/CNAME
