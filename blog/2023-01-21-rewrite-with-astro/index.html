@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) --><script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-XCCQNP1TC3"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-XCCQNP1TC3");
+</script>
+
+<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="sitemap" href="/sitemap-index.xml">
+<link rel="author" href="/humans.txt">
+<link rel="icon" type="image/png" href="/icons/favicon32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/icons/favicon64.png" sizes="64x64">
+<link rel="icon" type="image/png" href="/icons/favicon128.png" sizes="128x128">
+<meta name="generator" content="Astro v2.4.3">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://ksquad.jp/blog/2023-01-21-rewrite-with-astro/">
+
+<!-- Primary Meta Tags -->
+<title>公式ページを更にAstroで書き直しました</title>
+<meta name="title" content="公式ページを更にAstroで書き直しました">
+<meta name="description">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ksquad.jp/blog/2023-01-21-rewrite-with-astro/">
+<meta property="og:title" content="公式ページを更にAstroで書き直しました">
+<meta property="og:description">
+<meta property="og:image" content="https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://ksquad.jp/blog/2023-01-21-rewrite-with-astro/">
+<meta property="twitter:title" content="公式ページを更にAstroで書き直しました">
+<meta property="twitter:description">
+<meta property="twitter:image" content="https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png">
+    
+  <link rel="stylesheet" href="/_astro/2023-01-12-update-lp-with-nextjs.2229edda.css" />
+<link rel="stylesheet" href="/_astro/2023-01-12-update-lp-with-nextjs.4a83be73.css" /><script>!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.7.6 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,p,l){function u(){l||(l=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.7.6":"sandbox-sw.html?"+Date.now()),e.body.appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){p=t,e.split(".").map((function(e,n,i){p=p[i[n]]=n+1<i.length?"push"==i[n+1]?[]:p[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script></head>
+
+  <body>
+    <nav class="rounded border-gray-200 bg-white px-2 py-2.5 sm:px-4"><div class="container mx-auto flex flex-wrap items-center justify-between"><a href="/" class="flex items-center"><img src="/logos/ksquad_logo.svg" class="mr-3 h-8" alt="K Squad" /></a><button type="button" class="ml-3 inline-flex items-center rounded-lg p-2 text-sm focus:outline-none focus:ring-gray-200 md:hidden"><span class="sr-only">Open main menu</span><svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg></button><div class="hidden md:inline-block w-full md:w-auto lg:order-1 lg:w-auto" id="mobile-navbar"><ul class="mt-4 flex flex-col rounded-lg p-4 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium"><li><a href="/company" class="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent">Company</a></li><li><a href="/news" class="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent">News</a></li><li><a href="/blog" class="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent">Blog</a></li><li><a href="/careers" class="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent">Careers</a></li><li><a href="/contact" class="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent">Contact</a></li></ul></div></div></nav>
+    <main>
+      <article>
+        <div class="container mx-auto px-5">
+  
+          <h1 class="py-8 text-4xl font-bold">公式ページを更にAstroで書き直しました</h1>
+          <div class="py-2">
+            <time class="">2023-01-21</time>
+          </div>
+          <div class="relative">
+            <img alt="" class="w-screen" fit="cover" width="1200" height="600" src="/_astro/screenshot_27BjvU.webp" loading="lazy" decoding="async">
+          </div>
+          <hr>
+          <div class="markdown">
+            <h2 id="astroでlpを書き直した">AstroでLPを書き直した</h2>
+<p>代表の<a href="https://twitter.com/komi_edtr_1230">komi</a>です。</p>
+<p>つい先週くらいにLPをNext.jsで作り直したというエントリーを書いたのですが、それをメンバーに見せたところ <strong>なんでNext.js使ったの？時代はAstroだよ？</strong> というツッコミをもらいました。</p>
+<p>そこからAstroについて調べてみたところ <strong>なんだ、Next.jsじゃなくてAstroでいいじゃん</strong> となったので6時間程度の突貫工事でゼロから書き直しました。</p>
+<h2 id="astroとは何か">Astroとは何か</h2>
+<p>もうすでに一部の技術情報にアンテナを張っている人はご存知ですが、Astroは以下のような思想で設計されたフロントエンドフレームワークです。</p>
+<ul>
+<li>静的サイトに特化</li>
+<li>なるべくJavaScriptを排除してピュアなHTMLを配信</li>
+<li>とにかく高速化</li>
+</ul>
+<p>感覚としてGatsbyに近いプロダクトとなります。</p>
+<p>こうした特徴はReactやSvelteといったフレームワークに依存しない独立したプロダクトとなっているため、結果としてAstroランタイムとしてオーバーヘッドが小さくなっているといえます。</p>
+<h2 id="nextjsからastroへ">Next.jsからAstroへ</h2>
+<p>AstroでWebサイトを作るとき、<code>.astro</code>という拡張子を持つファイルによって構成していきます。</p>
+<p>この<code>.astro</code>ファイルとはどのようなものかというと、以下のような具合になっています(<a href="https://zenn.dev/kagan/articles/ad0e327db0265a">出典</a>)。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #6A737D">// フロントマッター内にJS/TSが書ける！（ビルド時に実行される）</span></span>
+<span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">list</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> [</span><span style="color: #9ECBFF">'aaa'</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">'bbb'</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">'ccc'</span><span style="color: #E1E4E8">];</span></span>
+<span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">&#x3C;!-- Reactのように（ほぼ）JSXで書ける！ --></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  {list.</span><span style="color: #B392F0">map</span><span style="color: #E1E4E8">((</span><span style="color: #FFAB70">item</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">=></span><span style="color: #E1E4E8"> &#x3C;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">>{item}&#x3C;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">>)}</span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">lang</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"scss"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">// VueのようなScoped CSSが書ける！</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #85E89D">li</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #6A737D">// Sassなどのメタ言語も使える！</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #85E89D">&#x26;</span><span style="color: #B392F0">:first-child</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">      </span><span style="color: #79B8FF">color</span><span style="color: #E1E4E8">: </span><span style="color: #79B8FF">red</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">  }</span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">script</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #6A737D">// ブラウザで実行されるJS/TSも書ける！</span></span>
+<span class="line"><span style="color: #E1E4E8">  console.</span><span style="color: #B392F0">log</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">'in browser'</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">script</span><span style="color: #E1E4E8">></span></span></code></pre>
+<p>このファイル内の<code>---</code>によって括られたコードフェンスにはJavaScriptを書いていくのですが、ビルド時にはこの部分が排除されてピュアなHTMLが吐き出されます。</p>
+<h2 id="部品としてのastroコンポーネント">部品としてのAstroコンポーネント</h2>
+<p>この<code>.astro</code>ファイルはJSXのような扱い方もでき、例えば弊社の<a href="/careers">採用ページ</a>での募集ポジションについてのコンポーネントは以下のようになっています。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">interface</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Props</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #FFAB70">postion</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8"> </span><span style="color: #FFAB70">tasks</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">[];</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #FFAB70">skills</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">[];</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> { </span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">position</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">tasks</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #79B8FF">skills</span><span style="color: #E1E4E8">,</span></span>
+<span class="line"><span style="color: #E1E4E8">} </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> Astro.props;</span></span>
+<span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-6"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">h3</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-3 text-3xl font-bold"</span><span style="color: #E1E4E8">>{position}&#x3C;/</span><span style="color: #85E89D">h3</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">h4</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-2 text-xl font-bold"</span><span style="color: #E1E4E8">>主な業務&#x3C;/</span><span style="color: #85E89D">h4</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"mx-16 list-disc"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">        {tasks.</span><span style="color: #B392F0">map</span><span style="color: #E1E4E8">((</span><span style="color: #FFAB70">task</span><span style="color: #E1E4E8">, </span><span style="color: #FFAB70">i</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">=></span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #E1E4E8">            &#x3C;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">key</span><span style="color: #F97583">=</span><span style="color: #E1E4E8">{i} </span><span style="color: #B392F0">class</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">"list-item"</span><span style="color: #E1E4E8">>{task}&#x3C;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">        )}</span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;/</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">h4</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-2 text-xl font-bold"</span><span style="color: #E1E4E8">>歓迎スキル・経験等&#x3C;/</span><span style="color: #85E89D">h4</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"mx-16 list-disc"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">        {skills.</span><span style="color: #B392F0">map</span><span style="color: #E1E4E8">((</span><span style="color: #FFAB70">skill</span><span style="color: #E1E4E8">, </span><span style="color: #FFAB70">i</span><span style="color: #E1E4E8">) </span><span style="color: #F97583">=></span><span style="color: #E1E4E8"> </span></span>
+<span class="line"><span style="color: #E1E4E8">            &#x3C;</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">key</span><span style="color: #F97583">=</span><span style="color: #E1E4E8">{i} </span><span style="color: #B392F0">class</span><span style="color: #F97583">=</span><span style="color: #9ECBFF">"list-item"</span><span style="color: #E1E4E8">>{skill}&#x3C;/</span><span style="color: #85E89D">li</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">        )}</span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;/</span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span></code></pre>
+<p><code>Astro.props</code>によってこのコンポーネントの引数を定義しているのがわかると思います。</p>
+<p>さて、このコンポーネントを使うときは以下のようになります。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Postion </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'./Position.astro'</span></span>
+<span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-8 lg:mx-48"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"text-6xl font-bold"</span><span style="color: #E1E4E8">>募集要項&#x3C;/</span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">hr</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #79B8FF">Postion</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">position</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"パートナー"</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">tasks</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"クライアントとの折衝"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"要件定義"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"チームのアウトプットに対する品質保証"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">skills</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"ソフトウェア開発の知識、経験"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"自分でビジネスを持つという意識"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">    /></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #79B8FF">Postion</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">position</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"ソフトウェアエンジニア"</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">tasks</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"Webシステム・アプリ開発"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"UX設計"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">skills</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"ソフトウェア開発の知識、経験"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"OSSプロジェクトへのコミット経験"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"技術イベントでの登壇経験"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">    /></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #79B8FF">Postion</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">position</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"デザイナー"</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">tasks</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"画像、動画等の各種クリエイティブ制作"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"ロゴ制作"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">skills</span><span style="color: #E1E4E8">={[</span><span style="color: #9ECBFF">"Photoshop, Illustrator等のソフト使用"</span><span style="color: #E1E4E8">, </span><span style="color: #9ECBFF">"ユーザー目線に立ったUI・UXの設計"</span><span style="color: #E1E4E8">]}</span></span>
+<span class="line"><span style="color: #E1E4E8">    /></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span></code></pre>
+<p>まるでNext.jsのような感覚ですね。</p>
+<p>そのためJSXに慣れ親しんでいる開発者にはAstroは非常に親和性の高いプロダクトとなっていることがわかります。</p>
+<h2 id="jsxファイルも使える">JSXファイルも使える</h2>
+<p>このAstroのコンポーネントは<code>.astro</code>ファイル以外にも<code>.tsx</code>ファイルも使用可能です。</p>
+<p>例えば弊社のページでは、レスポンシブ対応として画面幅が小さくなるとヘッダーのリンクのボタン部分がメニューボタンへ切り替わります。</p>
+<p>メニューボタンはタップされたときだけ開いていて欲しいわけですが、ここの開いてるかどうかの状態管理として<code>useState</code>を使いたいところです。</p>
+<p>そういう場合、このように<code>.tsx</code>ファイルをimportすれば他の<code>.astro</code>ファイルと同様にコンポーネントとして扱うことができます。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> { SITE_TITLE, SITE_DESCRIPTION } </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../config'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Head </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Head.astro'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #6A737D">// ここ注目</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Header </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Header.tsx'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Footer </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Footer.astro'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Container </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Container.astro'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> About </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/company/About.astro'</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Members </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/company/Members.astro'</span></span>
+<span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;!</span><span style="color: #79B8FF">DOCTYPE</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">html</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">html</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">lang</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"ja"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;</span><span style="color: #85E89D">head</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Head</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">title</span><span style="color: #E1E4E8">={</span><span style="color: #79B8FF">SITE_TITLE</span><span style="color: #E1E4E8">} </span><span style="color: #B392F0">description</span><span style="color: #E1E4E8">={</span><span style="color: #79B8FF">SITE_DESCRIPTION</span><span style="color: #E1E4E8">} /></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;/</span><span style="color: #85E89D">head</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;</span><span style="color: #85E89D">body</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Header</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">client:load</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">title</span><span style="color: #E1E4E8">={</span><span style="color: #79B8FF">SITE_TITLE</span><span style="color: #E1E4E8">} /></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #85E89D">main</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"h-full block"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">   &#x3C;</span><span style="color: #79B8FF">Container</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-10"</span><span style="color: #E1E4E8">>お仕事のお問い合わせや講演依頼については以下からお問い合わせください。&#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">                &#x3C;</span><span style="color: #85E89D">iframe</span></span>
+<span class="line"><span style="color: #E1E4E8">                    </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"h-screen w-full"</span></span>
+<span class="line"><span style="color: #E1E4E8">                    </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true"</span></span>
+<span class="line"><span style="color: #E1E4E8">                ></span></span>
+<span class="line"><span style="color: #E1E4E8">                    読み込んでいます…</span></span>
+<span class="line"><span style="color: #E1E4E8">                &#x3C;/</span><span style="color: #85E89D">iframe</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">   &#x3C;/</span><span style="color: #79B8FF">Container</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;/</span><span style="color: #85E89D">main</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Footer</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;/</span><span style="color: #85E89D">body</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">html</span><span style="color: #E1E4E8">></span></span></code></pre>
+<h2 id="markdownをhtmlへ">MarkdownをHTMLへ</h2>
+<p>そしてこのブログ記事ですが、ファイル配置の位置として<code>./pages/blog/</code>ディレクトリに<code>2023-01-21-rewrite-with-astro.md</code>という名前で置いています。</p>
+<p>Astroはビルド時にMarkdownをHTMLへと変換してくれるので、Markdownも特に事前セットアップをすること無く使うことができます。便利ですね。</p>
+<p>Markdownファイルによって記述されたページのスタイルについては、<code>.md</code>ファイルのコードフェンス(<code>---</code>で括られた箇所)内に<code>layout:</code>で<code>.astro</code>ファイルのパスを指定すればその通りにページがビルドされます。</p>
+<p>具体的に、この記事の冒頭部分はファイルとしてこのようになっています。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #E1E4E8">---</span></span>
+<span class="line"><span style="color: #85E89D">layout</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">'@layouts/Post.astro'</span></span>
+<span class="line"><span style="color: #85E89D">title</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">'公式ページを更にAstroで書き直しました'</span></span>
+<span class="line"><span style="color: #85E89D">image</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">'https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png'</span></span>
+<span class="line"><span style="color: #85E89D">date</span><span style="color: #E1E4E8">: </span><span style="color: #9ECBFF">'2023-01-21'</span></span>
+<span class="line"><span style="color: #E1E4E8">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #79B8FF; font-weight: bold">## AstroでLPを書き直した</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">代表の[</span><span style="color: #DBEDFF; text-decoration: underline">komi</span><span style="color: #E1E4E8">](</span><span style="color: #E1E4E8; text-decoration: underline">https://twitter.com/komi_edtr_1230</span><span style="color: #E1E4E8">)です。</span></span></code></pre>
+<p>AstroとしてMarkdownファイルを扱うとき<code>layout</code>キーが予約されており、ここに以下のような<code>.astro</code>ファイルを指定することで良い具合にページのスタイルを作れます。</p>
+<pre is:raw="" class="astro-code github-dark" style="background-color: #24292e; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Head </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Head.astro'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Header </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Header.tsx'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Footer </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Footer.astro'</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> Container </span><span style="color: #F97583">from</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">'../components/base/Container.astro'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">export</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">interface</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Props</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8"> </span><span style="color: #FFAB70">content</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #FFAB70">title</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #FFAB70">description</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #FFAB70">date</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">  </span><span style="color: #FFAB70">image</span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">string</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8"> };</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">const</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8"> </span><span style="color: #FFAB70">content</span><span style="color: #E1E4E8">: { </span><span style="color: #79B8FF">title</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">description</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">date</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">image</span><span style="color: #E1E4E8"> },</span></span>
+<span class="line"><span style="color: #E1E4E8">} </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> Astro.props;</span></span>
+<span class="line"><span style="color: #6A737D">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;</span><span style="color: #85E89D">html</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">lang</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"ja"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;</span><span style="color: #85E89D">head</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Head</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">title</span><span style="color: #E1E4E8">={title} </span><span style="color: #B392F0">description</span><span style="color: #E1E4E8">={description} /></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">global</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">text-lg</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">leading-relaxed</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">lg</span><span style="color: #E1E4E8">:px-36 xl:px-48 py-10;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">p</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">py-</span><span style="color: #E1E4E8">2</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">px-</span><span style="color: #E1E4E8">16 </span><span style="color: #79B8FF">list-disc</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">ul</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">li</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">list-item</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">ol</span><span style="color: #E1E4E8"> {}</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">blockquote</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">my-</span><span style="color: #E1E4E8">6;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">h2</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">mt-</span><span style="color: #E1E4E8">12 </span><span style="color: #79B8FF">mb-</span><span style="color: #E1E4E8">4 </span><span style="color: #79B8FF">text-</span><span style="color: #E1E4E8">3</span><span style="color: #79B8FF">xl</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">font-bold</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">leading-snug</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">h3</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">mt-</span><span style="color: #E1E4E8">8 </span><span style="color: #79B8FF">mb-</span><span style="color: #E1E4E8">4 </span><span style="color: #79B8FF">text-</span><span style="color: #E1E4E8">2</span><span style="color: #79B8FF">xl</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">font-bold</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">leading-snug</span><span style="color: #E1E4E8">;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">a</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">text-blue-</span><span style="color: #E1E4E8">600;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">p</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">code</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">bg-neutral-</span><span style="color: #E1E4E8">200 </span><span style="color: #79B8FF">px-</span><span style="color: #E1E4E8">1 </span><span style="color: #79B8FF">text-orange-</span><span style="color: #E1E4E8">800;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">   </span><span style="color: #B392F0">.markdown</span><span style="color: #E1E4E8"> </span><span style="color: #85E89D">pre</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #79B8FF">apply</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">p-</span><span style="color: #E1E4E8">4;</span></span>
+<span class="line"><span style="color: #E1E4E8">   }</span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;/</span><span style="color: #85E89D">style</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;/</span><span style="color: #85E89D">head</span><span style="color: #E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;</span><span style="color: #85E89D">body</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Header</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #85E89D">main</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">   &#x3C;</span><span style="color: #85E89D">article</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #79B8FF">Container</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;</span><span style="color: #85E89D">h1</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-8 text-4xl font-bold"</span><span style="color: #E1E4E8">>{title}&#x3C;/</span><span style="color: #85E89D">h1</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"py-2"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">      &#x3C;</span><span style="color: #85E89D">time</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">""</span><span style="color: #E1E4E8">>{date}&#x3C;/</span><span style="color: #85E89D">time</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"relative"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">      &#x3C;</span><span style="color: #85E89D">img</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">src</span><span style="color: #E1E4E8">={image}</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">alt</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">""</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">fit</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"fill"</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"w-screen"</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">loading</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"lazy"</span></span>
+<span class="line"><span style="color: #E1E4E8">       </span><span style="color: #B392F0">decoding</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"async"</span></span>
+<span class="line"><span style="color: #E1E4E8">      /></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;</span><span style="color: #85E89D">hr</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">"markdown"</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">      &#x3C;</span><span style="color: #85E89D">slot</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8">     &#x3C;/</span><span style="color: #85E89D">div</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">    &#x3C;</span><span style="color: #79B8FF">Container</span><span style="color: #E1E4E8">/></span></span>
+<span class="line"><span style="color: #E1E4E8">   &#x3C;/</span><span style="color: #85E89D">article</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;/</span><span style="color: #85E89D">main</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">  &#x3C;</span><span style="color: #79B8FF">Footer</span><span style="color: #E1E4E8"> /></span></span>
+<span class="line"><span style="color: #E1E4E8"> &#x3C;/</span><span style="color: #85E89D">body</span><span style="color: #E1E4E8">></span></span>
+<span class="line"><span style="color: #E1E4E8">&#x3C;/</span><span style="color: #85E89D">html</span><span style="color: #E1E4E8">></span></span></code></pre>
+<p>この中の<code>Astro.props</code>にてMarkdownファイルの他のキー(タイトルや日付など)を渡すことができます。</p>
+<p>記事本体について、<code>Layout.astro</code>ファイル内の<code>&#x3C;slot /></code>にMarkdownのコンテンツが注入される形となっています。</p>
+<h2 id="終わりに">終わりに</h2>
+<p>Astroというプロダクトをメンバーから教えてもらって今回初めて使ってみたのですが、思ってた以上に開発体験が良く、同時に当サイト自体も非常に軽量化することができました。</p>
+<p>弊社では主にシステム開発を手掛けることが多いので静的Webサイトを開発することはあまり多くないのですが、今回の技術採用実績を通して次の新規プロジェクトではAstroを本番投入してみようと思います。</p>
+          </div>
+          <div class="container mx-auto px-5">
+  
+</div>
+        
+</div>
+      </article>
+      <footer class="border-t border-neutral-200 bg-neutral-50">
+  <div class="mx-auto flex flex-col items-center justify-around p-5 lg:flex-row">
+    <a href="/" class="mb-10 leading-tight lg:mb-0 lg:pr-4">
+      <img src="/logos/ksquad_logo.svg" class="h-9" alt="K Squad">
+    </a>
+    <div class="flex flex-col items-center justify-center lg:flex-row lg:pl-4">
+      <a href="/contact" class="mx-3 mb-6 border border-black bg-black py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-black lg:mb-0 lg:px-8">
+        お問い合わせ
+      </a>
+      <a href="/careers" class="mx-3 font-bold hover:underline"> 採用情報</a>
+    </div>
+  </div>
+  <p class="py-5 text-center">
+    &copy; 2023 K Squad LLC. All rights reserved.
+  </p>
+</footer>
+    </main>
+  </body></html>
