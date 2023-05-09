@@ -8,9 +8,6 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ksquad.jp/",
-  build: {
-    format: "file",
-  },
   integrations: [
     sitemap(),
     tailwind(),
