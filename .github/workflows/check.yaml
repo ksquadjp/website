@@ -17,7 +17,7 @@ jobs:
         uses: ./.github/actions/install-tools
 
       - name: Install Dependencies
-        run: pnpm install
+        run: rm -fr $(pnpm store path) && pnpm install
 
       - name: Check
         run: pnpm check
