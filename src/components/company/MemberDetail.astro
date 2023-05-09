@@ -14,7 +14,6 @@ const {
   nameKana,
   image = "https://cdn2.aprico-media.com/production/imgs/images/000/008/511/original.jpg?1505866639",
   title,
-  link,
   description,
 } = Astro.props;
 ---
@@ -39,13 +38,6 @@ const {
     </h3>
     <div class="">
       <h4 class="text-center text-stone-700">{title}</h4>
-      {
-        link && (
-          <div class="text-center text-blue-400">
-            <a href={`https://${link}`}>{link}</a>
-          </div>
-        )
-      }
     </div>
   </div>
   <p class="px-2 md:h-64">

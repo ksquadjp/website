@@ -10,7 +10,7 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@config": ["src/config.ts"],
-      "@types": ["src/types"],
+      "@types": ["src/types"]
     }
   }
 }
