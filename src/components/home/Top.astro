@@ -12,12 +12,32 @@ import { Image } from "@astrojs/image/components";
     height={2000}
     fit="fill"
   />
-  <div
-    class="absolute mx-auto flex h-screen w-screen items-center justify-center px-2 text-4xl font-bold md:text-6xl"
-    style={{
-      fontFamily: "ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro, メイリオ, Meiryo, sans-serif",
-    }}
-  >
-    技術を通して、価値を提供していく。
+  <div class="absolute mx-auto flex h-screen w-screen flex-col items-center justify-center">
+    <h1
+      class="mx-auto p-2 text-4xl font-bold md:text-6xl"
+      style={{
+        fontFamily: "ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro, メイリオ, Meiryo, sans-serif",
+      }}
+    >
+      技術を通して、価値を提供していく。
+    </h1>
+    <p class="mx-auto py-12 text-center font-sans text-xl md:text-2xl">
+      業界トップクラスのエンジニアが、<br />技術顧問としてWebを全方位的に支援します
+    </p>
+  </div>
+  <div class="absolute mx-auto flex h-screen w-screen flex-row items-end py-16">
+    <a class="mx-auto rounded bg-gray-500 p-3 font-sans text-white md:text-2xl" href="/contact"
+      >技術顧問の無料相談をする
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="inline-block h-6 w-6"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+      </svg>
+    </a>
   </div>
 </div>

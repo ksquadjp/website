@@ -1,6 +1,6 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "K Squad";
+export const SITE_TITLE = "K Squad | トップ1%エンジニアによる技術顧問";
 export const SITE_DESCRIPTION =
-  "ケイスクワッド合同会社はソフトウェア技術を通してお客様へ最大価値を提供します。アプリ開発からWebシステム構築、データ基盤整備を一気通貫で対応します。";
+  "ケイスクワッド合同会社は技術顧問とITコンサルティングを行うプロフェッショナル集団です。業界トップクラスのエンジニアがお客さまのWebに関するお困りごとを解決します。開発から広告、エンジニア採用まで全方位的にサポートしますのでお気軽にお問い合わせください。";

@@ -14,17 +14,18 @@ import Container from "@components/base/Container.astro";
   </head>
   <body>
     <Header client:load />
-    <main class="block h-full">
-      <Container>
-        <div class="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
-        <iframe
-          class="h-screen w-full"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true"
-        >
-          読み込んでいます…
-        </iframe>
-      </Container>
-    </main>
+    <Container>
+      <div class="py-10">お仕事のお問い合わせや講演依頼については以下からお問い合わせください。</div>
+      <iframe
+        id="inquiry"
+        class="w-full overflow-hidden"
+        height="1000"
+        allowfullscreen
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf_t29aMV3GleALm1rza3Se9Xpk0r0931-cf9_CoNFMOGzp1w/viewform?embedded=true"
+      >
+        読み込んでいます…
+      </iframe>
+    </Container>
     <Footer />
   </body>
 </html>
