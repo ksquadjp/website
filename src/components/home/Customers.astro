@@ -3,7 +3,7 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <h2 class="py-10 text-4xl font-bold">支援実績</h2>
-<div class="grid h-auto grid-cols-1 p-6 lg:grid-cols-4">
+<div class="grid h-auto grid-cols-2 p-6 lg:grid-cols-5">
   <div class="relative aspect-video px-8">
     <Image
       class="h-full object-contain"
@@ -45,6 +45,17 @@ import { Image } from "@astrojs/image/components";
       format="webp"
       width={500}
       height={129}
+      fit="cover"
+    />
+  </div>
+  <div class="relative aspect-video px-8">
+    <Image
+      class="h-full object-contain"
+      src="https://route06.co.jp/assets/logo-with-symbol.png"
+      alt="Route06"
+      format="webp"
+      width={1076}
+      height={216}
       fit="cover"
     />
   </div>
