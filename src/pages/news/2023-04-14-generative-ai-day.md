@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Post.astro'
 title: '代表の小南がGenerative AI Business Dayに登壇しました'
-date: '2024-04-14'
+date: '2023-04-14'
 image: 'https://prtimes.jp/i/117465/2/ogp/d117465-2-e2fe7f9c9908fdeaa787-0.png'
 ---
 
