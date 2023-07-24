@@ -44,6 +44,14 @@ export default function Header() {
             </li>
             <li>
               <a
+                href="/service"
+                className="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent"
+              >
+                Service
+              </a>
+            </li>
+            <li>
+              <a
                 href="/news"
                 className="block rounded py-2 pl-3 pr-4 text-xl text-gray-700 md:border-0 md:p-0 md:hover:bg-transparent"
               >

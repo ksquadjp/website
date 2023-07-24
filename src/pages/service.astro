@@ -1,0 +1,118 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
+
+import Head from "@components/base/Head.astro";
+import Header from "@components/base/Header";
+import Footer from "@components/base/Footer.astro";
+import Container from "@components/base/Container.astro";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <Head title={`${SITE_TITLE} | サービス紹介`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header client:load />
+    <Container>
+      <h1 class="py-10 text-6xl font-bold">サービス紹介</h1>
+      <p>
+        K
+        Squadは技術顧問を主要事業とする組織であり、その活動領域はシステム開発から新規事業構築、組織マネジメント支援、データ分析など非常に多岐に渡ります。
+        K
+        Squadを活用していただくために契約体系や料金体系をサンプルとして公開していますので、弊社へのお問い合わせに際して参考情報としてご活用いただけますと幸いです。
+      </p>
+
+      <h2 class="py-4 text-4xl font-bold">活動例</h2>
+      <div class="py-2">
+        <ul class="mx-16 list-disc">
+          <li class="list-item">
+            生成AIを用いた新規事業アイデアに対し、PoC(モバイルアプリ/Webサービス)を高速で開発してビジネス的な実効性を検証する
+          </li>
+          <li class="list-item">
+            エンジニア組織を今後拡大していくにあたり、シニアエンジニア/エンジニアリングマネージャーとして組織構築支援
+          </li>
+          <li class="list-item">社内で散らばっているVBAの取りまとめと汎用的な自動化ツールの開発</li>
+          <li class="list-item">既存のWebサービスのAWSアーキテクチャを見直してクラウドのコストをカットする</li>
+        </ul>
+      </div>
+
+      <h2 class="py-4 text-4xl font-bold">料金体系</h2>
+      <div class="overflow-auto">
+        <table class="mx-auto w-full table-auto overflow-scroll border text-sm font-light dark:border-neutral-500">
+          <thead class="border-b bg-gray-100 text-center font-medium dark:border-neutral-500">
+            <tr>
+              <th scope="col" class="border-r px-6 py-4 dark:border-neutral-500">プラン</th>
+              <th scope="col" class="border-r px-6 py-4 dark:border-neutral-500">内容</th>
+              <th scope="col" class="border-r px-6 py-4 dark:border-neutral-500">料金</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center font-medium dark:border-neutral-500"
+                >ライト</td
+              >
+              <td class="whitespace-nowrap border-r py-4 dark:border-neutral-500">
+                <ul class="mx-16 list-disc">
+                  <li class="list-item">月1回のミーティング</li>
+                  <li class="list-item">システム設計相談</li>
+                  <li class="list-item">各種資料作成</li>
+                </ul>
+              </td>
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center dark:border-neutral-500">30万円/月</td>
+            </tr>
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center font-medium dark:border-neutral-500"
+                >ミディアム</td
+              >
+              <td class="whitespace-nowrap border-r py-4 dark:border-neutral-500">
+                <ul class="mx-16 list-disc">
+                  <li class="list-item">月2回のミーティング</li>
+                  <li class="list-item">システム設計相談</li>
+                  <li class="list-item">各種資料作成</li>
+                  <li class="list-item">必要に応じて開発</li>
+                </ul>
+              </td>
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center dark:border-neutral-500">80万円/月</td>
+            </tr>
+            <tr class="border-b dark:border-neutral-500">
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center font-medium dark:border-neutral-500"
+                >パートナー</td
+              >
+              <td class="whitespace-nowrap border-r py-4 dark:border-neutral-500">
+                <ul class="mx-16 list-disc">
+                  <li class="list-item">ミディアムプランの内容全て</li>
+                  <li class="list-item">オフィスにメンバー常駐</li>
+                </ul>
+              </td>
+              <td class="whitespace-nowrap border-r px-6 py-4 text-center dark:border-neutral-500">120万円〜/月</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="py-4 text-4xl font-bold">契約書テンプレート</h2>
+      <div class="py-2">
+        <a
+          href="https://docs.google.com/document/d/1fL_6oRfh45RExJ3j-C9lr4owl0N4YvVPx5JJydZeiQU/edit?usp=sharing"
+          class="text-blue-500">サービス提供基本契約書</a
+        > / <a
+          href="https://docs.google.com/document/d/1pRu4Nwb_g8ALrgSCKLW_hm8Rrt9m-QY3E9ptTrRD9uc/edit?usp=sharing"
+          class="py-1 text-blue-500">個別契約書</a
+        >
+        <p class="py-2">
+          K Squadは顧客を支援するに際し、顧客が欲しがるものを提供するのは当たり前として最終的に顧客がK
+          Squadに頼らずとも正しくITを活用できる体制を構築することをゴールとしています。
+          つまり、ソフトウェアを開発すること以上に顧客のビジネスが成長していくことに強い意識を持っています。
+        </p>
+        <p class="py-2">これを念頭に考え、以下のポイントを踏まえがら契約書テンプレートを作成してあります。</p>
+        <ul class="mx-16 list-disc">
+          <li class="list-item">顧客の成長フェーズに応じて簡単に契約金額を変更できるよう契約書を2部に分割</li>
+          <li class="list-item">開発したソースコードの著作権は顧客に移譲する</li>
+          <li class="list-item">準委任契約を基本として業務範囲を固定せず、幅広く支援できるようにする</li>
+        </ul>
+      </div>
+    </Container>
+    <Footer />
+  </body>
+</html>
