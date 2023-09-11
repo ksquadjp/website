@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
 
@@ -12,7 +12,7 @@ const blogs = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 );
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <Head title={`${SITE_TITLE} | ニュース`} description={SITE_DESCRIPTION} />
