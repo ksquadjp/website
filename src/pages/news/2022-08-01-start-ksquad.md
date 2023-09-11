@@ -2,7 +2,7 @@
 layout: '@layouts/Post.astro'
 title: 'ケイスクワッド合同会社を設立しました'
 date: '2022-08-01'
-image: '/logos/ksquad_logo.png'
+image: '/assets/ksquad_logo.png'
 ---
 
 ## ケイスクワッド合同会社を設立
