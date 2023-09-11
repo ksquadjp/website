@@ -2,7 +2,7 @@
 layout: '@layouts/Post.astro'
 title: '組織変更のお知らせ'
 date: '2023-09-11'
-image: '/logos/ksquad_logo.png'
+image: '/assets/ksquad_logo.png'
 ---
 
 ## 合同会社から株式会社へ変更しました

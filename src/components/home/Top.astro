@@ -1,17 +1,10 @@
 ---
 import { Image } from "astro:assets";
+import top from "../../media/top.jpg";
 ---
 
 <div class="relative h-screen w-screen">
-  <Image
-    src="/assets/top.jpg"
-    alt=""
-    class="absolute inset-x-0 m-auto h-screen"
-    format="webp"
-    width={2000}
-    height={2000}
-    fit="fill"
-  />
+  <Image src={top} alt="" class="absolute inset-x-0 m-auto h-screen" format="webp" width={2000} height={2000} />
   <div class="absolute mx-auto flex h-screen w-screen flex-col items-center justify-center">
     <h1
       class="mx-auto p-2 text-4xl font-bold md:text-6xl"

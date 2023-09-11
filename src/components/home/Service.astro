@@ -1,41 +1,50 @@
+---
+import { Image } from "astro:assets";
+import electricity from "../../media/electricity.svg";
+import dev_productivity from "../../media/dev_productivity.svg";
+import predictive_analysis from "../../media/predictive_analytics.svg";
+---
+
 <h2 class="py-10 text-4xl font-bold">サービス</h2>
 <div class="grid h-auto grid-cols-1 px-6 lg:grid-cols-3">
   <div class="lg:px-18 grid grid-rows-2 py-3 lg:mx-12 lg:grid-cols-1">
     <div class="relative mx-auto">
-      <img class="h-full w-48" src="/assets/electricity.svg" alt="" />
+      <Image src={electricity} alt="" class="h-full w-48" />
     </div>
     <div>
       <h3 class="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">技術顧問</h3>
       <p>
         ベンダーにシステムを発注したいが予算が適正なのかわからない。内製化を進めていきたいがシニアエンジニアが不足している。
+
+
         <br />
-        そういった様々なケースに対応すべく、御社に伴走して技術顧問として様々なことをサポートさせていただきます。
+         そういった様々なケースに対応すべく、御社に伴走して技術顧問として様々なことをサポートさせていただきます。
       </p>
     </div>
   </div>
   <div class="lg:px-18 grid grid-rows-2 py-3 lg:mx-12 lg:grid-cols-1">
     <div class="relative mx-auto">
-      <img class="h-full w-48" src="/assets/dev_productivity.svg" alt="" />
+      <Image src={dev_productivity} alt="" class="h-full w-48" />
     </div>
     <div>
       <h3 class="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">システム・アプリ開発</h3>
       <p>
         Webサイトから顧客管理システム、モバイルアプリ、LINE Botなどあらゆる技術領域をカバーしています。
         <br />
-        弊社のノウハウを活かし、少数精鋭チームで高速に開発させていただきます。
+         弊社のノウハウを活かし、少数精鋭チームで高速に開発させていただきます。
       </p>
     </div>
   </div>
   <div class="lg:px-18 grid grid-rows-2 py-3 lg:mx-12 lg:grid-cols-1">
     <div class="relative mx-auto">
-      <img class="h-full w-48" src="/assets/predictive_analytics.svg" alt="" />
+      <Image src={predictive_analysis} alt="" class="h-full w-48" />
     </div>
     <div>
       <h3 class="flex justify-center py-6 text-center text-xl font-bold lg:text-2xl">データ分析基盤構築</h3>
       <p>
         アプリやシステムは作るだけでは終わらず、データを有効活用することによってその価値は何倍にも膨らみます。
         <br />
-        データ基盤を整備し、客観的な指標に基づいた意思決定がスムーズに行える体制を構築させていただきます。
+         データ基盤を整備し、客観的な指標に基づいた意思決定がスムーズに行える体制を構築させていただきます。
       </p>
     </div>
   </div>

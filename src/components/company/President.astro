@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import komi from "../../media/komi.jpg";
 ---
 
 <div class="py-8 lg:mx-32">
@@ -9,12 +10,11 @@ import { Image } from "astro:assets";
     <div class="relative mx-auto">
       <Image
         class="h-full w-full object-cover"
-        src="/assets/komi.jpg"
+        src={komi}
         alt="Yusuke Kominami"
         format="webp"
         width={1000}
         height={1000}
-        fit="cover"
       />
     </div>
     <div class="grid grid-cols-1 p-4 md:px-12">
