@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.16.7
     version: registry.npmmirror.com/@astrojs/image@0.16.7(astro@3.0.0)(sharp@0.32.0)
   '@astrojs/partytown':
-    specifier: ^1.2.1
-    version: registry.npmmirror.com/@astrojs/partytown@1.2.1
+    specifier: ^2.0.0
+    version: 2.0.0
   '@astrojs/preact':
     specifier: ^2.1.0
     version: registry.npmmirror.com/@astrojs/preact@2.1.0(preact@10.13.2)
@@ -94,6 +94,13 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/partytown@2.0.0:
+    resolution: {integrity: sha512-WKyWs3TdxAG4b0+vkMWwDProatsikfvpjJQ+IIDEI7QvPBmdIbD9BDfuGgKIETnmkA1DxFj9G3jiGn2DGiJKzg==}
+    dependencies:
+      '@builder.io/partytown': 0.8.1
+      mrmime: 1.0.1
     dev: false
 
   /@astrojs/prism@3.0.0:
@@ -344,6 +351,12 @@ packages:
       '@babel/helper-string-parser': 7.22.5
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@builder.io/partytown@0.8.1:
+    resolution: {integrity: sha512-p4xhEtQCPe8YFJ8e7KT9RptnT+f4lvtbmXymbp1t0bLp+USkNMTxrRMNc3Dlr2w2fpxyX7uA0CyAeU3ju84O4A==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
     dev: false
 
   /@esbuild/android-arm64@0.18.20:
@@ -2353,6 +2366,11 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /mrmime@1.0.1:
+    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
+    engines: {node: '>=10'}
+    dev: false
+
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: false
@@ -3422,15 +3440,6 @@ packages:
       sharp: 0.32.0
     dev: false
 
-  registry.npmmirror.com/@astrojs/partytown@1.2.1:
-    resolution: {integrity: sha512-sFs4RKaahYOrHKy5rM6xf5xDavKpUICVxS0P0tQec5z3+FRq1Eo57MDTCx2QJoIhOHd3+/GgXDRHKWpbFI4RCw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@astrojs/partytown/-/partytown-1.2.1.tgz}
-    name: '@astrojs/partytown'
-    version: 1.2.1
-    dependencies:
-      '@builder.io/partytown': registry.npmmirror.com/@builder.io/partytown@0.7.6
-      mrmime: registry.npmmirror.com/mrmime@1.0.1
-    dev: false
-
   registry.npmmirror.com/@astrojs/preact@2.1.0(preact@10.13.2):
     resolution: {integrity: sha512-1AnXpnjC24/mWJyq+EN5DoWp+w9Hg/y3dwFX3728rlBhyuY573jx+4+VHuG/g0A1alzJuIAhSPtqCP0YQktUnw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@astrojs/preact/-/preact-2.1.0.tgz}
     id: registry.npmmirror.com/@astrojs/preact/2.1.0
@@ -3686,13 +3695,6 @@ packages:
       '@babel/helper-string-parser': 7.22.5
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
-    dev: false
-
-  registry.npmmirror.com/@builder.io/partytown@0.7.6:
-    resolution: {integrity: sha512-snXIGNiZpqjno3XYQN2lbBB+05hsQR/LSttbtIW1c0gmZ7Kh/DIo0YrxlDxCDulAMFPFM8J+4voLwvYepSj3sw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@builder.io/partytown/-/partytown-0.7.6.tgz}
-    name: '@builder.io/partytown'
-    version: 0.7.6
-    hasBin: true
     dev: false
 
   registry.npmmirror.com/@cspotcode/source-map-support@0.8.1:
@@ -4428,13 +4430,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: registry.npmmirror.com/brace-expansion@2.0.1
-    dev: false
-
-  registry.npmmirror.com/mrmime@1.0.1:
-    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/mrmime/-/mrmime-1.0.1.tgz}
-    name: mrmime
-    version: 1.0.1
-    engines: {node: '>=10'}
     dev: false
 
   registry.npmmirror.com/mz@2.7.0:
