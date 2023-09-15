@@ -6,9 +6,5 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://ksquad.jp/",
-  integrations: [
-    sitemap(),
-    tailwind(),
-    preact(),
-  ],
+  integrations: [sitemap(), tailwind(), preact()],
 });
