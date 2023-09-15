@@ -18,6 +18,15 @@ const blogs = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     <Head title={`${SITE_TITLE} | ニュース`} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <Header client:load />
     <main>
       {

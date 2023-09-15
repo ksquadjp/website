@@ -11,12 +11,21 @@ import Members from "@components/company/Members.astro";
 import President from "@components/company/President.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <Head title={`${SITE_TITLE} | 会社概要`} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <Header client:load />
     <main>
       <Container>

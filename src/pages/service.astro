@@ -7,12 +7,21 @@ import Footer from "@components/base/Footer.astro";
 import Container from "@components/base/Container.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <Head title={`${SITE_TITLE} | サービス紹介`} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
     <Header client:load />
     <Container>
       <h1 class="py-10 text-6xl font-bold">サービス紹介</h1>
