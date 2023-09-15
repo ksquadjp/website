@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@astrojs/partytown':
-    specifier: ^2.0.0
-    version: registry.npmmirror.com/@astrojs/partytown@2.0.0
   '@astrojs/preact':
     specifier: ^3.0.0
     version: registry.npmmirror.com/@astrojs/preact@3.0.0(@babel/core@7.22.17)(preact@10.17.1)(vite@4.4.9)
@@ -117,15 +114,6 @@ packages:
       vfile: registry.npmmirror.com/vfile@5.3.7
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  registry.npmmirror.com/@astrojs/partytown@2.0.0:
-    resolution: {integrity: sha512-WKyWs3TdxAG4b0+vkMWwDProatsikfvpjJQ+IIDEI7QvPBmdIbD9BDfuGgKIETnmkA1DxFj9G3jiGn2DGiJKzg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@astrojs/partytown/-/partytown-2.0.0.tgz}
-    name: '@astrojs/partytown'
-    version: 2.0.0
-    dependencies:
-      '@builder.io/partytown': registry.npmmirror.com/@builder.io/partytown@0.8.1
-      mrmime: registry.npmmirror.com/mrmime@1.0.1
     dev: false
 
   registry.npmmirror.com/@astrojs/preact@3.0.0(@babel/core@7.22.17)(preact@10.17.1)(vite@4.4.9):
@@ -504,14 +492,6 @@ packages:
       '@babel/helper-string-parser': registry.npmmirror.com/@babel/helper-string-parser@7.22.5
       '@babel/helper-validator-identifier': registry.npmmirror.com/@babel/helper-validator-identifier@7.22.15
       to-fast-properties: registry.npmmirror.com/to-fast-properties@2.0.0
-    dev: false
-
-  registry.npmmirror.com/@builder.io/partytown@0.8.1:
-    resolution: {integrity: sha512-p4xhEtQCPe8YFJ8e7KT9RptnT+f4lvtbmXymbp1t0bLp+USkNMTxrRMNc3Dlr2w2fpxyX7uA0CyAeU3ju84O4A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@builder.io/partytown/-/partytown-0.8.1.tgz}
-    name: '@builder.io/partytown'
-    version: 0.8.1
-    engines: {node: '>=18.0.0'}
-    hasBin: true
     dev: false
 
   registry.npmmirror.com/@cspotcode/source-map-support@0.8.1:
@@ -3456,13 +3436,6 @@ packages:
     name: mri
     version: 1.2.0
     engines: {node: '>=4'}
-    dev: false
-
-  registry.npmmirror.com/mrmime@1.0.1:
-    resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mrmime/-/mrmime-1.0.1.tgz}
-    name: mrmime
-    version: 1.0.1
-    engines: {node: '>=10'}
     dev: false
 
   registry.npmmirror.com/ms@2.1.2:
