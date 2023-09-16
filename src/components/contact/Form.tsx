@@ -12,15 +12,13 @@ interface Props {
 function TextForm(props: Props) {
   return (
     <p class="p-3">
-      <label class="mb-2 block p-2 text-sm font-medium text-gray-900 dark:text-white">
-        {props.label}
-        <input
-          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          name={props.field}
-          type={props.contentType}
-          onInput={(e: any) => props.onInput(e.target.value)}
-        ></input>
-      </label>
+      <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">{props.label}</label>
+      <input
+        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        name={props.field}
+        type={props.contentType}
+        onInput={(e: any) => props.onInput(e.target.value)}
+      />
     </p>
   );
 }
@@ -28,15 +26,13 @@ function TextForm(props: Props) {
 function TextAreaForm(props: Props) {
   return (
     <p class="p-3">
-      <label class="mb-2 block p-2 text-sm font-medium text-gray-900 dark:text-white">
-        {props.label}
-        <textarea
-          rows={7}
-          class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          name={props.field}
-          onInput={(e: any) => props.onInput(e.target.value)}
-        ></textarea>
-      </label>
+      <label class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">{props.label}</label>
+      <textarea
+        rows={7}
+        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+        name={props.field}
+        onInput={(e: any) => props.onInput(e.target.value)}
+      />
     </p>
   );
 }
@@ -53,7 +49,7 @@ export default function Contact() {
   if (done) {
     return (
       <div className="p-3">
-        <p>お問い合わせいただきありがとうございました。</p>
+        <p id="thanks">お問い合わせいただきありがとうございました。</p>
         <p>内容を確認した上で担当者よりご連絡させていただきます。</p>
       </div>
     );
