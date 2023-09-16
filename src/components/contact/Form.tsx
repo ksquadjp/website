@@ -18,9 +18,7 @@ function TextForm(props: Props) {
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           name={props.field}
           type={props.contentType}
-          onInput={(e) => {
-            if (e != null && e.target != null) props.onInput(e.target.value);
-          }}
+          onInput={(e: any) => props.onInput(e.target.value)}
         ></input>
       </label>
     </p>
@@ -36,7 +34,7 @@ function TextAreaForm(props: Props) {
           rows={7}
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           name={props.field}
-          onInput={(e) => props.onInput(e?.target.value)}
+          onInput={(e: any) => props.onInput(e.target.value)}
         ></textarea>
       </label>
     </p>
@@ -44,17 +42,13 @@ function TextAreaForm(props: Props) {
 }
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [via, setVia] = useState("");
   const [content, setContent] = useState("");
-
-  // console.log("name = " + name);
-  // console.log("email = " + email);
-  // console.log("via = " + via);
-  // console.log("content = " + content);
 
   if (done) {
     return (
@@ -74,20 +68,26 @@ export default function Contact() {
       <div class="flex justify-center">
         <button
           className="border bg-black px-4 py-2 font-bold text-white hover:border-black hover:bg-white hover:text-black"
-          onClick={(e) => {
-            const formData = new FormData();
-            formData.append("name", name);
-            formData.append("email", email);
-            formData.append("via", via);
-            formData.append("content", content);
-            fetch(CONTACT_POST_URL, {
-              method: "POST",
-              body: formData,
-              mode: "cors",
-            }).then((_) => setDone(true));
-          }}
+          onClick={
+            !loading
+              ? (_) => {
+                  setLoading(true);
+                  const formData = new FormData();
+                  formData.append("name", name);
+                  formData.append("email", email);
+                  formData.append("via", via);
+                  formData.append("content", content);
+                  fetch(CONTACT_POST_URL, {
+                    method: "POST",
+                    body: formData,
+                    mode: "cors",
+                  }).then((_) => setDone(true));
+                }
+              : (_) => {}
+          }
         >
-          送信
+          {loading && "送信中..."}
+          {!loading && "送信"}
         </button>
       </div>
     </div>
