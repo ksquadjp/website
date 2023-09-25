@@ -1,18 +1,16 @@
 import rss from "@astrojs/rss";
-import { options } from "preact";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-const postImportResult = import.meta.glob("./blog/**/*.md", { eager: true });
-const posts = Object.values(postImportResult);
-
-export const get = () =>
-  rss({
+export async function GET(context) {
+  const posts = await getCollection("blog");
+  return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    site: import.meta.env.SITE,
+    site: context.site,
     items: posts.map((post) => ({
-      title: post.frontmatter.title,
-      pubDate: post.frontmatter.date,
-      link: post.url,
+      ...post.data,
+      link: `/blog/${post.slug}/`,
     })),
   });
+}

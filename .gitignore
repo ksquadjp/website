@@ -1,5 +1,7 @@
 # build output
 dist/
+# generated types
+.astro/
 
 # dependencies
 node_modules/
@@ -17,9 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# asdf
-!.tool-versions
-
-# the directory which contains members blog datas (by feedsCollector)
-public/ogp_images
