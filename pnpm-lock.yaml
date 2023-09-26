@@ -20,18 +20,21 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.0
     version: registry.npmmirror.com/@astrojs/tailwind@5.0.0(astro@3.1.2)(tailwindcss@3.3.3)(ts-node@10.9.1)
+  '@nanostores/preact':
+    specifier: ^0.5.0
+    version: registry.npmmirror.com/@nanostores/preact@0.5.0(nanostores@0.9.3)(preact@10.17.1)
   astro:
     specifier: ^3.1.2
     version: registry.npmmirror.com/astro@3.1.2(@types/node@20.6.3)
   astro-particles:
     specifier: ^2.10.0
     version: registry.npmmirror.com/astro-particles@2.10.0
+  nanostores:
+    specifier: ^0.9.3
+    version: registry.npmmirror.com/nanostores@0.9.3
   preact:
     specifier: ^10.17.1
     version: registry.npmmirror.com/preact@10.17.1
-  preact-particles:
-    specifier: ^2.12.1
-    version: registry.npmmirror.com/preact-particles@2.12.1(preact@10.17.1)
   tailwindcss:
     specifier: ^3.0.24
     version: registry.npmmirror.com/tailwindcss@3.3.3(ts-node@10.9.1)
@@ -41,9 +44,6 @@ dependencies:
   tsparticles-engine:
     specifier: ^2.12.0
     version: registry.npmmirror.com/tsparticles-engine@2.12.0
-  tsparticles-preset-links:
-    specifier: ^2.12.0
-    version: registry.npmmirror.com/tsparticles-preset-links@2.12.0
 
 devDependencies:
   '@types/node':
@@ -1098,6 +1098,20 @@ packages:
       vfile: registry.npmmirror.com/vfile@5.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmmirror.com/@nanostores/preact@0.5.0(nanostores@0.9.3)(preact@10.17.1):
+    resolution: {integrity: sha512-Zq5DEAY+kIfwJ1NPd43D1mpsbISuiD6N/SuTHrt/8jUoifLwXaReaZMAnvkvbIGOgcB1Hy++A9jZix2taNNYxQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@nanostores/preact/-/preact-0.5.0.tgz}
+    id: registry.npmmirror.com/@nanostores/preact/0.5.0
+    name: '@nanostores/preact'
+    version: 0.5.0
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0
+      preact: '>=10.0.0'
+    dependencies:
+      nanostores: registry.npmmirror.com/nanostores@0.9.3
+      preact: registry.npmmirror.com/preact@10.17.1
     dev: false
 
   registry.npmmirror.com/@nodelib/fs.scandir@2.1.5:
@@ -3877,6 +3891,13 @@ packages:
     hasBin: true
     dev: false
 
+  registry.npmmirror.com/nanostores@0.9.3:
+    resolution: {integrity: sha512-KobZjcVyNndNrb5DAjfs0WG0lRcZu5Q1BOrfTOxokFLi25zFrWPjg+joXC6kuDqNfSt9fQwppyjUBkRPtsL+8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/nanostores/-/nanostores-0.9.3.tgz}
+    name: nanostores
+    version: 0.9.3
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
+    dev: false
+
   registry.npmmirror.com/napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/napi-build-utils/-/napi-build-utils-1.0.2.tgz}
     name: napi-build-utils
@@ -4276,18 +4297,6 @@ packages:
       nanoid: registry.npmmirror.com/nanoid@3.3.6
       picocolors: registry.npmmirror.com/picocolors@1.0.0
       source-map-js: registry.npmmirror.com/source-map-js@1.0.2
-    dev: false
-
-  registry.npmmirror.com/preact-particles@2.12.1(preact@10.17.1):
-    resolution: {integrity: sha512-t/4WHaBUCVZgQBL5iB3HV6MNg5A8wZ0cJbT41svI43aYphKljq2bvHC+gzfkwziN/F+T05LH1BjBmZsFBC6G0Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/preact-particles/-/preact-particles-2.12.1.tgz}
-    id: registry.npmmirror.com/preact-particles/2.12.1
-    name: preact-particles
-    version: 2.12.1
-    peerDependencies:
-      preact: '>=10'
-    dependencies:
-      preact: registry.npmmirror.com/preact@10.17.1
-      tsparticles-engine: registry.npmmirror.com/tsparticles-engine@2.12.0
     dev: false
 
   registry.npmmirror.com/preact-render-to-string@6.2.1(preact@10.17.1):
@@ -5483,16 +5492,6 @@ packages:
     version: 2.12.0
     dependencies:
       tsparticles-engine: registry.npmmirror.com/tsparticles-engine@2.12.0
-    dev: false
-
-  registry.npmmirror.com/tsparticles-preset-links@2.12.0:
-    resolution: {integrity: sha512-ZWr4oDUVt+166lEmgjNCzysOXmyYAMH2ZD9dGIbqxamXK2TRt1/2JOj4edExiA3Qjml1zIu8TJ24yGRFF+FFMA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsparticles-preset-links/-/tsparticles-preset-links-2.12.0.tgz}
-    name: tsparticles-preset-links
-    version: 2.12.0
-    dependencies:
-      tsparticles-basic: registry.npmmirror.com/tsparticles-basic@2.12.0
-      tsparticles-engine: registry.npmmirror.com/tsparticles-engine@2.12.0
-      tsparticles-interaction-particles-links: registry.npmmirror.com/tsparticles-interaction-particles-links@2.12.0
     dev: false
 
   registry.npmmirror.com/tsparticles-shape-circle@2.12.0:
