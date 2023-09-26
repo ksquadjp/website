@@ -19,12 +19,16 @@ interface HeaderSubItemProps {
 function HeaderItem({ link, name, subpages }: HeaderItemProps) {
   const $hoveredNavItem = useStore(hoveredNavItem);
   const isSubItemVisible = $hoveredNavItem === name;
+  const [afterRender, setAfterRender] = useState<boolean>(false);
 
   return (
     <>
       <div
         className="relative z-50 px-2 text-center"
-        onMouseEnter={(_) => hoveredNavItem.set(name)}
+        onMouseEnter={(_) => {
+          hoveredNavItem.set(name);
+          if (subpages.length > 0) setAfterRender(true);
+        }}
         onMouseLeave={(_) => hoveredNavItem.set(null)}
       >
         <a href={link} className="">
@@ -37,8 +41,10 @@ function HeaderItem({ link, name, subpages }: HeaderItemProps) {
         )}
       </div>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full  ${
-          isSubItemVisible && subpages.length > 0 ? "visible bg-zinc-500 bg-opacity-80 " : "invisible"
+        className={`fixed left-0 top-0 z-10 h-full w-full ${
+          isSubItemVisible && subpages.length > 0
+            ? "animate-appear bg-zinc-500 bg-opacity-80"
+            : `${afterRender ? "animate-disappear bg-zinc-500" : ""}`
         }`}
       ></div>
     </>
@@ -88,12 +94,13 @@ export default function Header() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed z-50 flex w-full justify-between">
-      <h1>
-        <a href="/">
+    <header className="fixed z-40 flex w-full justify-between">
+      <a href="/" className="z-50">
+        <h1>
           <img src="/assets/logo.svg" className="m-3 h-8 md:h-12 lg:h-12" alt="K Squad" />
-        </a>
-      </h1>
+        </h1>
+      </a>
+
       <div className="hidden w-fit pr-24 text-xl md:inline-block">
         <nav className="flex h-full items-center">
           {navItems.map((e, idx) => (
