@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import { useEffect, useState } from "preact/hooks";
+
+const news = (await getCollection("news"))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<div class="text-center md:flex">
+  <h2 class="mx-auto w-1/4 pt-6 text-center text-3xl md:mx-0">News</h2>
+  <div class="justify-center p-2 md:w-fit md:p-4">
+    {
+      news.map((e) => (
+        <a href={`/news/${e.slug}`}>
+          <div class="flex rounded bg-opacity-100 py-2 transition-colors duration-200 hover:bg-zinc-600 hover:bg-opacity-80 hover:text-white">
+            <time datetime={e.data.pubDate.toISOString()} class="p-4 font-mono">
+              {e.data.pubDate
+                .toLocaleDateString("ja-JP", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })
+                .split("/")
+                .join("-")}
+            </time>
+            <p class="p-4 text-start">{e.data.title}</p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</div>
+<a href="/news">
+  <div
+    class="mx-auto my-4 w-32 border-2 border-black bg-slate-700 text-center leading-loose text-white transition-colors hover:bg-white hover:text-black"
+  >
+    More News
+  </div>
+</a>

@@ -20,6 +20,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.0
     version: registry.npmmirror.com/@astrojs/tailwind@5.0.0(astro@3.1.2)(tailwindcss@3.3.3)(ts-node@10.9.1)
+  '@heroicons/react':
+    specifier: ^2.0.18
+    version: registry.npmmirror.com/@heroicons/react@2.0.18(react@18.2.0)
   '@nanostores/preact':
     specifier: ^0.5.0
     version: registry.npmmirror.com/@nanostores/preact@0.5.0(nanostores@0.9.3)(preact@10.17.1)
@@ -1027,6 +1030,17 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  registry.npmmirror.com/@heroicons/react@2.0.18(react@18.2.0):
+    resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@heroicons/react/-/react-2.0.18.tgz}
+    id: registry.npmmirror.com/@heroicons/react/2.0.18
+    name: '@heroicons/react'
+    version: 2.0.18
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: registry.npmmirror.com/react@18.2.0
+    dev: false
 
   registry.npmmirror.com/@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz}
@@ -3092,6 +3106,15 @@ packages:
     version: 3.1.0
     dev: false
 
+  registry.npmmirror.com/loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz}
+    name: loose-envify
+    version: 1.4.0
+    hasBin: true
+    dependencies:
+      js-tokens: registry.npmmirror.com/js-tokens@4.0.0
+    dev: false
+
   registry.npmmirror.com/lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lru-cache/-/lru-cache-5.1.1.tgz}
     name: lru-cache
@@ -4509,6 +4532,15 @@ packages:
       strip-json-comments: registry.npmmirror.com/strip-json-comments@2.0.1
     dev: false
     optional: true
+
+  registry.npmmirror.com/react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react/-/react-18.2.0.tgz}
+    name: react
+    version: 18.2.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: registry.npmmirror.com/loose-envify@1.4.0
+    dev: false
 
   registry.npmmirror.com/read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/read-cache/-/read-cache-1.0.0.tgz}

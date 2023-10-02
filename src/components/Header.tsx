@@ -82,11 +82,16 @@ function HeaderItem({ link, name, subpages }: HeaderItemProps) {
               subItemVisible ? "visible animate-appear" : "invisible animate-disappear"
             } hover:visible`}
           >
-            <div className="flex w-fit -translate-x-2/3 divide-x bg-white p-4 text-start">
+            <div className="flex w-fit -translate-x-2/3 divide-x rounded bg-white p-4 text-start">
               <div className="mb-8 mr-8 flex-initial p-4">
                 <p className="text-3xl font-bold">{name}</p>
-                <a href={link} className="text-sm">
-                  View Details
+                <a href={link} className="flex text-sm">
+                  <p class="self-center">View Details</p>
+                  <div class="self-center p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15">
+                      <path d="m2.828 15.555 7.777-7.779L2.828 0 0 2.828l4.949 4.948L0 12.727l2.828 2.828z" />
+                    </svg>
+                  </div>
                 </a>
               </div>
               <div className="container flex w-full">
@@ -111,13 +116,17 @@ function HeaderItem({ link, name, subpages }: HeaderItemProps) {
           <></>
         )}
       </div>
-      <div
-        className={`fixed left-0 top-0 z-10 h-full w-full ${
-          subItemVisible && subpages.length > 0
-            ? "animate-appear bg-black bg-opacity-50"
-            : `${afterRender ? "animate-disappear bg-black bg-opacity-50" : ""}`
-        }`}
-      ></div>
+      {subpages.length > 0 ? (
+        <div
+          className={`fixed left-0 top-0 h-full w-full ${
+            subItemVisible
+              ? "z-10 animate-appear bg-black bg-opacity-50"
+              : `animate-disappear ${afterRender ? "bg-black bg-opacity-50" : ""}`
+          }`}
+        ></div>
+      ) : (
+        <></>
+      )}
     </>
   );
 }
@@ -162,10 +171,9 @@ const navItems: HeaderItemProps[] = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState<boolean>(false);
   const [navColor, setnavColor] = useState("bg-transparent");
   const listenScrollEvent = () =>
-    window.scrollY > 10 ? setnavColor("bg-white bg-opacity-90") : setnavColor("transparent");
+    window.scrollY > 10 ? setnavColor("bg-white bg-opacity-90 transition") : setnavColor("transparent");
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
@@ -174,7 +182,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed z-40 flex w-full justify-between`}>
+    <header className={`fixed z-40 flex w-full justify-between ${navColor}`}>
       <a href="/" className="z-50">
         <h1>
           <img src="/assets/logo.svg" className="m-3 h-8 md:h-12 lg:h-12" alt="K Squad" />

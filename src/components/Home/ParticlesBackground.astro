@@ -38,7 +38,7 @@ const options: ISourceOptions = {
       random: true,
       anim: {
         enable: true,
-        speed: 10,
+        speed: 5,
         size_min: 10,
         sync: false,
       },
@@ -52,7 +52,7 @@ const options: ISourceOptions = {
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 2,
       direction: "none",
       random: false,
       straight: false,
@@ -76,13 +76,13 @@ const options: ISourceOptions = {
     },
     modes: {
       grab: {
-        distance: 400,
+        distance: 200,
         lineLinked: {
           opacity: 1,
         },
       },
       bubble: {
-        distance: 400,
+        distance: 200,
         size: 100,
         duration: 2,
         opacity: 0.3,
@@ -108,6 +108,7 @@ const options: ISourceOptions = {
   import { type Container, type Engine, tsParticles } from "tsparticles-engine";
   import { loadFull } from "tsparticles";
 
+  // @ts-ignore
   window.particlesInit = async function (engine: Engine) {
     await loadFull(engine);
   };

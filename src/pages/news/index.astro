@@ -1,11 +1,11 @@
 ---
 import Head from "../../components/Head.astro";
-import Header from "../../components/Header.tsx";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+const posts = (await getCollection("news")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <!doctype html>
