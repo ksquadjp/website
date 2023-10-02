@@ -2,23 +2,22 @@
 import { Image } from "astro:assets";
 
 const clients = [
-  "stores.png",
-  "wellness-kit.png",
   "aiful.png",
-  "meijitosho.png",
-  "tos.png",
-  "renoarq.png",
   "sony.png",
   "aixtal.webp",
-]
-  .sort()
-  .map((e) => `/assets/clients/${e}`);
+  "meijitosho.png",
+  "stores.png",
+  "wellness-kit.png",
+  "tos.png",
+  "renoarq.png",
+].map((e) => `/assets/clients/${e}`);
 ---
 
+<h2 class="text-center text-2xl font-bold lg:text-start lg:text-4xl">Our Clients & Partners</h2>
 <div class="grid grid-cols-2 justify-center lg:grid-cols-4">
   {
     clients.map((c) => (
-      <div class="m-auto p-8">
+      <div class="m-auto p-4 lg:p-8">
         <Image src={c} height={800} width={800} alt={c} />
       </div>
     ))
