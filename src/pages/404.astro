@@ -1,10 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import TopParticlesBackground from "../components/ParticlesBackground.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="flex h-screen items-center justify-center">
+  <div class="hidden"><TopParticlesBackground /></div>
+  <div class="flex h-screen items-center justify-center bg-white bg-opacity-80">
     <div class="text-center">
       <h1 class="text-3xl">NOT FOUND</h1>
     </div>

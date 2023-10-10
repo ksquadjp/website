@@ -173,12 +173,12 @@ const navItems: HeaderItemProps[] = [
 export default function Header() {
   const [navColor, setnavColor] = useState("bg-transparent");
   const listenScrollEvent = () =>
-    window.scrollY > 10 ? setnavColor("bg-white bg-opacity-90 transition") : setnavColor("transparent");
+    window.scrollY > 10
+      ? setnavColor("bg-white bg-opacity-90 transition duration-300")
+      : setnavColor("transparent transition duration-300");
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
-    return () => {
-      window.removeEventListener("scroll", listenScrollEvent);
-    };
+    return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
 
   return (

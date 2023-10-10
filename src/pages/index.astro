@@ -1,17 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
-import TopParticlesBackground from "../components/Home/ParticlesBackground.astro";
+import TopParticlesBackground from "../components/ParticlesBackground.astro";
 import LetterText from "../components/Home/LetterText.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
 import News from "../components/Home/News.astro";
 import AboutUs from "../components/Home/AboutUs.tsx";
 import Service from "../components/Home/Service.tsx";
-import Clients from "../components/Home/Clients.astro";
-
-const news = (await getCollection("news"))
-  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
-  .slice(0, 3);
+import Partners from "../components/Home/Partners.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -34,7 +29,7 @@ const news = (await getCollection("news"))
         <Service client:load />
       </section>
       <section class="py-10">
-        <Clients />
+        <Partners />
       </section>
     </div>
   </main>

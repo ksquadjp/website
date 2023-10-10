@@ -1,0 +1,15 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+import Base from "../../layouts/Base.astro";
+import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="mx-6 lg:mx-48">
+      <div class="py-32">Hello</div>
+    </div>
+  </main>
+</Base>
