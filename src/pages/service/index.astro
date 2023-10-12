@@ -3,13 +3,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+import Service from "../../components/service/Service.astro";
+import Detail from "../../components/service/Detail.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="mx-6 lg:mx-48">
-      <div class="py-32">Hello</div>
+      <div class="pt-32">
+        <Service />
+      </div>
+
+      <div class="grid py-8">
+        <Detail
+          name="Tech Advisor"
+          nameKana="技術顧問"
+          description="私たちは技術顧問として、プロダクト開発、新規事業立ち上げ、システム設計、コスト最適化などクライアントの技術的課題に向き合い、伴走型でビジネスの成長に貢献します。"
+          path="/service/tech-advisor"
+          image="/assets/services/advisor.svg"
+        />
+        <Detail
+          name="Team Building"
+          nameKana="エンジニア組織構築支援"
+          description="私たちは技術顧問として"
+          path="/service/team-building"
+          image="/assets/services/team-building.svg"
+        />
+      </div>
     </div>
   </main>
 </Base>

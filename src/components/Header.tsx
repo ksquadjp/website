@@ -144,12 +144,12 @@ const navItems: HeaderItemProps[] = [
       {
         link: "/service/tech-advisor",
         name: "技術顧問",
-        imagePath: "/assets/services/adviser.svg",
+        imagePath: "/assets/services/advisor.svg",
       },
       {
-        link: "/service/hiring-support",
-        name: "エンジニア採用支援",
-        imagePath: "/assets/services/hiring.svg",
+        link: "/service/team-building",
+        name: "エンジニア組織構築",
+        imagePath: "/assets/services/team-building.svg",
       },
     ],
   },
