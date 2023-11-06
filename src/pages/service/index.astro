@@ -4,7 +4,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 import Service from "../../components/service/Service.astro";
-import Detail from "../../components/service/Detail.astro";
+import Business from "../../components/service/Business.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -16,17 +16,17 @@ import Detail from "../../components/service/Detail.astro";
       </div>
 
       <div class="grid py-8">
-        <Detail
+        <Business
           name="Tech Advisor"
           nameKana="技術顧問"
           description="私たちは技術顧問として、プロダクト開発、新規事業立ち上げ、システム設計、コスト最適化などクライアントの技術的課題に向き合い、伴走型でビジネスの成長に貢献します。"
           path="/service/tech-advisor"
           image="/assets/services/advisor.svg"
         />
-        <Detail
+        <Business
           name="Team Building"
           nameKana="エンジニア組織構築支援"
-          description="私たちは技術顧問として"
+          description="プロダクトが顧客から高い満足度をキープするためには絶え間なくブラッシュアップすることが大切であり、このエンジンとなるのがエンジニア組織です。K Squadは顧客がソフトウェア開発を行える土台作りを支援します。"
           path="/service/team-building"
           image="/assets/services/team-building.svg"
         />

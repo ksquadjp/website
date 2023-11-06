@@ -3,13 +3,59 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+import Top from "../../components/service/detail/Top.astro";
+import Content from "../../components/service/detail/Content.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
-    <div class="mx-6 lg:mx-48">
-      <div class="py-32">Hello</div>
+    <div class="lg:mx-48">
+      <div class="py-32">
+        <Top title="Tech Advisor" titleKana="技術顧問" image="/assets/services/advisor.svg" />
+      </div>
+
+      <div class="p-8 text-center">
+        <b class="text-5xl"> Empowering partners.</b>
+      </div>
+      <div class="p-3">
+        <Content image="/assets/advisor/empowering.png" reversed={true}>
+          <p class="p-2 text-lg">
+            デジタルプロダクト開発（UI/UXデザイン）を強みに置き、新規事業立ち上げ、システム構築、経営的意思決定の技術的サポートなどあらゆるビジネス課題にコミットします。
+          </p><p class="p-2 text-lg">
+            K
+            Squadはクライアントと一緒に一つのチームとなり並走するソフトウェア開発パートナーです。アウトプットの納品だけでなく、ソフトウェア開発の文化がクライアント組織に根付いてゆくことを目指します。
+          </p>
+        </Content>
+      </div>
+
+      <div class="py-12">
+        <div class="p-8">
+          <b class="text-5xl">What We Do</b>
+        </div>
+        <div class="p-3"></div>
+      </div>
+
+      <div class="py-12">
+        <div class="p-8">
+          <b class="text-5xl">How We Develop</b>
+        </div>
+        <div class="p-3">
+          <Content image="/assets/advisor/timeline.png" reversed={false}>
+            <div class="py-2">
+              <p>
+                K Squadが向き合う顧客課題は、それぞれ似ていることはあっても全く同じというものただの一つもありません。
+              </p>
+              <p>そのため我々は一社一社と着実に向き合い、顧客ごとに適切な戦略を選定及び選択、実行に移していきます。</p>
+            </div>
+            <div class="py-2">
+              <p>
+                顧客が不自由なくソフトウェアエンジニアリングを活用できるようになっている状態を出口戦略として掲げ、そこに到達するために開発ノウハウの伝授から実際の開発サポートまで多面的に活動します。
+              </p>
+            </div>
+          </Content>
+        </div>
+      </div>
     </div>
   </main>
 </Base>
