@@ -1,0 +1,34 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import Base from "../layouts/Base.astro";
+import TopParticlesBackground from "../components/ParticlesBackground.astro";
+import Head from "../components/Head.astro";
+import Header from "../components/Header";
+import Footer from "../components/Footer.astro";
+
+import Message from "../components/careers/Message.astro";
+import Requirements from "../components/careers/Requirements.astro";
+import Contracts from "../components/careers/Contracts.astro";
+import Application from "../components/careers/Application.astro";
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="mx-6">
+      <div class="py-4">
+        <Message />
+      </div>
+      <div class="py-4">
+        <Requirements />
+      </div>
+      <div class="py-4">
+        <Contracts />
+      </div>
+      <div class="py-4">
+        <Application />
+      </div>
+    </div>
+  </main>
+</Base>

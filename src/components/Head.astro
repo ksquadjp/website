@@ -36,7 +36,7 @@ const { title, description, image = "/blog-placeholder-1.jpg", noindex = false }
   <link rel="icon" type="image/png" href="/icons/favicon128.png" sizes="128x128" />
   <meta name="generator" content={Astro.generator} />
 
-  {noindex && <meta name="robots" content="noindex" />}
+  {noindex && <meta name="robots" content="noindex,nofollow" />}
 
   <!-- Canonical URL -->
   <link rel="canonical" href={canonicalURL} />

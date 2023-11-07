@@ -164,6 +164,11 @@ const navItems: HeaderItemProps[] = [
     subpages: [],
   },
   {
+    link: "/careers",
+    name: "Careers",
+    subpages: [],
+  },
+  {
     link: "/contact",
     name: "Contact",
     subpages: [],

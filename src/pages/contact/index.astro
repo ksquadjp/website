@@ -3,13 +3,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+import Form from "../../components/contact/Form";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
-    <div class="mx-6 lg:mx-48">
-      <div class="py-32">Hello</div>
+    <div class="mx-6 py-32 lg:mx-48">
+      <Form client:load />
     </div>
   </main>
 </Base>

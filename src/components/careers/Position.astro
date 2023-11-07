@@ -1,0 +1,23 @@
+---
+export interface Props {
+  position: string;
+  tasks: string[];
+  skills: string[];
+}
+
+const { position, tasks, skills } = Astro.props;
+---
+
+<div class="my-10 py-2 lg:border">
+  <h3 class="py-3 text-center text-3xl font-bold">{position}</h3>
+  <div class="px-3 lg:px-16">
+    <h4 class="pt-4 text-xl font-bold">主な業務</h4>
+    <ul class="mx-8 list-disc lg:mx-16">
+      {tasks.map((task) => <li class="list-item">{task}</li>)}
+    </ul>
+    <h4 class="pt-4 text-xl font-bold">歓迎スキル・経験等</h4>
+    <ul class="mx-8 list-disc py-3 lg:mx-16">
+      {skills.map((skill) => <li class="list-item">{skill}</li>)}
+    </ul>
+  </div>
+</div>
