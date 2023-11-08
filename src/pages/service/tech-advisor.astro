@@ -6,6 +6,7 @@ import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 import Top from "../../components/service/detail/Top.astro";
 import Solution from "../../components/service/detail/Solution.astro";
 import Content from "../../components/service/detail/Content.astro";
+import Cards from "../../components/service/detail/Cards.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -17,7 +18,7 @@ import Content from "../../components/service/detail/Content.astro";
       </div>
 
       <div class="p-8 text-center">
-        <b class="text-5xl"> Empowering partners.</b>
+        <b class="text-5xl">Empowering partners.</b>
       </div>
       <div class="p-3">
         <Content image="/assets/advisor/empowering.png" reversed={true}>
@@ -80,6 +81,81 @@ import Content from "../../components/service/detail/Content.astro";
               </p>
             </div>
           </Content>
+          <div class="p-12">
+            <Cards
+              title="1. 現状分析"
+              contents={[
+                {
+                  subtitle: "課題確認",
+                  description:
+                    "技術顧問として支援を開始するのにあたり、まずクライアントが何を課題と感じているかをヒアリングします。エンジニアが不足しているのか、ナレッジが不足しているか、予算は十分かを把握します。",
+                },
+                {
+                  subtitle: "技術スタックの確認",
+                  description:
+                    "ソフトウェアエンジニアリングを支援するにあたり、既存の技術について把握する必要があります。既存技術が採用や予算、運用可能性の観点で持続的なのか判断します。",
+                },
+              ]}
+            />
+            <Cards
+              title="2. 戦略立案/企画立案"
+              contents={[
+                {
+                  subtitle: "技術選定",
+                  description:
+                    "既存技術とのマッチや持続的な技術であることを条件に、プロジェクトに適切な技術を選定します。",
+                },
+                {
+                  subtitle: "技術調査",
+                  description:
+                    "必要となる技術を調査し、現状にフィットしたソリューションであるかを確認します。AI系のプロジェクトであれば最新論文を確認し、実装可能性やパフォーマンスを調査します。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="3. 施策実施"
+              contents={[
+                {
+                  subtitle: "開発ナレッジのハンズオン",
+                  description:
+                    "本番レベルのシステム開発を行うにあたり、プログラミングスクールなどでは習わないような本格的なノウハウをペアプログラミングなどを通して現場エンジニアにハンズオンします。",
+                },
+                {
+                  subtitle: "セキュリティ対策",
+                  description:
+                    "システムをセキュアなものにすることはもちろん、インシデントが発生しにくいような開発体系を構築し、徹底的にセキュリティにおける不安を取り除きます。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="4. 振り返り"
+              contents={[
+                {
+                  subtitle: "主要KPIの確認",
+                  description:
+                    "支援開始してからどの程度開発生産性が上がったのか、クラウドの予算を低減できたのか、エンジニアのモチベーションは向上したのかを定量的な数値指標に基づいて計測します。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="5. 出口戦略"
+              contents={[
+                {
+                  subtitle: "支援の卒業",
+                  description:
+                    "K Squadが支援を終えた後もクライアントにソフトウェアエンジニアリングのカルチャーが定着するよう、自発的な問題解決のスキームを整えます。",
+                },
+                {
+                  subtitle: "属人性の排除",
+                  description:
+                    "システムの運用を誰でも行えるよう、徹底的にシステム化を行います。サービスのデプロイ手順やリリース管理、プロジェクト進行など、K Squadが持つ開発標準をハンズオンします。",
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
     </div>

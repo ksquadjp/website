@@ -1,43 +1,42 @@
 ---
-import Head from "../../components/Head.astro";
-import Header from "../../components/Header.tsx";
-import Footer from "../../components/Footer.astro";
+import Base from "../../layouts/Base.astro";
+import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("blog")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
-<!doctype html>
-<html lang="ja">
-  <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  <body>
-    <Header client:load />
-    <main>
-      <section>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="mx-6 lg:mx-48">
+      <section class="pt-32 lg:px-24">
         <ul>
           {
             posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}/`}>
-                  <img width={720} height={360} src={post.data.heroImage} alt="" />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
+              <li class="grid py-10 lg:grid-cols-2">
+                <div class="py-2 text-center lg:text-start">
+                  <a href={`/blog/${post.slug}/`}>
                     <time datetime={post.data.pubDate.toISOString()}>
-                      {post.data.pubDate.toLocaleDateString("en-us", {
+                      {post.data.pubDate.toLocaleDateString("ja-jp", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
                       })}
                     </time>
-                  </p>
-                </a>
+                    <h4 class="text-2xl">{post.data.title}</h4>
+                  </a>
+                </div>
+                <div class="order-first py-2 lg:order-last">
+                  <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                </div>
               </li>
             ))
           }
         </ul>
       </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+    </div>
+  </main>
+</Base>

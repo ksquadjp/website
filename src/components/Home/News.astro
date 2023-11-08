@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { useEffect, useState } from "preact/hooks";
 
 const news = (await getCollection("news"))
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())

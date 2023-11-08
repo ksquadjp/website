@@ -3,13 +3,66 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+import Top from "../../components/service/detail/Top.astro";
+import Solution from "../../components/service/detail/Solution.astro";
+import Content from "../../components/service/detail/Content.astro";
+import Cards from "../../components/service/detail/Cards.astro";
 ---
 
 <Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
-    <div class="mx-6 lg:mx-48">
-      <div class="py-32">Hello</div>
+    <div class="lg:mx-48">
+      <div class="py-32">
+        <Top title="Team Building" titleKana="エンジニア組織構築" image="/assets/services/team-building.svg" />
+      </div>
+
+      <div class="p-8 text-center">
+        <b class="text-5xl">Empowering partners.</b>
+      </div>
+      <div class="p-3">
+        <Content image="/assets/advisor/empowering.png" reversed={true}>
+          <p class="p-2 text-lg">
+            K Squadは様々な技術領域に強みを持つエンジニアが集まったチームであり、K
+            Squad自身が卓越したエンジニア組織です。
+          </p><p class="p-2 text-lg">
+            クライアントが開発組織を立ち上げるにあたり、K
+            Squadが持つノウハウを最大限に活かすことによって最高のソフトウェアエンジニアリングチームとなるようサポートします。
+          </p>
+        </Content>
+      </div>
+
+      <div class="py-12">
+        <div class="p-8">
+          <b class="text-5xl">What We Do</b>
+        </div>
+        <div class="grid grid-cols-1 p-3 md:grid-cols-2">
+          <Solution
+            title="Recruit Strategy"
+            titleKana="採用戦略策定"
+            image="/assets/team-building/recruit.svg"
+            description="営業やマーケターの採用と比べ、エンジニア採用は非常に難しい部分があります。どのようなジョブディスクリプションでどのような媒体に募集を掲載するのか、ヘッドハンティングを実施すべきか、こうした判断はエンジニアの感性を持っていないと難しい箇所となってきます。K Squadはこうした課題に対して、エンジニア目線で採用戦略を設計させていただきます。"
+          />
+          <Solution
+            title="Assesment"
+            titleKana="評価制度設計"
+            image="/assets/team-building/assesment.svg"
+            description="どういったエンジニアが優秀なのかを判断するのはエンジニアでないと判断が難しい部分です。また、エンジニアは独特なキャリア観を持っているため、そこに合わせて評価制度を設計する必要があります。エンジニアとして多くの経験を持つK Squadのメンバーが、エンジニアにとって働きやすい環境を提案させていただきます。"
+          />
+          <Solution
+            title="Technical Interview"
+            titleKana="技術面接の実施"
+            image="/assets/team-building/interview.svg"
+            description="採用面接において人柄や雰囲気が会社のカルチャーとマッチしていることは最も重要ですが、同時に技術力を見る必要もあります。技術面接を実施する際、システム開発の深い経験がないと判断が難しい部分があるため、そこをK Squadのメンバーが重厚な技術知識をもとに面接をサポートします。"
+          />
+          <Solution
+            title="Tech Hands-on"
+            titleKana="技術ハンズオン"
+            image="/assets/advisor/seminar.svg"
+            description="システム開発に関しての様々なノウハウをハンズオンします。昨今ではソフトウェア開発の難易度は下がったと言われますが、プログラミングスクールを卒業したからといってすぐに本番レベルのWeb開発を行えるわけではなく、多くの知識と経験が要求されます。ソフトウェア開発の深い経験をもとに、CI/CD活用パターンやセキュアな運用設計、チーム開発ノウハウなど多面的なナレッジをOJTを通して提供します。"
+          />
+        </div>
+      </div>
     </div>
   </main>
 </Base>
