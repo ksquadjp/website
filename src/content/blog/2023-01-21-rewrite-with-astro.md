@@ -2,6 +2,7 @@
 title: '公式ページを更にAstroで書き直しました'
 heroImage: 'https://codesandbox.io/api/v1/sandboxes/cu81s/screenshot.png'
 pubDate: '2023-01-21'
+description: 'K Squadの公式サイトをAstro.jsを用いて構築しました'
 ---
 
 ## AstroでLPを書き直した

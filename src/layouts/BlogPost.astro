@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
 <html lang="ja">
@@ -21,7 +21,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         </div>
         <div class="prose">
           <div class="title">
-            <div class="date">2023-09-01</div>
+            <div class="date">{pubDate}</div>
             <h1>{title}</h1>
             <hr />
           </div>

@@ -2,6 +2,7 @@
 title: '公式ページをNext.jsで構築した'
 heroImage: 'https://miro.medium.com/max/1400/1*2tmzU7bve-VlTkOMWsk_Hw.jpeg'
 pubDate: '2023-01-12'
+description: 'K Squadの公式サイトをNext.jsを用いて構築しました'
 ---
 
 ## Markdownで更新可能な公式サイトをNext.jsで構築した

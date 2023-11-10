@@ -2,6 +2,7 @@
 title: '代表の小南がGenerative AI Business Dayに登壇しました'
 pubDate: '2023-04-14'
 heroImage: 'https://prtimes.jp/i/117465/2/ogp/d117465-2-e2fe7f9c9908fdeaa787-0.png'
+description: 'K Squadの代表の小南が生成AIのイベントに登壇しました'
 ---
 
 ## Generative AI Business Dayとは

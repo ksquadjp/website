@@ -2,6 +2,7 @@
 title: '技術顧問とは？仕事内容や費用について解説します！'
 heroImage: 'https://www.oro.com/zac/blog/4fa868c3dda64cb60acebf7f4a4668165de6acf1.jpeg'
 pubDate: '2023-07-11'
+description: 'K Squadが主要事業として行なっている技術顧問事業とはどのようなことを行なっているのかについて説明します。'
 ---
 
 K Squadは日本で数少ない技術顧問を専門とする企業です。

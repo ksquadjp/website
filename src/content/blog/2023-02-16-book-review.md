@@ -2,6 +2,7 @@
 title: '『評価指標入門』書評'
 heroImage: 'https://pubimg.honto.jp/ogimage/item/32190850'
 pubDate: '2023-02-16'
+description: '献本いただいた『評価指標入門』についての書評を行いました。非常に良書であったと感じています。'
 ---
 
 ## 『評価指標入門』を献本いただきました

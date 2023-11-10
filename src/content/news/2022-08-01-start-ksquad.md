@@ -2,6 +2,7 @@
 title: 'ケイスクワッド合同会社を設立しました'
 pubDate: '2022-08-01'
 heroImage: '/assets/ksquad_logo.png'
+description: 'ケイスクワッド合同会社を設立したことをご報告させていただきます。'
 ---
 
 ## ケイスクワッド合同会社を設立

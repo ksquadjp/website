@@ -2,6 +2,7 @@
 title: '設立から1年を迎えました'
 pubDate: '2023-08-01'
 heroImage: 'https://thumb.ac-illust.com/21/214f8847e3db6ca3ee367228e69a336c_t.jpeg'
+description: 'K Squadが設立から1年を迎えました。'
 ---
 
 ## 設立から1年経ちました

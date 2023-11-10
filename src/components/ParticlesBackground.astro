@@ -105,11 +105,10 @@ const options: ISourceOptions = {
 ---
 
 <script>
-  import { type Container, type Engine, tsParticles } from "tsparticles-engine";
   import { loadFull } from "tsparticles";
 
   // @ts-ignore
-  window.particlesInit = async function (engine: Engine) {
+  window.particlesInit = async function (engine) {
     await loadFull(engine);
   };
 </script>

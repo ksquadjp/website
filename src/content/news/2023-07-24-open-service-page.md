@@ -2,6 +2,7 @@
 title: 'サービス紹介ページを公開しました'
 pubDate: '2023-07-24'
 heroImage: 'https://www.cct-inc.co.jp/wp-content/uploads/2020/07/ai07_thum.jpg'
+description: 'K Squadの公式サイトにサービス紹介ページを追加しました。'
 ---
 
 ## サービス紹介ページを公開しました

@@ -2,6 +2,7 @@
 title: '組織変更のお知らせ'
 pubDate: '2023-09-11'
 heroImage: '/assets/logo.svg'
+description: '合同会社から株式会社へと組織変更を行いました。'
 ---
 
 ## 合同会社から株式会社へ変更しました
