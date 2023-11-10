@@ -18,7 +18,7 @@ const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueO
             posts.map((post) => (
               <li class="grid py-10 lg:grid-cols-2">
                 <div class="py-2 text-center lg:text-start">
-                  <a href={`/blog/${post.slug}/`}>
+                  <a href={`/news/${post.slug}/`}>
                     <time datetime={post.data.pubDate.toISOString()}>
                       {post.data.pubDate.toLocaleDateString("ja-jp", {
                         year: "numeric",
