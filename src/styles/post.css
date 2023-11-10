@@ -1,30 +1,38 @@
 div.title h1 {
-    @apply text-4xl;
-    @apply font-extrabold;
-    @apply py-2;
+  @apply text-4xl;
+  @apply font-extrabold;
+  @apply py-2;
 }
 
 div.prose h2 {
-    @apply py-4;
-    @apply text-2xl;
-    @apply font-bold;
+  @apply py-4;
+  @apply text-2xl;
+  @apply font-bold;
 }
 
 div.prose h2::before {
-    content: "# "
+  content: "# ";
 }
 
 div.prose a {
-    @apply px-0.5;
-    @apply text-blue-700;
-    @apply hover:underline;
-    @apply font-medium;
+  @apply px-0.5;
+  @apply text-blue-700;
+  @apply hover:underline;
+  @apply font-medium;
 }
 
 div.prose pre {
-    @apply p-3;
+  @apply p-3;
+}
+
+div.prose ul {
+  @apply px-10;
+}
+
+div.prose li {
+  list-style-type: disc;
 }
 
 p {
-    @apply py-2
+  @apply py-2;
 }
