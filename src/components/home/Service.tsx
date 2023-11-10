@@ -4,7 +4,7 @@ function Icon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="400"
+      width={window.screen.width >= 400 ? 400 : window.screen.width - 20}
       height="200"
       style={{ "stroke-width": "20px", "stroke-linecap": "round" }}
     >
@@ -31,7 +31,7 @@ export default function Services() {
   if (visible)
     return (
       <div className="m-6 animate-fadeInBottom lg:flex">
-        <div class="">
+        <div>
           <Icon />
         </div>
         <div class="my-auto">
