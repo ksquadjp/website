@@ -30,7 +30,9 @@ const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueO
                   </a>
                 </div>
                 <div class="order-first py-2 lg:order-last">
-                  <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                  <a href={`/news/${post.slug}/`}>
+                    <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                  </a>
                 </div>
               </li>
             ))
