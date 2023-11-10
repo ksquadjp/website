@@ -1,39 +1,30 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
-import Head from "@components/base/Head.astro";
-import Header from "@components/base/Header";
-import Footer from "@components/base/Footer.astro";
-import Container from "@components/base/Container.astro";
-
-import About from "@components/company/About.astro";
-import Members from "@components/company/Members.astro";
-import President from "@components/company/President.astro";
+import Base from "../layouts/Base.astro";
+import TopParticlesBackground from "../components/ParticlesBackground.astro";
+import Message from "../components/company/Message.astro";
+import About from "../components/company/About.astro";
+import CEO from "../components/company/CEO.astro";
+import Members from "../components/company/Members.astro";
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <Head title={`${SITE_TITLE} | 会社概要`} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-    <!-- End Google Tag Manager (noscript) -->
-    <Header client:load />
-    <main>
-      <Container>
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="mx-6 lg:mx-48">
+      <div class="py-32">
+        <Message />
+      </div>
+      <div class="py-8">
         <About />
-        <President />
+      </div>
+      <div class="py-8">
+        <CEO />
+      </div>
+      <div class="py-8">
         <Members />
-      </Container>
-    </main>
-    <Footer />
-  </body>
-</html>
+      </div>
+    </div>
+  </main>
+</Base>

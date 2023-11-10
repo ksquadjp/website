@@ -1,0 +1,163 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+import Base from "../../layouts/Base.astro";
+import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+import Top from "../../components/service/detail/Top.astro";
+import Solution from "../../components/service/detail/Solution.astro";
+import Content from "../../components/service/detail/Content.astro";
+import Cards from "../../components/service/detail/Cards.astro";
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="lg:mx-48">
+      <div class="py-32">
+        <Top title="Tech Advisor" titleKana="技術顧問" image="/assets/services/advisor.svg" />
+      </div>
+
+      <div class="p-8 text-center">
+        <b class="text-5xl">Empowering partners.</b>
+      </div>
+      <div class="p-3">
+        <Content image="/assets/advisor/empowering.png" reversed={true}>
+          <p class="p-2 text-lg">
+            デジタルプロダクト開発（UI/UXデザイン）を強みに置き、新規事業立ち上げ、システム構築、データ分析、経営的意思決定の技術的サポートなどあらゆるビジネス課題にコミットします。
+          </p><p class="p-2 text-lg">
+            K
+            Squadはクライアントと一緒に一つのチームとなり並走するソフトウェア開発パートナーです。アウトプットの納品だけでなく、ソフトウェア開発の文化がクライアント組織に根付いてゆくことを目指します。
+          </p>
+        </Content>
+      </div>
+
+      <div class="py-12">
+        <div class="p-8">
+          <b class="text-5xl">What We Do</b>
+        </div>
+        <div class="grid grid-cols-1 p-3 md:grid-cols-2">
+          <Solution
+            title="Software Development"
+            titleKana="ソフトウェア開発"
+            image="/assets/advisor/tool.svg"
+            description="新規サービスの立ち上げから既存サービスの改善まで、ソフトウェアプロダクトのあらゆるフェーズをサポートします。ビジネスモデルの策定から技術的実現可能性の調査、新規アルゴリズムの構築、ビジネスとユーザー体験を見据えたシステムデザイン、ユーザー目線に立ったUXデザインなど、高品質で持続可能なプロダクト開発を実現します。モバイルアプリからWebサービス、業務システムまで幅広く支援します。"
+          />
+          <Solution
+            title="Tech Hands-on"
+            titleKana="技術ハンズオン"
+            image="/assets/advisor/seminar.svg"
+            description="システム開発に関しての様々なノウハウをハンズオンします。昨今ではソフトウェア開発の難易度は下がったと言われますが、プログラミングスクールを卒業したからといってすぐに本番レベルのWeb開発を行えるわけではなく、多くの知識と経験が要求されます。ソフトウェア開発の深い経験をもとに、CI/CD活用パターンやセキュアな運用設計、チーム開発ノウハウなど多面的なナレッジをOJTを通して提供します。"
+          />
+          <Solution
+            title="Data Platform"
+            titleKana="データ基盤構築"
+            image="/assets/advisor/analytics.svg"
+            description="営業からマーケティング、カスタマーサクセスなど様々なビジネスオペレーションでデータを活用できるよう、データ基盤を構築し、データ分析からAI活用まで実現します。高いエンジニアリング力をもとに、複雑なデータを見やすく使いやすいものにし、新鮮なデータを活用したビジネスオペレーションを実現できるよう、データ基盤を実装します。"
+          />
+          <Solution
+            title="Optimizing your Cloud"
+            titleKana="クラウド最適化"
+            image="/assets/advisor/cloud.svg"
+            description="クラウドアプリケーションは耐障害性を高めながら運用負荷を下げてくれるものですが、正しい利用方法でないとコストは大きくなりがちです。Webアプリケーション開発の知識を持ったプロが最適なシステム設計を実現し、クラウドにかかる費用を最適化させます。"
+          />
+        </div>
+      </div>
+
+      <div class="py-12">
+        <div class="p-8">
+          <b class="text-5xl">How We Develop</b>
+        </div>
+        <div class="p-3">
+          <Content image="/assets/advisor/timeline.png" reversed={false}>
+            <div class="py-2">
+              <p>
+                K Squadが向き合う顧客課題は、それぞれ似ていることはあっても全く同じというものただの一つもありません。
+              </p>
+              <p>そのため我々は一社一社と着実に向き合い、顧客ごとに適切な戦略を選定及び選択、実行に移していきます。</p>
+            </div>
+            <div class="py-2">
+              <p>
+                顧客が不自由なくソフトウェアエンジニアリングを活用できるようになっている状態を出口戦略として掲げ、そこに到達するために開発ノウハウの伝授から実際の開発サポートまで多面的に活動します。
+              </p>
+            </div>
+          </Content>
+          <div class="p-12">
+            <Cards
+              title="1. 現状分析"
+              contents={[
+                {
+                  subtitle: "課題確認",
+                  description:
+                    "技術顧問として支援を開始するのにあたり、まずクライアントが何を課題と感じているかをヒアリングします。エンジニアが不足しているのか、ナレッジが不足しているか、予算は十分かを把握します。",
+                },
+                {
+                  subtitle: "技術スタックの確認",
+                  description:
+                    "ソフトウェアエンジニアリングを支援するにあたり、既存の技術について把握する必要があります。既存技術が採用や予算、運用可能性の観点で持続的なのか判断します。",
+                },
+              ]}
+            />
+            <Cards
+              title="2. 戦略立案/企画立案"
+              contents={[
+                {
+                  subtitle: "技術選定",
+                  description:
+                    "既存技術とのマッチや持続的な技術であることを条件に、プロジェクトに適切な技術を選定します。",
+                },
+                {
+                  subtitle: "技術調査",
+                  description:
+                    "必要となる技術を調査し、現状にフィットしたソリューションであるかを確認します。AI系のプロジェクトであれば最新論文を確認し、実装可能性やパフォーマンスを調査します。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="3. 施策実施"
+              contents={[
+                {
+                  subtitle: "開発ナレッジのハンズオン",
+                  description:
+                    "本番レベルのシステム開発を行うにあたり、プログラミングスクールなどでは習わないような本格的なノウハウをペアプログラミングなどを通して現場エンジニアにハンズオンします。",
+                },
+                {
+                  subtitle: "セキュリティ対策",
+                  description:
+                    "システムをセキュアなものにすることはもちろん、インシデントが発生しにくいような開発体系を構築し、徹底的にセキュリティにおける不安を取り除きます。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="4. 振り返り"
+              contents={[
+                {
+                  subtitle: "主要KPIの確認",
+                  description:
+                    "支援開始してからどの程度開発生産性が上がったのか、クラウドの予算を低減できたのか、エンジニアのモチベーションは向上したのかを定量的な数値指標に基づいて計測します。",
+                },
+              ]}
+            />
+
+            <Cards
+              title="5. 出口戦略"
+              contents={[
+                {
+                  subtitle: "支援の卒業",
+                  description:
+                    "K Squadが支援を終えた後もクライアントにソフトウェアエンジニアリングのカルチャーが定着するよう、自発的な問題解決のスキームを整えます。",
+                },
+                {
+                  subtitle: "属人性の排除",
+                  description:
+                    "システムの運用を誰でも行えるよう、徹底的にシステム化を行います。サービスのデプロイ手順やリリース管理、プロジェクト進行など、K Squadが持つ開発標準をハンズオンします。",
+                },
+              ]}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

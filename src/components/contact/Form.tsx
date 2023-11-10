@@ -1,4 +1,4 @@
-import { CONTACT_POST_URL } from "@config";
+import { CONTACT_POST_URL } from "../../consts";
 
 import { useState } from "preact/hooks";
 
@@ -37,6 +37,10 @@ function TextAreaForm(props: Props) {
   );
 }
 
+function allFormsFilled(name: string, email: string, via: string, content: string) {
+  return name.length > 0 && email.length > 0 && via.length > 0 && content.length > 0;
+}
+
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -45,6 +49,8 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [via, setVia] = useState("");
   const [content, setContent] = useState("");
+
+  const canSubmit = allFormsFilled(name, email, via, content);
 
   if (done) {
     return (
@@ -62,29 +68,43 @@ export default function Contact() {
       <TextForm label="どこでK Squadを知ったか" field="via" onInput={setVia} />
       <TextAreaForm label="内容" field="content" onInput={setContent} />
       <div class="flex justify-center">
-        <button
-          className="border bg-black px-4 py-2 font-bold text-white hover:border-black hover:bg-white hover:text-black"
-          onClick={
-            !loading
-              ? (_) => {
-                  setLoading(true);
-                  const formData = new FormData();
-                  formData.append("name", name);
-                  formData.append("email", email);
-                  formData.append("via", via);
-                  formData.append("content", content);
-                  fetch(CONTACT_POST_URL, {
-                    method: "POST",
-                    body: formData,
-                    mode: "cors",
-                  }).then((_) => setDone(true));
-                }
-              : (_) => {}
-          }
-        >
-          {loading && "送信中..."}
-          {!loading && "送信"}
-        </button>
+        {!canSubmit ? (
+          <button className="border bg-black px-4 py-2 font-bold text-white hover:border-black hover:bg-white hover:text-black">
+            必要情報を入力してください
+          </button>
+        ) : (
+          <a
+            href="/contact/thanks"
+            disabled={!canSubmit}
+            className={`${
+              !canSubmit ? "disabled" : ""
+            } border bg-black px-4 py-2 font-bold text-white hover:border-black hover:bg-white hover:text-black`}
+            onClick={
+              !loading && canSubmit
+                ? (e) => {
+                    e.preventDefault();
+                    setLoading(true);
+                    const formData = new FormData();
+                    formData.append("name", name);
+                    formData.append("email", email);
+                    formData.append("via", via);
+                    formData.append("content", content);
+                    fetch(CONTACT_POST_URL, {
+                      method: "POST",
+                      body: formData,
+                      mode: "cors",
+                    }).then((_) => {
+                      setDone(true);
+                      location.href = (e.target as HTMLAnchorElement).href;
+                    });
+                  }
+                : (_) => {}
+            }
+          >
+            {loading && "送信中..."}
+            {!loading && "送信"}
+          </a>
+        )}
       </div>
     </div>
   );

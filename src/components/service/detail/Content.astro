@@ -1,0 +1,17 @@
+---
+interface Props {
+  image: string;
+  reversed: boolean;
+}
+
+const { image, reversed } = Astro.props;
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2">
+  <div class=`${reversed ? "lg:order-last" : ""}`>
+    <img src={image} class="m-3 mx-auto" alt={image} />
+  </div>
+  <div class="my-auto px-10">
+    <slot />
+  </div>
+</div>

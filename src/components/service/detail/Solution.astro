@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  titleKana: string;
+  image: string;
+  description: string;
+}
+
+const { title, titleKana, image, description } = Astro.props;
+---
+
+<div class="p-6">
+  <div class="flex py-4">
+    <div class="relative my-auto">
+      <img src={image} class="h-16" alt={title} />
+    </div>
+    <div class="pl-8 lg:pl-12">
+      <div class="text-3xl font-bold">{title}</div>
+      <div class="text-xl">{titleKana}</div>
+    </div>
+  </div>
+  <p>{description}</p>
+</div>

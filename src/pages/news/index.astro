@@ -1,0 +1,42 @@
+---
+import Base from "../../layouts/Base.astro";
+import TopParticlesBackground from "../../components/ParticlesBackground.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <main class="bg-white bg-opacity-80">
+    <div class="mx-6 lg:mx-48">
+      <section class="pt-32 lg:px-24">
+        <ul>
+          {
+            posts.map((post) => (
+              <li class="grid py-10 lg:grid-cols-2">
+                <div class="py-2 text-center lg:text-start">
+                  <a href={`/blog/${post.slug}/`}>
+                    <time datetime={post.data.pubDate.toISOString()}>
+                      {post.data.pubDate.toLocaleDateString("ja-jp", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </time>
+                    <h4 class="text-2xl">{post.data.title}</h4>
+                  </a>
+                </div>
+                <div class="order-first py-2 lg:order-last">
+                  <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </main>
+</Base>

@@ -1,43 +1,36 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "@config";
-
-import Head from "@components/base/Head.astro";
-import Header from "@components/base/Header";
-import Footer from "@components/base/Footer.astro";
-import Container from "@components/base/Container.astro";
-
-import Top from "@components/home/Top.astro";
-import Customers from "@components/home/Customers.astro";
-import News from "@components/home/News.astro";
-import Service from "@components/home/Service.astro";
-import Message from "@components/home/Message.astro";
+import Base from "../layouts/Base.astro";
+import TopParticlesBackground from "../components/ParticlesBackground.astro";
+import LetterText from "../components/home/LetterText.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import News from "../components/home/News.astro";
+import AboutUs from "../components/home/AboutUs.tsx";
+import Service from "../components/home/Service.tsx";
+import Partners from "../components/home/Partners.astro";
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe></noscript
-    >
-    <!-- End Google Tag Manager (noscript) -->
-    <Header client:load />
-    <main>
-      <Top />
-      <Container>
-        <Message />
+<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hidden"><TopParticlesBackground /></div>
+  <div class="h-screen">
+    <div class="absolute bottom-36 left-0 right-0 w-full px-2 lg:bottom-16">
+      <LetterText />
+    </div>
+  </div>
+
+  <main class="z-20 bg-white bg-opacity-80">
+    <div class="md:mx-32 xl:mx-64 2xl:mx-96">
+      <section class="py-10">
         <News />
-        <Service />
-        <Customers />
-      </Container>
-    </main>
-    <Footer />
-  </body>
-</html>
+      </section>
+      <section class="py-10">
+        <AboutUs client:load />
+      </section>
+      <section class="py-10">
+        <Service client:load />
+      </section>
+      <section class="py-10">
+        <Partners />
+      </section>
+    </div>
+  </main>
+</Base>

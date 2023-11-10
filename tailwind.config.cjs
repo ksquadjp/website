@@ -3,33 +3,38 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
-        success: "#0070f3",
-        cyan: "#79FFE1",
+      keyframes: {
+        appear: {
+          from: {
+            opacity: 0,
+            visibility: "hidden",
+          },
+          to: { opacity: 1 },
+        },
+        disappear: {
+          from: { opacity: 1 },
+          to: {
+            opacity: 0,
+            visibility: "hidden",
+          },
+        },
+        fadeInBottom: {
+          from: {
+            transform: "translateY(50px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
       },
-      spacing: {
-        28: "7rem",
-      },
-      letterSpacing: {
-        tighter: "-.04em",
-      },
-      lineHeight: {
-        tight: 1.2,
-      },
-      fontSize: {
-        "5xl": "2.5rem",
-        "6xl": "2.75rem",
-        "7xl": "4.5rem",
-        "8xl": "6.25rem",
-      },
-      boxShadow: {
-        sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
-        md: "0 8px 30px rgba(0, 0, 0, 0.12)",
+      animation: {
+        appear: "appear 0.3s linear forwards",
+        disappear: "disappear 0.3s linear forwards",
+        fadeInBottom: "fadeInBottom 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

@@ -1,0 +1,30 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <Head title={title} description={description} noindex={noindex} />
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WD88TGDP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <Header client:load />
+    <slot />
+    <Footer />
+  </body>
+</html>
