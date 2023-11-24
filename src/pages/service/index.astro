@@ -1,13 +1,14 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 import Service from "../../components/service/Service.astro";
 import Business from "../../components/service/Business.astro";
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base
+  title="サービス紹介 | K Squad ケイスクワッド株式会社"
+  description="K Squadではソフトウェアエンジニアリングへの強みを活かし、技術的な知見をお客さまに提供しながらITをサポートする技術顧問事業、ソフトウェアエンジニアならではの視点をもとに採用支援や評価制度設計を行うエンジニア組織構築支援サービスの2つを展開しています。"
+>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="mx-6 lg:mx-48">

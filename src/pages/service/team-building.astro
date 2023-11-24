@@ -1,6 +1,4 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 import Top from "../../components/service/detail/Top.astro";
@@ -8,7 +6,10 @@ import Solution from "../../components/service/detail/Solution.astro";
 import Content from "../../components/service/detail/Content.astro";
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base
+  title="エンジニア組織構築支援 | K Squad ケイスクワッド株式会社"
+  description="K Squadはソフトウェアエンジニアリングのカルチャーを持ったメンバーが集結していることから、どのような組織体系であればエンジニアが生産性高くプロジェクトに貢献できるかを熟知しています。このノウハウをもとにエンジニア組織の構築支援を行なっていきます。"
+>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="lg:mx-48">

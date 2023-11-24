@@ -2,14 +2,16 @@
 import Base from "../layouts/Base.astro";
 import TopParticlesBackground from "../components/ParticlesBackground.astro";
 import LetterText from "../components/home/LetterText.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import News from "../components/home/News.astro";
 import AboutUs from "../components/home/AboutUs.tsx";
 import Service from "../components/home/Service.tsx";
 import Partners from "../components/home/Partners.astro";
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base
+  title="K Squad ケイスクワッド株式会社 ソフトウェア技術顧問カンパニー"
+  description="ケイスクワッド株式会社は技術顧問を主要事業とするITのプロフェッショナル集団です。業界トップクラスのエンジニアがお客さまのWebに関するお困りごとを解決します。開発から広告、IT人材採用まで全方位的にサポートしますのでお気軽にお問い合わせください。"
+>
   <div class="hidden"><TopParticlesBackground /></div>
   <div class="h-screen">
     <div class="absolute bottom-36 left-0 right-0 w-full px-2 lg:bottom-16">

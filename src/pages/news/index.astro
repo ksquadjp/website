@@ -2,13 +2,12 @@
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base title="ニュース一覧 | K Squad ケイスクワッド株式会社" description="K Squadの最新の活動に関する一覧ページです。">
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="mx-6 lg:mx-48">

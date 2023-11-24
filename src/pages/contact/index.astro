@@ -1,12 +1,13 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 import Form from "../../components/contact/Form";
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Base
+  title="お問い合わせ | K Squad ケイスクワッド株式会社"
+  description="K Squadに関するお問い合わせはこちらのページよりよろしくお願いします。"
+>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="mx-6 py-32 lg:mx-48">

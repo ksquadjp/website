@@ -1,11 +1,13 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 ---
 
-<Base title={SITE_TITLE} description={SITE_DESCRIPTION} noindex={true}>
+<Base
+  title="お問い合わせ"
+  description="お問い合わせいただきありがとうございました。1営業日以内に担当の者より返事をさせていただきます。今しばらくお待ちください。"
+  noindex={true}
+>
   <div class="hidden"><TopParticlesBackground /></div>
   <main class="bg-white bg-opacity-80">
     <div class="mx-6 lg:mx-48">
