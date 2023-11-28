@@ -44,7 +44,7 @@ function HanburgerMenu() {
             open && clicked ? "animate-appear bg-white bg-opacity-90" : `animate-disappear bg-white`
           }`}
         >
-          <div className="py-48 text-center">
+          <div className="py-40 text-center">
             {navItems.map((e) => (
               <div className="p-4 text-3xl font-bold">
                 <a href={e.link}>{e.name}</a>
