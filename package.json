@@ -25,7 +25,7 @@
     "@astrojs/tailwind": "^5.0.0",
     "@heroicons/react": "^2.0.18",
     "@nanostores/preact": "^0.5.0",
-    "astro": "^3.1.2",
+    "astro": "^4.0.0",
     "astro-particles": "^2.10.0",
     "nanostores": "^0.9.3",
     "preact": "^10.17.1",
