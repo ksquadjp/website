@@ -1,5 +1,5 @@
 name: Install tools
-description: Install pnpm, Node.js specified by .tool-versions
+description: Install pnpm, Node.js specified by .node-version
 
 runs:
   using: composite
@@ -7,7 +7,7 @@ runs:
     - name: Get node version
       id: node-version
       run: |
-        version=$(grep "^node " ".tool-versions" | sed -e "s/^node //")
+        version=$(head ".node-version")
         echo "NODE_VERSION=$version" >> $GITHUB_OUTPUT
       shell: bash
 
