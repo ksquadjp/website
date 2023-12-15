@@ -7,7 +7,7 @@ runs:
     - name: Get node version
       id: node-version
       run: |
-        version=$(grep "^node " ".node-version" | sed -e "s/^node //")
+        version=$(head ".node-version")
         echo "NODE_VERSION=$version" >> $GITHUB_OUTPUT
       shell: bash
 
