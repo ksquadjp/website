@@ -21,8 +21,8 @@ const response = await getBlogs({ fields: ["id", "title", "publishedAt", "heroIm
               <li class="grid py-10 lg:grid-cols-2">
                 <div class="py-2 text-center lg:text-start">
                   <a href={`/blog/${blog.id}/`}>
-                    <time datetime={blog.publishedAt.toISOString()}>
-                      {blog.publishedAt.toLocaleDateString("ja-jp", {
+                    <time datetime={new Date(blog.publishedAt).toISOString()}>
+                      {new Date(blog.publishedAt).toLocaleDateString("ja-jp", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",

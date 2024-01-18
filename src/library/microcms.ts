@@ -31,14 +31,14 @@ export type BlogResponse = {
 
 export const getBlogs = async (queries?: MicroCMSQueries) => {
   return await client.get<BlogResponse>({
-    endpoint: "blog",
+    endpoint: "blogs",
     queries,
   });
 };
 
 export const getBlogDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   return await client.getListDetail<Blog>({
-    endpoint: "blog",
+    endpoint: "blogs",
     contentId,
     queries,
   });
