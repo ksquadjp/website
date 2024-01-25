@@ -3,8 +3,8 @@ import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 
 // microCMS呼び出し
-import { getBlogs } from "../../library/microcms";
-const response = await getBlogs({ fields: ["id", "title", "publishedAt", "heroImage"] });
+import { getPosts } from "../../library/microcms";
+const response = await getPosts("blogs", { fields: ["id", "title", "publishedAt", "heroImage"] });
 ---
 
 <Base

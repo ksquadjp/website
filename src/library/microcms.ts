@@ -1,5 +1,6 @@
 import type { MicroCMSQueries } from "microcms-js-sdk";
 import { createClient } from "microcms-js-sdk";
+import type { Blog } from "../content/config";
 const client = createClient({
   serviceDomain: import.meta.env.MICROCMS_SERVICE_DOMAIN,
   apiKey: import.meta.env.MICROCMS_API_KEY,
@@ -11,7 +12,7 @@ export type HeroImage = {
   width: number;
 };
 
-export type Blog = {
+export type Post = {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -22,23 +23,23 @@ export type Blog = {
   heroImage: HeroImage;
 };
 
-export type BlogResponse = {
+export type PostResponse = {
   totalCount: number;
   offset: number;
   limit: number;
-  contents: Blog[];
+  contents: Post[];
 };
 
-export const getBlogs = async (queries?: MicroCMSQueries) => {
-  return await client.get<BlogResponse>({
-    endpoint: "blogs",
+export const getPosts = async (endpoint: "blogs" | "news", queries?: MicroCMSQueries) => {
+  return await client.get<PostResponse>({
+    endpoint: endpoint,
     queries,
   });
 };
 
-export const getBlogDetail = async (contentId: string, queries?: MicroCMSQueries) => {
-  return await client.getListDetail<Blog>({
-    endpoint: "blogs",
+export const getPostDetail = async (contentId: string, endpoint: "blogs" | "news", queries?: MicroCMSQueries) => {
+  return await client.getListDetail<Post>({
+    endpoint: endpoint,
     contentId,
     queries,
   });
