@@ -35,9 +35,6 @@ dependencies:
   astro-particles:
     specifier: ^2.10.0
     version: registry.npmmirror.com/astro-particles@2.10.0
-  marked:
-    specifier: ^11.1.1
-    version: 11.1.1
   microcms-js-sdk:
     specifier: ^2.7.0
     version: 2.7.0
@@ -47,6 +44,12 @@ dependencies:
   preact:
     specifier: ^10.19.2
     version: 10.19.2
+  remark:
+    specifier: ^15.0.1
+    version: 15.0.1
+  remark-html:
+    specifier: ^16.0.1
+    version: 16.0.1
   tailwindcss:
     specifier: ^3.3.6
     version: 3.3.6(ts-node@10.9.1)
@@ -2074,6 +2077,14 @@ packages:
       zwitch: 2.0.4
     dev: false
 
+  /hast-util-sanitize@5.0.1:
+    resolution: {integrity: sha512-IGrgWLuip4O2nq5CugXy4GI2V8kx4sFVy5Hd4vF7AR2gxS0N9s7nEAVUyeMtZKZvzrxVsHt73XdTsno1tClIkQ==}
+    dependencies:
+      '@types/hast': 3.0.3
+      '@ungap/structured-clone': 1.2.0
+      unist-util-position: 5.0.0
+    dev: false
+
   /hast-util-to-estree@3.1.0:
     resolution: {integrity: sha512-lfX5g6hqVh9kjS/B9E2gSkvHH4SZNiQFiqWS0x9fENzEl+8W12RqdRxX6d/Cwxi30tPQs3bIO+aolQJNp1bIyw==}
     dependencies:
@@ -2492,12 +2503,6 @@ packages:
 
   /markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
-    dev: false
-
-  /marked@11.1.1:
-    resolution: {integrity: sha512-EgxRjgK9axsQuUa/oKMx5DEY8oXpKJfk61rT5iY3aRlgU6QJtUcxU5OAymdhCvWvhYcd9FKmO5eQoX8m9VGJXg==}
-    engines: {node: '>= 18'}
-    hasBin: true
     dev: false
 
   /mdast-util-definitions@6.0.0:
@@ -3724,6 +3729,16 @@ packages:
       - supports-color
     dev: false
 
+  /remark-html@16.0.1:
+    resolution: {integrity: sha512-B9JqA5i0qZe0Nsf49q3OXyGvyXuZFDzAP2iOFLEumymuYJITVpiH1IgsTEwTpdptDmZlMDMWeDmSawdaJIGCXQ==}
+    dependencies:
+      '@types/mdast': 4.0.3
+      hast-util-sanitize: 5.0.1
+      hast-util-to-html: 9.0.0
+      mdast-util-to-hast: 13.0.2
+      unified: 11.0.4
+    dev: false
+
   /remark-mdx@3.0.0:
     resolution: {integrity: sha512-O7yfjuC6ra3NHPbRVxfflafAj3LTwx3b73aBvkEFU5z4PsD6FD4vrqJAkE5iNGLz71GdjXfgRqm3SQ0h0VuE7g==}
     dependencies:
@@ -3769,6 +3784,17 @@ packages:
       '@types/mdast': 4.0.3
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.4
+    dev: false
+
+  /remark@15.0.1:
+    resolution: {integrity: sha512-Eht5w30ruCXgFmxVUSlNWQ9iiimq07URKeFS3hNc8cUWy1llX4KDWfyEDZRycMc+znsN9Ux5/tJ/BFdgdOwA3A==}
+    dependencies:
+      '@types/mdast': 4.0.3
+      remark-parse: 11.0.0
+      remark-stringify: 11.0.0
+      unified: 11.0.4
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /resolve@1.22.8:

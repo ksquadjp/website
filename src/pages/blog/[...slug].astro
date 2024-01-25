@@ -1,7 +1,8 @@
 ---
 import Post from "../../layouts/Post.astro";
 import { getBlogs, getBlogDetail } from "../../library/microcms";
-import { marked } from "marked";
+import { remark } from "remark";
+import remarkHtml from "remark-html";
 
 export const getStaticPaths = async () => {
   const response = await getBlogs({ fields: ["id"] });
@@ -13,7 +14,8 @@ export const getStaticPaths = async () => {
 };
 
 const processContentToHTML = (content) => {
-  return marked(content);
+  const processedContent = remark().use(remarkHtml).process(content);
+  return processedContent;
 };
 
 const { slug } = Astro.params;
