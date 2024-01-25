@@ -1,20 +1,26 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
 import Post from "../../layouts/Post.astro";
+import { getBlogs, getBlogDetail } from "../../library/microcms";
+import { marked } from "marked";
 
-export async function getStaticPaths() {
-  const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
+export const getStaticPaths = async () => {
+  const response = await getBlogs({ fields: ["id"] });
+  return response.contents.map((blog) => ({
+    params: {
+      slug: blog.id,
+    },
   }));
-}
-type Props = CollectionEntry<"blog">;
+};
 
-const post = Astro.props;
-const { Content } = await post.render();
+const processContentToHTML = (content) => {
+  return marked(content);
+};
+
+const { slug } = Astro.params;
+const blog = await getBlogDetail(slug);
+const processedBlog = processContentToHTML(blog.content);
 ---
 
-<Post {...post.data}>
-  <Content />
+<Post {...blog}>
+  <div set:html={processedBlog} />
 </Post>
