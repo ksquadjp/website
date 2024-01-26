@@ -13,7 +13,7 @@ export const getStaticPaths = async () => {
   }));
 };
 
-const processContentToHTML = (content) => {
+const processContentToHTML = (content: string) => {
   const processedContent = remark().use(remarkHtml).process(content);
   return processedContent;
 };
