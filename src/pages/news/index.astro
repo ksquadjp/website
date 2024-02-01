@@ -2,9 +2,9 @@
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// microCMS呼び出し
+import { getPosts } from "../../library/microcms";
+const response = await getPosts("news", { fields: ["id", "title", "publishedAt", "heroImage"] });
 ---
 
 <Base title="ニュース一覧 | K Squad ケイスクワッド株式会社" description="K Squadの最新の活動に関する一覧ページです。">
@@ -14,23 +14,23 @@ const posts = (await getCollection("news")).sort((a, b) => b.data.pubDate.valueO
       <section class="pt-32 lg:px-24">
         <ul>
           {
-            posts.map((post) => (
+            response.contents.map((news) => (
               <li class="grid py-10 lg:grid-cols-2">
                 <div class="py-2 text-center lg:text-start">
-                  <a href={`/news/${post.slug}/`}>
-                    <time datetime={post.data.pubDate.toISOString()}>
-                      {post.data.pubDate.toLocaleDateString("ja-jp", {
+                  <a href={`/news/${news.id}/`}>
+                    <time datetime={new Date(news.publishedAt).toISOString()}>
+                      {new Date(news.publishedAt).toLocaleDateString("ja-jp", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
                       })}
                     </time>
-                    <h4 class="text-2xl">{post.data.title}</h4>
+                    <h4 class="text-2xl">{news.title}</h4>
                   </a>
                 </div>
                 <div class="order-first py-2 lg:order-last">
-                  <a href={`/news/${post.slug}/`}>
-                    <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                  <a href={`/news/${news.id}/`}>
+                    <img class="mx-auto h-36 rounded-lg" src={news.heroImage.url} alt="" />
                   </a>
                 </div>
               </li>

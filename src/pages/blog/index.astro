@@ -2,9 +2,9 @@
 import Base from "../../layouts/Base.astro";
 import TopParticlesBackground from "../../components/ParticlesBackground.astro";
 
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// microCMS呼び出し
+import { getPosts } from "../../library/microcms";
+const response = await getPosts("blogs", { fields: ["id", "title", "publishedAt", "heroImage"] });
 ---
 
 <Base
@@ -17,23 +17,23 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
       <section class="pt-32 lg:px-24">
         <ul>
           {
-            posts.map((post) => (
+            response.contents.map((blog) => (
               <li class="grid py-10 lg:grid-cols-2">
                 <div class="py-2 text-center lg:text-start">
-                  <a href={`/blog/${post.slug}/`}>
-                    <time datetime={post.data.pubDate.toISOString()}>
-                      {post.data.pubDate.toLocaleDateString("ja-jp", {
+                  <a href={`/blog/${blog.id}/`}>
+                    <time datetime={new Date(blog.publishedAt).toISOString()}>
+                      {new Date(blog.publishedAt).toLocaleDateString("ja-jp", {
                         year: "numeric",
                         month: "short",
                         day: "numeric",
                       })}
                     </time>
-                    <h4 class="text-2xl">{post.data.title}</h4>
+                    <h4 class="text-2xl">{blog.title}</h4>
                   </a>
                 </div>
                 <div class="order-first py-2 lg:order-last">
-                  <a href={`/blog/${post.slug}/`}>
-                    <img class="mx-auto h-36 rounded-lg" src={post.data.heroImage} alt="" />
+                  <a href={`/blog/${blog.id}/`}>
+                    <img class="mx-auto h-36 rounded-lg" src={blog.heroImage.url} alt="" />
                   </a>
                 </div>
               </li>
