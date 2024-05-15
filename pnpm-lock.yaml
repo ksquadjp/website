@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.3.1
-    version: registry.npmmirror.com/@astrojs/check@0.3.1(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2)
+    specifier: ^0.7.0
+    version: 0.7.0(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2)
   '@astrojs/mdx':
     specifier: ^2.0.0
     version: 2.0.0(astro@4.0.2)
@@ -98,6 +98,23 @@ packages:
       '@jridgewell/trace-mapping': 0.3.20
     dev: false
 
+  /@astrojs/check@0.7.0(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-UTqwOeKNu9IYZmJXEeWnQuTdSd/pX58Hl4TUARsMlT97SVDL//kLBE4T/ctxRz6J573N87oE5ddtW/uOOnQTug==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    dependencies:
+      '@astrojs/language-server': 2.10.0(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2)
+      chokidar: 3.5.3
+      fast-glob: 3.3.2
+      kleur: 4.1.5
+      typescript: 5.3.2
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+    dev: false
+
   /@astrojs/compiler@1.8.2:
     resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
 
@@ -105,8 +122,46 @@ packages:
     resolution: {integrity: sha512-jkY7bCVxl27KeZsSxIZ+pqACe+g8VQUdTiSJRj/sXYdIaZlW3ZMq4qF2M17P/oDt3LBq0zLNwQr4Cb7fSpRGxQ==}
     dev: false
 
+  /@astrojs/compiler@2.8.0:
+    resolution: {integrity: sha512-yrpD1WRGqsJwANaDIdtHo+YVjvIOFAjC83lu5qENIgrafwZcJgSXDuwVMXOgok4tFzpeKLsFQ6c3FoUdloLWBQ==}
+    dev: false
+
   /@astrojs/internal-helpers@0.2.1:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
+    dev: false
+
+  /@astrojs/language-server@2.10.0(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-crHXpqYfA5qWioiuZnZFpTsNItgBlF1f0S9MzDYS7/pfCALkHNJ7K3w9U/j0uMKymsT4hC7BfMaX0DYlfdSzHg==}
+    hasBin: true
+    peerDependencies:
+      prettier: ^3.0.0
+      prettier-plugin-astro: '>=0.11.0'
+    peerDependenciesMeta:
+      prettier:
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+    dependencies:
+      '@astrojs/compiler': 2.8.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/kit': 2.2.4(typescript@5.3.2)
+      '@volar/language-core': 2.2.4
+      '@volar/language-server': 2.2.4
+      '@volar/language-service': 2.2.4
+      '@volar/typescript': 2.2.4
+      fast-glob: 3.3.2
+      prettier: 3.1.0
+      prettier-plugin-astro: 0.12.2
+      volar-service-css: 0.0.45(@volar/language-service@2.2.4)
+      volar-service-emmet: 0.0.45(@volar/language-service@2.2.4)
+      volar-service-html: 0.0.45(@volar/language-service@2.2.4)
+      volar-service-prettier: 0.0.45(@volar/language-service@2.2.4)(prettier@3.1.0)
+      volar-service-typescript: 0.0.45(@volar/language-service@2.2.4)
+      volar-service-typescript-twoslash-queries: 0.0.45(@volar/language-service@2.2.4)
+      vscode-html-languageservice: 5.2.0
+      vscode-uri: 3.0.8
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /@astrojs/markdown-remark@4.0.0(astro@4.0.2):
@@ -466,6 +521,43 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
+  /@emmetio/abbreviation@2.3.3:
+    resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
+    dependencies:
+      '@emmetio/scanner': 1.0.4
+    dev: false
+
+  /@emmetio/css-abbreviation@2.1.8:
+    resolution: {integrity: sha512-s9yjhJ6saOO/uk1V74eifykk2CBYi01STTK3WlXWGOepyKa23ymJ053+DNQjpFcy1ingpaO7AxCcwLvHFY9tuw==}
+    dependencies:
+      '@emmetio/scanner': 1.0.4
+    dev: false
+
+  /@emmetio/css-parser@0.4.0:
+    resolution: {integrity: sha512-z7wkxRSZgrQHXVzObGkXG+Vmj3uRlpM11oCZ9pbaz0nFejvCDmAiNDpY75+wgXOcffKpj4rzGtwGaZxfJKsJxw==}
+    dependencies:
+      '@emmetio/stream-reader': 2.2.0
+      '@emmetio/stream-reader-utils': 0.1.0
+    dev: false
+
+  /@emmetio/html-matcher@1.3.0:
+    resolution: {integrity: sha512-NTbsvppE5eVyBMuyGfVu2CRrLvo7J4YHb6t9sBFLyY03WYhXET37qA4zOYUjBWFCRHO7pS1B9khERtY0f5JXPQ==}
+    dependencies:
+      '@emmetio/scanner': 1.0.4
+    dev: false
+
+  /@emmetio/scanner@1.0.4:
+    resolution: {integrity: sha512-IqRuJtQff7YHHBk4G8YZ45uB9BaAGcwQeVzgj/zj8/UdOhtQpEIupUhSk8dys6spFIWVZVeK20CzGEnqR5SbqA==}
+    dev: false
+
+  /@emmetio/stream-reader-utils@0.1.0:
+    resolution: {integrity: sha512-ZsZ2I9Vzso3Ho/pjZFsmmZ++FWeEd/txqybHTm4OgaZzdS8V9V/YYWQwg5TC38Z7uLWUV1vavpLLbjJtKubR1A==}
+    dev: false
+
+  /@emmetio/stream-reader@2.2.0:
+    resolution: {integrity: sha512-fXVXEyFA5Yv3M3n8sUGT7+fvecGrZP4k6FnWWMSZVQf69kAq0LLpaBQLGcPR30m3zMmKYhECP4k/ZkzvhEW5kw==}
+    dev: false
+
   /@esbuild/android-arm64@0.19.8:
     resolution: {integrity: sha512-B8JbS61bEunhfx8kasogFENgQfr/dIp+ggYXwTqdbMAgGDhRa3AaPpQMuQU0rNxDLECj6FhDzk1cF9WHMVwrtA==}
     engines: {node: '>=12'}
@@ -663,6 +755,15 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@johnsoncodehk/vscode-html-languageservice@5.2.0-34a5462:
+    resolution: {integrity: sha512-etqLfpSJ5zaw76KUNF603be6d6QsiQPmaHr9FKEp4zhLZJzWCCMH6Icak7MtLUFLZLMpL761mZNImi/joBo1ZA==}
+    dependencies:
+      '@vscode/l10n': 0.0.18
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
+      vscode-uri: 3.0.8
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -1020,6 +1121,88 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
+  /@volar/kit@2.2.4(typescript@5.3.2):
+    resolution: {integrity: sha512-TyRYaj56NBwa+0DgYbIkNQm+pN5DaV1dvZ5PzoKGDk9oag/sCG+W6wVkyaqmYCNJkXpmRtM627RkeMRTBvnYzw==}
+    peerDependencies:
+      typescript: '*'
+    dependencies:
+      '@volar/language-service': 2.2.4
+      '@volar/typescript': 2.2.4
+      typesafe-path: 0.2.2
+      typescript: 5.3.2
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    dev: false
+
+  /@volar/language-core@2.2.4:
+    resolution: {integrity: sha512-7As47GndxGxsqqYnbreLrfB5NDUeQioPM2LJKUuB4/34c0NpEJ2byVl3c9KYdjIdiEstWZ9JLtLKNTaPWb5jtA==}
+    dependencies:
+      '@volar/source-map': 2.2.4
+    dev: false
+
+  /@volar/language-server@2.2.4:
+    resolution: {integrity: sha512-wgRsKsqFMY7MRkmBfIX+GB0uzAv2Nks7YS3Ud6RWdHsjEu7tF+cXzBX/IRgW5HOayLLPC1xES2PYXk26hdOIoA==}
+    dependencies:
+      '@volar/language-core': 2.2.4
+      '@volar/language-service': 2.2.4
+      '@volar/snapshot-document': 2.2.4
+      '@volar/typescript': 2.2.4
+      '@vscode/l10n': 0.0.16
+      path-browserify: 1.0.1
+      request-light: 0.7.0
+      vscode-languageserver: 9.0.1
+      vscode-languageserver-protocol: 3.17.5
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    dev: false
+
+  /@volar/language-service@2.2.4:
+    resolution: {integrity: sha512-3OxJFADEsAZp1RoTS3SX2GY9SeVnB9mbd3N/Faz45IvnT2EFAyVJGPOyrz5bJDvKuCtjdoTNNWS1GX1bHGytrA==}
+    dependencies:
+      '@volar/language-core': 2.2.4
+      vscode-languageserver-protocol: 3.17.5
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    dev: false
+
+  /@volar/snapshot-document@2.2.4:
+    resolution: {integrity: sha512-XwL9Jo5+nn4WZystok1+kRXbmFuJXaCx0KfJYZizJQDd7kPDgBcyci/aKsBVNhIgiD9JT0KKycru0ndyHRadGQ==}
+    dependencies:
+      vscode-languageserver-protocol: 3.17.5
+      vscode-languageserver-textdocument: 1.0.11
+    dev: false
+
+  /@volar/source-map@2.2.4:
+    resolution: {integrity: sha512-m92FLpR9vB1YEZfiZ+bfgpLrToL/DNkOrorWVep3pffHrwwI4Tx2oIQN+sqHJfKkiT5N3J1owC+8crhAEinfjg==}
+    dependencies:
+      muggle-string: 0.4.1
+    dev: false
+
+  /@volar/typescript@2.2.4:
+    resolution: {integrity: sha512-uAQC53tgEbHO62G8NXMfmBrJAlP2QJ9WxVEEQqqK3I6VSy8frL5LbH3hAWODxiwMWixv74wJLWlKbWXOgdIoRQ==}
+    dependencies:
+      '@volar/language-core': 2.2.4
+      path-browserify: 1.0.1
+    dev: false
+
+  /@vscode/emmet-helper@2.9.2:
+    resolution: {integrity: sha512-MaGuyW+fa13q3aYsluKqclmh62Hgp0BpKIqS66fCxfOaBcVQ1OnMQxRRgQUYnCkxFISAQlkJ0qWWPyXjro1Qrg==}
+    dependencies:
+      emmet: 2.4.6
+      jsonc-parser: 2.3.1
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
+      vscode-uri: 2.1.2
+    dev: false
+
+  /@vscode/l10n@0.0.16:
+    resolution: {integrity: sha512-JT5CvrIYYCrmB+dCana8sUqJEcGB1ZDXNLMQ2+42bW995WmNoenijWMUdZfwmuQUTQcEVVIa2OecZzTYWUW9Cg==}
+    dev: false
+
+  /@vscode/l10n@0.0.18:
+    resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
+    dev: false
+
   /acorn-jsx@5.3.2(acorn@8.11.2):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1055,6 +1238,13 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       color-convert: 1.9.3
+    dev: false
+
+  /ansi-styles@4.3.0:
+    resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
+    engines: {node: '>=8'}
+    dependencies:
+      color-convert: 2.0.1
     dev: false
 
   /ansi-styles@6.2.1:
@@ -1438,6 +1628,15 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /cliui@8.0.1:
+    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 7.0.0
+    dev: false
+
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
@@ -1460,7 +1659,6 @@ packages:
     dependencies:
       color-name: 1.1.4
     dev: false
-    optional: true
 
   /color-name@1.1.3:
     resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==}
@@ -1470,7 +1668,6 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     requiresBuild: true
     dev: false
-    optional: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -1723,6 +1920,13 @@ packages:
 
   /electron-to-chromium@1.4.605:
     resolution: {integrity: sha512-V52j+P5z6cdRqTjPR/bYNxx7ETCHIkm5VIGuyCy3CMrfSnbEpIlLnk5oHmZo7gYvDfh2TfHeanB6rawyQ23ktg==}
+    dev: false
+
+  /emmet@2.4.6:
+    resolution: {integrity: sha512-dJfbdY/hfeTyf/Ef7Y7ubLYzkBvPQ912wPaeVYpAxvFxkEBf/+hJu4H6vhAvFN6HlxqedlfVn2x1S44FfQ97pg==}
+    dependencies:
+      '@emmetio/abbreviation': 2.3.3
+      '@emmetio/css-abbreviation': 2.1.8
     dev: false
 
   /emoji-regex@10.3.0:
@@ -1990,6 +2194,11 @@ packages:
   /gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
+    dev: false
+
+  /get-caller-file@2.0.5:
+    resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
+    engines: {node: 6.* || 8.* || >= 10.*}
     dev: false
 
   /get-east-asian-width@1.2.0:
@@ -2470,6 +2679,10 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
+    dev: false
+
+  /jsonc-parser@2.3.1:
+    resolution: {integrity: sha512-H8jvkz1O50L3dMZCsLqiuB2tA7muqbSg1AtGEkN0leAqGjsUzDJir3Zwr02BhqdcITPg3ei3mZ+HjMocAknhhg==}
     dev: false
 
   /kind-of@6.0.3:
@@ -3196,6 +3409,10 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: false
 
+  /muggle-string@0.4.1:
+    resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
+    dev: false
+
   /mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
     dependencies:
@@ -3427,6 +3644,10 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
+    dev: false
+
+  /path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
     dev: false
 
   /path-exists@4.0.0:
@@ -3863,6 +4084,15 @@ packages:
       '@types/mdast': 4.0.3
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.4
+    dev: false
+
+  /request-light@0.7.0:
+    resolution: {integrity: sha512-lMbBMrDoxgsyO+yB3sDcrDuX85yYt7sS8BfQd11jtbW/z5ZWgLZRcEGLsLoYw7I0WSUGQBs8CC8ScIxkTX1+6Q==}
+    dev: false
+
+  /require-directory@2.1.1:
+    resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /resolve@1.22.8:
@@ -4414,6 +4644,16 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
+  /typesafe-path@0.2.2:
+    resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==}
+    dev: false
+
+  /typescript-auto-import-cache@0.3.2:
+    resolution: {integrity: sha512-+laqe5SFL1vN62FPOOJSUDTZxtgsoOXjneYOXIpx5rQ4UMiN89NAtJLpqLqyebv9fgQ/IMeeTX+mQyRnwvJzvg==}
+    dependencies:
+      semver: 7.5.4
+    dev: false
+
   /typescript@5.3.2:
     resolution: {integrity: sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ==}
     engines: {node: '>=14.17'}
@@ -4636,6 +4876,148 @@ packages:
       vite: 5.0.6(@types/node@20.10.3)
     dev: false
 
+  /volar-service-css@0.0.45(@volar/language-service@2.2.4):
+    resolution: {integrity: sha512-f+AlUI1+kESbcZSVaNJVAnK0c/9Da5StoxzPqA5/8VqUHJWNdubWNnwG5xpFVTfgh6pgTcey3UBhBfHytFaIOg==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+    dependencies:
+      '@volar/language-service': 2.2.4
+      vscode-css-languageservice: 6.2.10
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    dev: false
+
+  /volar-service-emmet@0.0.45(@volar/language-service@2.2.4):
+    resolution: {integrity: sha512-9nLXSDkR1vA/3fQkFEsSXAu3XovQxOpTkVG2jilQgfek/K1ZLkaA/WMhN/TtmPmQg4NxE9Ni6mA5udBQ5gVXIA==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+    dependencies:
+      '@emmetio/css-parser': 0.4.0
+      '@emmetio/html-matcher': 1.3.0
+      '@volar/language-service': 2.2.4
+      '@vscode/emmet-helper': 2.9.2
+    dev: false
+
+  /volar-service-html@0.0.45(@volar/language-service@2.2.4):
+    resolution: {integrity: sha512-tLTJqfy1v5C4nmeAsfekFIKPl4r4qDMyL0L9MWywr/EApZzPCsbeUGxCqdzxSMC2q7PMCfX2i167txDo+J0LVA==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+    dependencies:
+      '@volar/language-service': 2.2.4
+      vscode-html-languageservice: /@johnsoncodehk/vscode-html-languageservice@5.2.0-34a5462
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-uri: 3.0.8
+    dev: false
+
+  /volar-service-prettier@0.0.45(@volar/language-service@2.2.4)(prettier@3.1.0):
+    resolution: {integrity: sha512-+mBS2EsDgp/kunKEBnHvhBwIQm5v2ahw4NKpKdg4sTpXy3UxqHt+Fq/wRYQ7Z8LlNVNRVfp75ThjM+w2zaZBAw==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+      prettier: ^2.2 || ^3.0
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+      prettier:
+        optional: true
+    dependencies:
+      '@volar/language-service': 2.2.4
+      prettier: 3.1.0
+      vscode-uri: 3.0.8
+    dev: false
+
+  /volar-service-typescript-twoslash-queries@0.0.45(@volar/language-service@2.2.4):
+    resolution: {integrity: sha512-KrPUUvKggZgV9mrDpstCzmf20irgv0ooMv+FGDzIIQUkya+d2+nSS8Mx2h9FvsYgLccUVw5jU3Rhwhd3pv/7qg==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+    dependencies:
+      '@volar/language-service': 2.2.4
+    dev: false
+
+  /volar-service-typescript@0.0.45(@volar/language-service@2.2.4):
+    resolution: {integrity: sha512-i/mMIIAMastJ2kgPo3qvX0Rrl7NyxhIYZ0ug/B4ambZcLPI1vzBgS2fmvyWX3jhBYHh8NmbAotFj+0Y9JtN47A==}
+    peerDependencies:
+      '@volar/language-service': ~2.2.3
+    peerDependenciesMeta:
+      '@volar/language-service':
+        optional: true
+    dependencies:
+      '@volar/language-service': 2.2.4
+      path-browserify: 1.0.1
+      semver: 7.5.4
+      typescript-auto-import-cache: 0.3.2
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-nls: 5.2.0
+    dev: false
+
+  /vscode-css-languageservice@6.2.10:
+    resolution: {integrity: sha512-sYUZPku4mQ06AWGCbMyjv2tdR6juBW6hTbVPFwbJvNVzdtEfBioQOgkdXg7yMJNWnXkvWSU1FL2kb4Vxu5Cdyw==}
+    dependencies:
+      '@vscode/l10n': 0.0.16
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
+      vscode-uri: 3.0.8
+    dev: false
+
+  /vscode-html-languageservice@5.2.0:
+    resolution: {integrity: sha512-cdNMhyw57/SQzgUUGSIMQ66jikqEN6nBNyhx5YuOyj9310+eY9zw8Q0cXpiKzDX8aHYFewQEXRnigl06j/TVwQ==}
+    dependencies:
+      '@vscode/l10n': 0.0.18
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
+      vscode-uri: 3.0.8
+    dev: false
+
+  /vscode-jsonrpc@8.2.0:
+    resolution: {integrity: sha512-C+r0eKJUIfiDIfwJhria30+TYWPtuHJXHtI7J0YlOmKAo7ogxP20T0zxB7HZQIFhIyvoBPwWskjxrvAtfjyZfA==}
+    engines: {node: '>=14.0.0'}
+    dev: false
+
+  /vscode-languageserver-protocol@3.17.5:
+    resolution: {integrity: sha512-mb1bvRJN8SVznADSGWM9u/b07H7Ecg0I3OgXDuLdn307rl/J3A9YD6/eYOssqhecL27hK1IPZAsaqh00i/Jljg==}
+    dependencies:
+      vscode-jsonrpc: 8.2.0
+      vscode-languageserver-types: 3.17.5
+    dev: false
+
+  /vscode-languageserver-textdocument@1.0.11:
+    resolution: {integrity: sha512-X+8T3GoiwTVlJbicx/sIAF+yuJAqz8VvwJyoMVhwEMoEKE/fkDmrqUgDMyBECcM2A2frVZIUj5HI/ErRXCfOeA==}
+    dev: false
+
+  /vscode-languageserver-types@3.17.5:
+    resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
+    dev: false
+
+  /vscode-languageserver@9.0.1:
+    resolution: {integrity: sha512-woByF3PDpkHFUreUa7Hos7+pUWdeWMXRd26+ZX2A8cFx6v/JPTtd4/uN0/jB6XQHYaOlHbio03NTHCqrgG5n7g==}
+    hasBin: true
+    dependencies:
+      vscode-languageserver-protocol: 3.17.5
+    dev: false
+
+  /vscode-nls@5.2.0:
+    resolution: {integrity: sha512-RAaHx7B14ZU04EU31pT+rKz2/zSl7xMsfIZuo8pd+KZO6PXtQmpevpq3vxvWNcrGbdmhM/rr5Uw5Mz+NBfhVng==}
+    dev: false
+
+  /vscode-uri@2.1.2:
+    resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==}
+    dev: false
+
+  /vscode-uri@3.0.8:
+    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
+    dev: false
+
   /web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
     dev: false
@@ -4687,6 +5069,15 @@ packages:
       string-width: 5.1.2
     dev: false
 
+  /wrap-ansi@7.0.0:
+    resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
+    engines: {node: '>=10'}
+    dependencies:
+      ansi-styles: 4.3.0
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+    dev: false
+
   /wrap-ansi@8.1.0:
     resolution: {integrity: sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==}
     engines: {node: '>=12'}
@@ -4698,6 +5089,11 @@ packages:
 
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+    dev: false
+
+  /y18n@5.0.8:
+    resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
+    engines: {node: '>=10'}
     dev: false
 
   /yallist@3.1.1:
@@ -4718,6 +5114,19 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /yargs@17.7.2:
+    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 8.0.1
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
+    dev: false
+
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -4736,71 +5145,6 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: false
 
-  registry.npmmirror.com/@astrojs/check@0.3.1(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-3LjEUvh7Z4v9NPokaqKMXQ0DwnSXfmtcyAuWVTjNt9yzjv54SxykobV5CTOB3TIko+Rqg59ejamJBxaJN6fvkw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@astrojs/check/-/check-0.3.1.tgz}
-    id: registry.npmmirror.com/@astrojs/check/0.3.1
-    name: '@astrojs/check'
-    version: 0.3.1
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
-    dependencies:
-      '@astrojs/language-server': registry.npmmirror.com/@astrojs/language-server@2.5.2(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2)
-      chokidar: registry.npmmirror.com/chokidar@3.5.3
-      fast-glob: registry.npmmirror.com/fast-glob@3.3.1
-      kleur: registry.npmmirror.com/kleur@4.1.5
-      typescript: 5.3.2
-      yargs: registry.npmmirror.com/yargs@17.7.2
-    transitivePeerDependencies:
-      - prettier
-      - prettier-plugin-astro
-    dev: false
-
-  registry.npmmirror.com/@astrojs/compiler@2.3.0:
-    resolution: {integrity: sha512-pxYRAaRdMS6XUll8lbFM+Lr0DI1HKIDT+VpiC+S+9di5H/nmm3znZOgdMlLiMxADot+56eps+M1BvtKfQremXA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@astrojs/compiler/-/compiler-2.3.0.tgz}
-    name: '@astrojs/compiler'
-    version: 2.3.0
-    dev: false
-
-  registry.npmmirror.com/@astrojs/language-server@2.5.2(prettier-plugin-astro@0.12.2)(prettier@3.1.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-O5SMzoQ65wSxA1KygreI9UJYmHpgt15bSYBxceHwqX7OCDM4Ek8mr6mZn45LGDtwM3dp1uup7kp8exfRPwIFbA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@astrojs/language-server/-/language-server-2.5.2.tgz}
-    id: registry.npmmirror.com/@astrojs/language-server/2.5.2
-    name: '@astrojs/language-server'
-    version: 2.5.2
-    hasBin: true
-    peerDependencies:
-      prettier: ^3.0.0
-      prettier-plugin-astro: '>=0.11.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-      prettier-plugin-astro:
-        optional: true
-    dependencies:
-      '@astrojs/compiler': registry.npmmirror.com/@astrojs/compiler@2.3.0
-      '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec@1.4.15
-      '@volar/kit': registry.npmmirror.com/@volar/kit@1.10.10(typescript@5.3.2)
-      '@volar/language-core': registry.npmmirror.com/@volar/language-core@1.10.10
-      '@volar/language-server': registry.npmmirror.com/@volar/language-server@1.10.10
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      '@volar/source-map': registry.npmmirror.com/@volar/source-map@1.10.10
-      '@volar/typescript': registry.npmmirror.com/@volar/typescript@1.10.10
-      fast-glob: registry.npmmirror.com/fast-glob@3.3.1
-      muggle-string: registry.npmmirror.com/muggle-string@0.3.1
-      prettier: 3.1.0
-      prettier-plugin-astro: 0.12.2
-      volar-service-css: registry.npmmirror.com/volar-service-css@0.0.16(@volar/language-service@1.10.10)
-      volar-service-emmet: registry.npmmirror.com/volar-service-emmet@0.0.16(@volar/language-service@1.10.10)
-      volar-service-html: registry.npmmirror.com/volar-service-html@0.0.16(@volar/language-service@1.10.10)
-      volar-service-prettier: registry.npmmirror.com/volar-service-prettier@0.0.16(@volar/language-service@1.10.10)(prettier@3.1.0)
-      volar-service-typescript: registry.npmmirror.com/volar-service-typescript@0.0.16(@volar/language-service@1.10.10)(@volar/typescript@1.10.10)
-      volar-service-typescript-twoslash-queries: registry.npmmirror.com/volar-service-typescript-twoslash-queries@0.0.16(@volar/language-service@1.10.10)
-      vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice@5.1.1
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    transitivePeerDependencies:
-      - typescript
-    dev: false
-
   registry.npmmirror.com/@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz}
     name: '@cspotcode/source-map-support'
@@ -4808,28 +5152,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/trace-mapping': registry.npmmirror.com/@jridgewell/trace-mapping@0.3.9
-
-  registry.npmmirror.com/@emmetio/abbreviation@2.3.3:
-    resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@emmetio/abbreviation/-/abbreviation-2.3.3.tgz}
-    name: '@emmetio/abbreviation'
-    version: 2.3.3
-    dependencies:
-      '@emmetio/scanner': registry.npmmirror.com/@emmetio/scanner@1.0.4
-    dev: false
-
-  registry.npmmirror.com/@emmetio/css-abbreviation@2.1.8:
-    resolution: {integrity: sha512-s9yjhJ6saOO/uk1V74eifykk2CBYi01STTK3WlXWGOepyKa23ymJ053+DNQjpFcy1ingpaO7AxCcwLvHFY9tuw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@emmetio/css-abbreviation/-/css-abbreviation-2.1.8.tgz}
-    name: '@emmetio/css-abbreviation'
-    version: 2.1.8
-    dependencies:
-      '@emmetio/scanner': registry.npmmirror.com/@emmetio/scanner@1.0.4
-    dev: false
-
-  registry.npmmirror.com/@emmetio/scanner@1.0.4:
-    resolution: {integrity: sha512-IqRuJtQff7YHHBk4G8YZ45uB9BaAGcwQeVzgj/zj8/UdOhtQpEIupUhSk8dys6spFIWVZVeK20CzGEnqR5SbqA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@emmetio/scanner/-/scanner-1.0.4.tgz}
-    name: '@emmetio/scanner'
-    version: 1.0.4
-    dev: false
 
   registry.npmmirror.com/@heroicons/react@2.0.18(react@18.2.0):
     resolution: {integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@heroicons/react/-/react-2.0.18.tgz}
@@ -4875,33 +5197,6 @@ packages:
       preact: 10.19.2
     dev: false
 
-  registry.npmmirror.com/@nodelib/fs.scandir@2.1.5:
-    resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz}
-    name: '@nodelib/fs.scandir'
-    version: 2.1.5
-    engines: {node: '>= 8'}
-    dependencies:
-      '@nodelib/fs.stat': registry.npmmirror.com/@nodelib/fs.stat@2.0.5
-      run-parallel: registry.npmmirror.com/run-parallel@1.2.0
-    dev: false
-
-  registry.npmmirror.com/@nodelib/fs.stat@2.0.5:
-    resolution: {integrity: sha512-RkhPPp2zrqDAQA/2jNhnztcPAlv64XdhIp7a7454A5ovI7Bukxgt7MX7udwAu3zg1DcpPU0rz3VV1SeaqvY4+A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz}
-    name: '@nodelib/fs.stat'
-    version: 2.0.5
-    engines: {node: '>= 8'}
-    dev: false
-
-  registry.npmmirror.com/@nodelib/fs.walk@1.2.8:
-    resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz}
-    name: '@nodelib/fs.walk'
-    version: 1.2.8
-    engines: {node: '>= 8'}
-    dependencies:
-      '@nodelib/fs.scandir': registry.npmmirror.com/@nodelib/fs.scandir@2.1.5
-      fastq: registry.npmmirror.com/fastq@1.15.0
-    dev: false
-
   registry.npmmirror.com/@tsconfig/node10@1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@tsconfig/node10/-/node10-1.0.9.tgz}
     name: '@tsconfig/node10'
@@ -4922,93 +5217,6 @@ packages:
     name: '@tsconfig/node16'
     version: 1.0.4
 
-  registry.npmmirror.com/@volar/kit@1.10.10(typescript@5.3.2):
-    resolution: {integrity: sha512-V2SyUPCPUhueqH8j5t48LJ0QsjExGSXzTv/XOdkUHV7hJ/ekyRGFqKxcfBtMq/nK6Tgu2G1ba+6u0d7e6wKcQw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/kit/-/kit-1.10.10.tgz}
-    id: registry.npmmirror.com/@volar/kit/1.10.10
-    name: '@volar/kit'
-    version: 1.10.10
-    peerDependencies:
-      typescript: '*'
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      typesafe-path: registry.npmmirror.com/typesafe-path@0.2.2
-      typescript: 5.3.2
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/@volar/language-core@1.10.10:
-    resolution: {integrity: sha512-nsV1o3AZ5n5jaEAObrS3MWLBWaGwUj/vAsc15FVNIv+DbpizQRISg9wzygsHBr56ELRH8r4K75vkYNMtsSNNWw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/language-core/-/language-core-1.10.10.tgz}
-    name: '@volar/language-core'
-    version: 1.10.10
-    dependencies:
-      '@volar/source-map': registry.npmmirror.com/@volar/source-map@1.10.10
-    dev: false
-
-  registry.npmmirror.com/@volar/language-server@1.10.10:
-    resolution: {integrity: sha512-F2PRBU+CRjT7L9qe8bjof/uz/LbAXVmgwNU2gOSX2y1bUl3E8DHmD0dB6pwIVublvkx+Ivg/0r3Z6oyxfPPruQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/language-server/-/language-server-1.10.10.tgz}
-    name: '@volar/language-server'
-    version: 1.10.10
-    dependencies:
-      '@volar/language-core': registry.npmmirror.com/@volar/language-core@1.10.10
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      '@volar/typescript': registry.npmmirror.com/@volar/typescript@1.10.10
-      '@vscode/l10n': registry.npmmirror.com/@vscode/l10n@0.0.16
-      path-browserify: registry.npmmirror.com/path-browserify@1.0.1
-      request-light: registry.npmmirror.com/request-light@0.7.0
-      vscode-languageserver: registry.npmmirror.com/vscode-languageserver@9.0.1
-      vscode-languageserver-protocol: registry.npmmirror.com/vscode-languageserver-protocol@3.17.5
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/@volar/language-service@1.10.10:
-    resolution: {integrity: sha512-P4fiPWDI6fLGO6BghlksCVHs1nr9gvWAMDyma3Bca4aowxXusxjUVTsnJq0EVorIN5uIr1Xel4B/tNdXt/IKyw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/language-service/-/language-service-1.10.10.tgz}
-    name: '@volar/language-service'
-    version: 1.10.10
-    dependencies:
-      '@volar/language-core': registry.npmmirror.com/@volar/language-core@1.10.10
-      '@volar/source-map': registry.npmmirror.com/@volar/source-map@1.10.10
-      vscode-languageserver-protocol: registry.npmmirror.com/vscode-languageserver-protocol@3.17.5
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/@volar/source-map@1.10.10:
-    resolution: {integrity: sha512-GVKjLnifV4voJ9F0vhP56p4+F3WGf+gXlRtjFZsv6v3WxBTWU3ZVeaRaEHJmWrcv5LXmoYYpk/SC25BKemPRkg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/source-map/-/source-map-1.10.10.tgz}
-    name: '@volar/source-map'
-    version: 1.10.10
-    dependencies:
-      muggle-string: registry.npmmirror.com/muggle-string@0.3.1
-    dev: false
-
-  registry.npmmirror.com/@volar/typescript@1.10.10:
-    resolution: {integrity: sha512-4a2r5bdUub2m+mYVnLu2wt59fuoYWe7nf0uXtGHU8QQ5LDNfzAR0wK7NgDiQ9rcl2WT3fxT2AA9AylAwFtj50A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@volar/typescript/-/typescript-1.10.10.tgz}
-    name: '@volar/typescript'
-    version: 1.10.10
-    dependencies:
-      '@volar/language-core': registry.npmmirror.com/@volar/language-core@1.10.10
-      path-browserify: registry.npmmirror.com/path-browserify@1.0.1
-    dev: false
-
-  registry.npmmirror.com/@vscode/emmet-helper@2.9.2:
-    resolution: {integrity: sha512-MaGuyW+fa13q3aYsluKqclmh62Hgp0BpKIqS66fCxfOaBcVQ1OnMQxRRgQUYnCkxFISAQlkJ0qWWPyXjro1Qrg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@vscode/emmet-helper/-/emmet-helper-2.9.2.tgz}
-    name: '@vscode/emmet-helper'
-    version: 2.9.2
-    dependencies:
-      emmet: registry.npmmirror.com/emmet@2.4.6
-      jsonc-parser: registry.npmmirror.com/jsonc-parser@2.3.1
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types@3.17.5
-      vscode-uri: registry.npmmirror.com/vscode-uri@2.1.2
-    dev: false
-
-  registry.npmmirror.com/@vscode/l10n@0.0.16:
-    resolution: {integrity: sha512-JT5CvrIYYCrmB+dCana8sUqJEcGB1ZDXNLMQ2+42bW995WmNoenijWMUdZfwmuQUTQcEVVIa2OecZzTYWUW9Cg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@vscode/l10n/-/l10n-0.0.16.tgz}
-    name: '@vscode/l10n'
-    version: 0.0.16
-    dev: false
-
   registry.npmmirror.com/acorn-walk@8.2.0:
     resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/acorn-walk/-/acorn-walk-8.2.0.tgz}
     name: acorn-walk
@@ -5021,32 +5229,6 @@ packages:
     version: 8.10.0
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  registry.npmmirror.com/ansi-regex@5.0.1:
-    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/ansi-regex/-/ansi-regex-5.0.1.tgz}
-    name: ansi-regex
-    version: 5.0.1
-    engines: {node: '>=8'}
-    dev: false
-
-  registry.npmmirror.com/ansi-styles@4.3.0:
-    resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/ansi-styles/-/ansi-styles-4.3.0.tgz}
-    name: ansi-styles
-    version: 4.3.0
-    engines: {node: '>=8'}
-    dependencies:
-      color-convert: registry.npmmirror.com/color-convert@2.0.1
-    dev: false
-
-  registry.npmmirror.com/anymatch@3.1.3:
-    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/anymatch/-/anymatch-3.1.3.tgz}
-    name: anymatch
-    version: 3.1.3
-    engines: {node: '>= 8'}
-    dependencies:
-      normalize-path: registry.npmmirror.com/normalize-path@3.0.0
-      picomatch: registry.npmmirror.com/picomatch@2.3.1
-    dev: false
 
   registry.npmmirror.com/arg@4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/arg/-/arg-4.1.3.tgz}
@@ -5061,67 +5243,6 @@ packages:
       tsparticles-engine: registry.npmmirror.com/tsparticles-engine@2.12.0
     dev: false
 
-  registry.npmmirror.com/binary-extensions@2.2.0:
-    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/binary-extensions/-/binary-extensions-2.2.0.tgz}
-    name: binary-extensions
-    version: 2.2.0
-    engines: {node: '>=8'}
-    dev: false
-
-  registry.npmmirror.com/braces@3.0.2:
-    resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/braces/-/braces-3.0.2.tgz}
-    name: braces
-    version: 3.0.2
-    engines: {node: '>=8'}
-    dependencies:
-      fill-range: registry.npmmirror.com/fill-range@7.0.1
-    dev: false
-
-  registry.npmmirror.com/chokidar@3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/chokidar/-/chokidar-3.5.3.tgz}
-    name: chokidar
-    version: 3.5.3
-    engines: {node: '>= 8.10.0'}
-    dependencies:
-      anymatch: registry.npmmirror.com/anymatch@3.1.3
-      braces: registry.npmmirror.com/braces@3.0.2
-      glob-parent: registry.npmmirror.com/glob-parent@5.1.2
-      is-binary-path: registry.npmmirror.com/is-binary-path@2.1.0
-      is-glob: registry.npmmirror.com/is-glob@4.0.3
-      normalize-path: registry.npmmirror.com/normalize-path@3.0.0
-      readdirp: registry.npmmirror.com/readdirp@3.6.0
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: false
-
-  registry.npmmirror.com/cliui@8.0.1:
-    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/cliui/-/cliui-8.0.1.tgz}
-    name: cliui
-    version: 8.0.1
-    engines: {node: '>=12'}
-    dependencies:
-      string-width: registry.npmmirror.com/string-width@4.2.3
-      strip-ansi: registry.npmmirror.com/strip-ansi@6.0.1
-      wrap-ansi: registry.npmmirror.com/wrap-ansi@7.0.0
-    dev: false
-
-  registry.npmmirror.com/color-convert@2.0.1:
-    resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/color-convert/-/color-convert-2.0.1.tgz}
-    name: color-convert
-    version: 2.0.1
-    engines: {node: '>=7.0.0'}
-    requiresBuild: true
-    dependencies:
-      color-name: registry.npmmirror.com/color-name@1.1.4
-    dev: false
-
-  registry.npmmirror.com/color-name@1.1.4:
-    resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/color-name/-/color-name-1.1.4.tgz}
-    name: color-name
-    version: 1.1.4
-    requiresBuild: true
-    dev: false
-
   registry.npmmirror.com/create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/create-require/-/create-require-1.1.1.tgz}
     name: create-require
@@ -5133,264 +5254,10 @@ packages:
     version: 4.0.2
     engines: {node: '>=0.3.1'}
 
-  registry.npmmirror.com/emmet@2.4.6:
-    resolution: {integrity: sha512-dJfbdY/hfeTyf/Ef7Y7ubLYzkBvPQ912wPaeVYpAxvFxkEBf/+hJu4H6vhAvFN6HlxqedlfVn2x1S44FfQ97pg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/emmet/-/emmet-2.4.6.tgz}
-    name: emmet
-    version: 2.4.6
-    dependencies:
-      '@emmetio/abbreviation': registry.npmmirror.com/@emmetio/abbreviation@2.3.3
-      '@emmetio/css-abbreviation': registry.npmmirror.com/@emmetio/css-abbreviation@2.1.8
-    dev: false
-
-  registry.npmmirror.com/emoji-regex@8.0.0:
-    resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/emoji-regex/-/emoji-regex-8.0.0.tgz}
-    name: emoji-regex
-    version: 8.0.0
-    dev: false
-
-  registry.npmmirror.com/escalade@3.1.1:
-    resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/escalade/-/escalade-3.1.1.tgz}
-    name: escalade
-    version: 3.1.1
-    engines: {node: '>=6'}
-    dev: false
-
-  registry.npmmirror.com/fast-glob@3.3.1:
-    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/fast-glob/-/fast-glob-3.3.1.tgz}
-    name: fast-glob
-    version: 3.3.1
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': registry.npmmirror.com/@nodelib/fs.stat@2.0.5
-      '@nodelib/fs.walk': registry.npmmirror.com/@nodelib/fs.walk@1.2.8
-      glob-parent: registry.npmmirror.com/glob-parent@5.1.2
-      merge2: registry.npmmirror.com/merge2@1.4.1
-      micromatch: registry.npmmirror.com/micromatch@4.0.5
-    dev: false
-
-  registry.npmmirror.com/fastq@1.15.0:
-    resolution: {integrity: sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/fastq/-/fastq-1.15.0.tgz}
-    name: fastq
-    version: 1.15.0
-    dependencies:
-      reusify: registry.npmmirror.com/reusify@1.0.4
-    dev: false
-
-  registry.npmmirror.com/fill-range@7.0.1:
-    resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz}
-    name: fill-range
-    version: 7.0.1
-    engines: {node: '>=8'}
-    dependencies:
-      to-regex-range: registry.npmmirror.com/to-regex-range@5.0.1
-    dev: false
-
-  registry.npmmirror.com/get-caller-file@2.0.5:
-    resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/get-caller-file/-/get-caller-file-2.0.5.tgz}
-    name: get-caller-file
-    version: 2.0.5
-    engines: {node: 6.* || 8.* || >= 10.*}
-    dev: false
-
-  registry.npmmirror.com/glob-parent@5.1.2:
-    resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz}
-    name: glob-parent
-    version: 5.1.2
-    engines: {node: '>= 6'}
-    dependencies:
-      is-glob: registry.npmmirror.com/is-glob@4.0.3
-    dev: false
-
-  registry.npmmirror.com/is-binary-path@2.1.0:
-    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-binary-path/-/is-binary-path-2.1.0.tgz}
-    name: is-binary-path
-    version: 2.1.0
-    engines: {node: '>=8'}
-    dependencies:
-      binary-extensions: registry.npmmirror.com/binary-extensions@2.2.0
-    dev: false
-
-  registry.npmmirror.com/is-extglob@2.1.1:
-    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-extglob/-/is-extglob-2.1.1.tgz}
-    name: is-extglob
-    version: 2.1.1
-    engines: {node: '>=0.10.0'}
-    dev: false
-
-  registry.npmmirror.com/is-fullwidth-code-point@3.0.0:
-    resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz}
-    name: is-fullwidth-code-point
-    version: 3.0.0
-    engines: {node: '>=8'}
-    dev: false
-
-  registry.npmmirror.com/is-glob@4.0.3:
-    resolution: {integrity: sha512-xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-glob/-/is-glob-4.0.3.tgz}
-    name: is-glob
-    version: 4.0.3
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      is-extglob: registry.npmmirror.com/is-extglob@2.1.1
-    dev: false
-
-  registry.npmmirror.com/is-number@7.0.0:
-    resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/is-number/-/is-number-7.0.0.tgz}
-    name: is-number
-    version: 7.0.0
-    engines: {node: '>=0.12.0'}
-    dev: false
-
-  registry.npmmirror.com/jsonc-parser@2.3.1:
-    resolution: {integrity: sha512-H8jvkz1O50L3dMZCsLqiuB2tA7muqbSg1AtGEkN0leAqGjsUzDJir3Zwr02BhqdcITPg3ei3mZ+HjMocAknhhg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/jsonc-parser/-/jsonc-parser-2.3.1.tgz}
-    name: jsonc-parser
-    version: 2.3.1
-    dev: false
-
-  registry.npmmirror.com/kleur@4.1.5:
-    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/kleur/-/kleur-4.1.5.tgz}
-    name: kleur
-    version: 4.1.5
-    engines: {node: '>=6'}
-    dev: false
-
-  registry.npmmirror.com/lru-cache@6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/lru-cache/-/lru-cache-6.0.0.tgz}
-    name: lru-cache
-    version: 6.0.0
-    engines: {node: '>=10'}
-    dependencies:
-      yallist: registry.npmmirror.com/yallist@4.0.0
-    dev: false
-
   registry.npmmirror.com/make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/make-error/-/make-error-1.3.6.tgz}
     name: make-error
     version: 1.3.6
-
-  registry.npmmirror.com/merge2@1.4.1:
-    resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/merge2/-/merge2-1.4.1.tgz}
-    name: merge2
-    version: 1.4.1
-    engines: {node: '>= 8'}
-    dev: false
-
-  registry.npmmirror.com/micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/micromatch/-/micromatch-4.0.5.tgz}
-    name: micromatch
-    version: 4.0.5
-    engines: {node: '>=8.6'}
-    dependencies:
-      braces: registry.npmmirror.com/braces@3.0.2
-      picomatch: registry.npmmirror.com/picomatch@2.3.1
-    dev: false
-
-  registry.npmmirror.com/muggle-string@0.3.1:
-    resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/muggle-string/-/muggle-string-0.3.1.tgz}
-    name: muggle-string
-    version: 0.3.1
-    dev: false
-
-  registry.npmmirror.com/normalize-path@3.0.0:
-    resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/normalize-path/-/normalize-path-3.0.0.tgz}
-    name: normalize-path
-    version: 3.0.0
-    engines: {node: '>=0.10.0'}
-    dev: false
-
-  registry.npmmirror.com/path-browserify@1.0.1:
-    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/path-browserify/-/path-browserify-1.0.1.tgz}
-    name: path-browserify
-    version: 1.0.1
-    dev: false
-
-  registry.npmmirror.com/picomatch@2.3.1:
-    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/picomatch/-/picomatch-2.3.1.tgz}
-    name: picomatch
-    version: 2.3.1
-    engines: {node: '>=8.6'}
-    dev: false
-
-  registry.npmmirror.com/queue-microtask@1.2.3:
-    resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/queue-microtask/-/queue-microtask-1.2.3.tgz}
-    name: queue-microtask
-    version: 1.2.3
-    dev: false
-
-  registry.npmmirror.com/readdirp@3.6.0:
-    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/readdirp/-/readdirp-3.6.0.tgz}
-    name: readdirp
-    version: 3.6.0
-    engines: {node: '>=8.10.0'}
-    dependencies:
-      picomatch: registry.npmmirror.com/picomatch@2.3.1
-    dev: false
-
-  registry.npmmirror.com/request-light@0.7.0:
-    resolution: {integrity: sha512-lMbBMrDoxgsyO+yB3sDcrDuX85yYt7sS8BfQd11jtbW/z5ZWgLZRcEGLsLoYw7I0WSUGQBs8CC8ScIxkTX1+6Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/request-light/-/request-light-0.7.0.tgz}
-    name: request-light
-    version: 0.7.0
-    dev: false
-
-  registry.npmmirror.com/require-directory@2.1.1:
-    resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/require-directory/-/require-directory-2.1.1.tgz}
-    name: require-directory
-    version: 2.1.1
-    engines: {node: '>=0.10.0'}
-    dev: false
-
-  registry.npmmirror.com/reusify@1.0.4:
-    resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/reusify/-/reusify-1.0.4.tgz}
-    name: reusify
-    version: 1.0.4
-    engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
-    dev: false
-
-  registry.npmmirror.com/run-parallel@1.2.0:
-    resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/run-parallel/-/run-parallel-1.2.0.tgz}
-    name: run-parallel
-    version: 1.2.0
-    dependencies:
-      queue-microtask: registry.npmmirror.com/queue-microtask@1.2.3
-    dev: false
-
-  registry.npmmirror.com/semver@7.5.4:
-    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/semver/-/semver-7.5.4.tgz}
-    name: semver
-    version: 7.5.4
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: registry.npmmirror.com/lru-cache@6.0.0
-    dev: false
-
-  registry.npmmirror.com/string-width@4.2.3:
-    resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/string-width/-/string-width-4.2.3.tgz}
-    name: string-width
-    version: 4.2.3
-    engines: {node: '>=8'}
-    dependencies:
-      emoji-regex: registry.npmmirror.com/emoji-regex@8.0.0
-      is-fullwidth-code-point: registry.npmmirror.com/is-fullwidth-code-point@3.0.0
-      strip-ansi: registry.npmmirror.com/strip-ansi@6.0.1
-    dev: false
-
-  registry.npmmirror.com/strip-ansi@6.0.1:
-    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/strip-ansi/-/strip-ansi-6.0.1.tgz}
-    name: strip-ansi
-    version: 6.0.1
-    engines: {node: '>=8'}
-    dependencies:
-      ansi-regex: registry.npmmirror.com/ansi-regex@5.0.1
-    dev: false
-
-  registry.npmmirror.com/to-regex-range@5.0.1:
-    resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/to-regex-range/-/to-regex-range-5.0.1.tgz}
-    name: to-regex-range
-    version: 5.0.1
-    engines: {node: '>=8.0'}
-    dependencies:
-      is-number: registry.npmmirror.com/is-number@7.0.0
-    dev: false
 
   registry.npmmirror.com/ts-node@10.9.1(@types/node@20.10.3)(typescript@5.3.2):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/ts-node/-/ts-node-10.9.1.tgz}
@@ -5815,249 +5682,10 @@ packages:
       tsparticles-updater-wobble: registry.npmmirror.com/tsparticles-updater-wobble@2.12.0
     dev: false
 
-  registry.npmmirror.com/typesafe-path@0.2.2:
-    resolution: {integrity: sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/typesafe-path/-/typesafe-path-0.2.2.tgz}
-    name: typesafe-path
-    version: 0.2.2
-    dev: false
-
-  registry.npmmirror.com/typescript-auto-import-cache@0.3.0:
-    resolution: {integrity: sha512-Rq6/q4O9iyqUdjvOoyas7x/Qf9nWUMeqpP3YeTaLA+uECgfy5wOhfOS+SW/+fZ/uI/ZcKaf+2/ZhFzXh8xfofQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/typescript-auto-import-cache/-/typescript-auto-import-cache-0.3.0.tgz}
-    name: typescript-auto-import-cache
-    version: 0.3.0
-    dependencies:
-      semver: registry.npmmirror.com/semver@7.5.4
-    dev: false
-
   registry.npmmirror.com/v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz}
     name: v8-compile-cache-lib
     version: 3.0.1
-
-  registry.npmmirror.com/volar-service-css@0.0.16(@volar/language-service@1.10.10):
-    resolution: {integrity: sha512-gK/XD35t/P3SQrUuS8LMlCnE2ItIk+kXI6gPvBYl1NZ7O+tLH8rUWXA32YgpwNoITxYrm/G1seaq08zs4aiPvg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-css/-/volar-service-css-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-css/0.0.16
-    name: volar-service-css
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice@6.2.10
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/volar-service-emmet@0.0.16(@volar/language-service@1.10.10):
-    resolution: {integrity: sha512-8sWWywzVJOD+PWDArOXDWbiRlM7+peydFhXJT71i4X1WPW32RyPxn6FypvciO+amqpfZP2rXfB9eibIJ+EofSQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-emmet/-/volar-service-emmet-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-emmet/0.0.16
-    name: volar-service-emmet
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      '@vscode/emmet-helper': registry.npmmirror.com/@vscode/emmet-helper@2.9.2
-      volar-service-html: registry.npmmirror.com/volar-service-html@0.0.16(@volar/language-service@1.10.10)
-    dev: false
-
-  registry.npmmirror.com/volar-service-html@0.0.16(@volar/language-service@1.10.10):
-    resolution: {integrity: sha512-/oEXXgry++1CnTXQBUNf9B8MZfTlYZuJfZA7Zx9MN7WS4ZPxk3BFOdal/cXH6RNR2ruNEYr5QTW9rsqtoUscag==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-html/-/volar-service-html-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-html/0.0.16
-    name: volar-service-html
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice@5.1.1
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/volar-service-prettier@0.0.16(@volar/language-service@1.10.10)(prettier@3.1.0):
-    resolution: {integrity: sha512-Kj2ZdwJGEvfYbsHW8Sjrew/7EB4PgRoas4f8yAJzUUVxIC/kvhUwLDxQc8+N2IibomN76asJGWe+i6VZZvgIkw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-prettier/-/volar-service-prettier-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-prettier/0.0.16
-    name: volar-service-prettier
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-      prettier: ^2.2 || ^3.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-      prettier:
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      prettier: 3.1.0
-    dev: false
-
-  registry.npmmirror.com/volar-service-typescript-twoslash-queries@0.0.16(@volar/language-service@1.10.10):
-    resolution: {integrity: sha512-0gPrkDTD2bMj2AnSNykOKhfmPnBFE2LS1lF3LWA7qu1ChRnJF0sodwCCbbeNYJ9+yth956ApoU1BVQ8UrMg+yw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-typescript-twoslash-queries/-/volar-service-typescript-twoslash-queries-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-typescript-twoslash-queries/0.0.16
-    name: volar-service-typescript-twoslash-queries
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-    dev: false
-
-  registry.npmmirror.com/volar-service-typescript@0.0.16(@volar/language-service@1.10.10)(@volar/typescript@1.10.10):
-    resolution: {integrity: sha512-k/qFKM2oxs/3fhbr/vcBSHnCLZ1HN3Aeh+bGvV9Lc9qIhrNyCVsDFOUJN1Qp4dI72+Y+eFSIDCLHmFEZdsP2EA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/volar-service-typescript/-/volar-service-typescript-0.0.16.tgz}
-    id: registry.npmmirror.com/volar-service-typescript/0.0.16
-    name: volar-service-typescript
-    version: 0.0.16
-    peerDependencies:
-      '@volar/language-service': ~1.10.0
-      '@volar/typescript': ~1.10.0
-    peerDependenciesMeta:
-      '@volar/language-service':
-        optional: true
-    dependencies:
-      '@volar/language-service': registry.npmmirror.com/@volar/language-service@1.10.10
-      '@volar/typescript': registry.npmmirror.com/@volar/typescript@1.10.10
-      path-browserify: registry.npmmirror.com/path-browserify@1.0.1
-      semver: registry.npmmirror.com/semver@7.5.4
-      typescript-auto-import-cache: registry.npmmirror.com/typescript-auto-import-cache@0.3.0
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-nls: registry.npmmirror.com/vscode-nls@5.2.0
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/vscode-css-languageservice@6.2.10:
-    resolution: {integrity: sha512-sYUZPku4mQ06AWGCbMyjv2tdR6juBW6hTbVPFwbJvNVzdtEfBioQOgkdXg7yMJNWnXkvWSU1FL2kb4Vxu5Cdyw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-6.2.10.tgz}
-    name: vscode-css-languageservice
-    version: 6.2.10
-    dependencies:
-      '@vscode/l10n': registry.npmmirror.com/@vscode/l10n@0.0.16
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types@3.17.5
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/vscode-html-languageservice@5.1.1:
-    resolution: {integrity: sha512-JenrspIIG/Q+93R6G3L6HdK96itSisMynE0glURqHpQbL3dKAKzdm8L40lAHNkwJeBg+BBPpAshZKv/38onrTQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-html-languageservice/-/vscode-html-languageservice-5.1.1.tgz}
-    name: vscode-html-languageservice
-    version: 5.1.1
-    dependencies:
-      '@vscode/l10n': registry.npmmirror.com/@vscode/l10n@0.0.16
-      vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11
-      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types@3.17.5
-      vscode-uri: registry.npmmirror.com/vscode-uri@3.0.8
-    dev: false
-
-  registry.npmmirror.com/vscode-jsonrpc@8.2.0:
-    resolution: {integrity: sha512-C+r0eKJUIfiDIfwJhria30+TYWPtuHJXHtI7J0YlOmKAo7ogxP20T0zxB7HZQIFhIyvoBPwWskjxrvAtfjyZfA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-jsonrpc/-/vscode-jsonrpc-8.2.0.tgz}
-    name: vscode-jsonrpc
-    version: 8.2.0
-    engines: {node: '>=14.0.0'}
-    dev: false
-
-  registry.npmmirror.com/vscode-languageserver-protocol@3.17.5:
-    resolution: {integrity: sha512-mb1bvRJN8SVznADSGWM9u/b07H7Ecg0I3OgXDuLdn307rl/J3A9YD6/eYOssqhecL27hK1IPZAsaqh00i/Jljg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.5.tgz}
-    name: vscode-languageserver-protocol
-    version: 3.17.5
-    dependencies:
-      vscode-jsonrpc: registry.npmmirror.com/vscode-jsonrpc@8.2.0
-      vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types@3.17.5
-    dev: false
-
-  registry.npmmirror.com/vscode-languageserver-textdocument@1.0.11:
-    resolution: {integrity: sha512-X+8T3GoiwTVlJbicx/sIAF+yuJAqz8VvwJyoMVhwEMoEKE/fkDmrqUgDMyBECcM2A2frVZIUj5HI/ErRXCfOeA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.11.tgz}
-    name: vscode-languageserver-textdocument
-    version: 1.0.11
-    dev: false
-
-  registry.npmmirror.com/vscode-languageserver-types@3.17.5:
-    resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz}
-    name: vscode-languageserver-types
-    version: 3.17.5
-    dev: false
-
-  registry.npmmirror.com/vscode-languageserver@9.0.1:
-    resolution: {integrity: sha512-woByF3PDpkHFUreUa7Hos7+pUWdeWMXRd26+ZX2A8cFx6v/JPTtd4/uN0/jB6XQHYaOlHbio03NTHCqrgG5n7g==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-languageserver/-/vscode-languageserver-9.0.1.tgz}
-    name: vscode-languageserver
-    version: 9.0.1
-    hasBin: true
-    dependencies:
-      vscode-languageserver-protocol: registry.npmmirror.com/vscode-languageserver-protocol@3.17.5
-    dev: false
-
-  registry.npmmirror.com/vscode-nls@5.2.0:
-    resolution: {integrity: sha512-RAaHx7B14ZU04EU31pT+rKz2/zSl7xMsfIZuo8pd+KZO6PXtQmpevpq3vxvWNcrGbdmhM/rr5Uw5Mz+NBfhVng==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-nls/-/vscode-nls-5.2.0.tgz}
-    name: vscode-nls
-    version: 5.2.0
-    dev: false
-
-  registry.npmmirror.com/vscode-uri@2.1.2:
-    resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-uri/-/vscode-uri-2.1.2.tgz}
-    name: vscode-uri
-    version: 2.1.2
-    dev: false
-
-  registry.npmmirror.com/vscode-uri@3.0.8:
-    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/vscode-uri/-/vscode-uri-3.0.8.tgz}
-    name: vscode-uri
-    version: 3.0.8
-    dev: false
-
-  registry.npmmirror.com/wrap-ansi@7.0.0:
-    resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz}
-    name: wrap-ansi
-    version: 7.0.0
-    engines: {node: '>=10'}
-    dependencies:
-      ansi-styles: registry.npmmirror.com/ansi-styles@4.3.0
-      string-width: registry.npmmirror.com/string-width@4.2.3
-      strip-ansi: registry.npmmirror.com/strip-ansi@6.0.1
-    dev: false
-
-  registry.npmmirror.com/y18n@5.0.8:
-    resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/y18n/-/y18n-5.0.8.tgz}
-    name: y18n
-    version: 5.0.8
-    engines: {node: '>=10'}
-    dev: false
-
-  registry.npmmirror.com/yallist@4.0.0:
-    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/yallist/-/yallist-4.0.0.tgz}
-    name: yallist
-    version: 4.0.0
-    dev: false
-
-  registry.npmmirror.com/yargs-parser@21.1.1:
-    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/yargs-parser/-/yargs-parser-21.1.1.tgz}
-    name: yargs-parser
-    version: 21.1.1
-    engines: {node: '>=12'}
-    dev: false
-
-  registry.npmmirror.com/yargs@17.7.2:
-    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/yargs/-/yargs-17.7.2.tgz}
-    name: yargs
-    version: 17.7.2
-    engines: {node: '>=12'}
-    dependencies:
-      cliui: registry.npmmirror.com/cliui@8.0.1
-      escalade: registry.npmmirror.com/escalade@3.1.1
-      get-caller-file: registry.npmmirror.com/get-caller-file@2.0.5
-      require-directory: registry.npmmirror.com/require-directory@2.1.1
-      string-width: registry.npmmirror.com/string-width@4.2.3
-      y18n: registry.npmmirror.com/y18n@5.0.8
-      yargs-parser: registry.npmmirror.com/yargs-parser@21.1.1
-    dev: false
 
   registry.npmmirror.com/yn@3.1.1:
     resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/yn/-/yn-3.1.1.tgz}
