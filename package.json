@@ -15,7 +15,7 @@
     "clean:dist": "node -e 'fs.rmSync(`dist/`, {recursive:true, force:true})'",
     "clean:cache": "node -e 'fs.rmSync(`node_modules/.cache`, {recursive:true, force:true})'"
   },
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@9.4.0",
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/mdx": "^2.0.0",
